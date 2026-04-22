@@ -2,13 +2,14 @@
   "repoUrl": "https://github.com/YOUR_ORG/YOUR_REPO",
   "assets": [
     {
-      "id": "sample-loader",
+      "id": "team-loader",
       "type": "json",
-      "title": "Sample Loader",
-      "path": "./assets/json/sample-loader.json",
+      "title": "Team Loader",
+      "path": "./assets/json/loader.json",
       "thumbnail": "",
       "tags": ["sample", "loader", "lottie"],
       "updatedAt": "2026-04-22"
     }
+    
   ]
 }
