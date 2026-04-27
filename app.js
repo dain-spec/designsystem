@@ -1,4 +1,5 @@
 const ASSET_INDEX_PATH = "./assets/index.json";
+const MEMO_STORAGE_KEY = "asset-notes-v1";
 
 const state = {
   assets: [],
@@ -50,7 +51,7 @@ function applyFilters() {
 
   state.filteredAssets = state.assets.filter((asset) => {
     const matchesType = selectedType === "all" || asset.type === selectedType;
-    const haystack = `${asset.title} ${(asset.tags || []).join(" ")}`.toLowerCase();
+    const haystack = `${asset.title} ${(asset.tags || []).join(" ")} ${asset.note || ""}`.toLowerCase();
     const matchesQuery = !query || haystack.includes(query);
     return matchesType && matchesQuery;
   });
@@ -75,6 +76,7 @@ function renderAssets() {
     fragment.querySelector(".asset-title").textContent = asset.title;
     fragment.querySelector(".asset-type").textContent = asset.type.toUpperCase();
     fragment.querySelector(".asset-meta").textContent = `업데이트: ${asset.updatedAt || "-"}`;
+    fragment.querySelector(".shared-note").textContent = asset.note || "등록된 팀 메모가 없습니다.";
 
     const openLink = fragment.querySelector(".open-link");
     openLink.href = asset.path;
@@ -85,6 +87,20 @@ function renderAssets() {
       span.className = "tag";
       span.textContent = `#${tag}`;
       tagList.appendChild(span);
+    });
+
+    const memoInput = fragment.querySelector(".memo-input");
+    const memoSave = fragment.querySelector(".memo-save");
+    const memoStatus = fragment.querySelector(".memo-status");
+    const savedMemo = getMemo(asset.id);
+    memoInput.value = savedMemo;
+
+    memoSave.addEventListener("click", () => {
+      saveMemo(asset.id, memoInput.value);
+      memoStatus.textContent = "저장됨";
+      setTimeout(() => {
+        memoStatus.textContent = "";
+      }, 1200);
     });
 
     renderPreview(asset, preview);
@@ -122,4 +138,29 @@ function renderPreview(asset, container) {
   }
 
   container.innerHTML = '<p class="preview-error">지원하지 않는 타입</p>';
+}
+
+function getAllMemos() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(MEMO_STORAGE_KEY) || "{}");
+    return typeof parsed === "object" && parsed ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function getMemo(assetId) {
+  const memos = getAllMemos();
+  return memos[assetId] || "";
+}
+
+function saveMemo(assetId, memo) {
+  const memos = getAllMemos();
+  const trimmed = memo.trim();
+  if (trimmed) {
+    memos[assetId] = trimmed;
+  } else {
+    delete memos[assetId];
+  }
+  localStorage.setItem(MEMO_STORAGE_KEY, JSON.stringify(memos));
 }

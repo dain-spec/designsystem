@@ -46,6 +46,7 @@ asset-share-site/
 - `thumbnail`: 선택값 (없으면 빈 문자열)
 - `tags`: 문자열 배열
 - `updatedAt`: `YYYY-MM-DD`
+- `note`: 팀 공유 메모(사이트 카드에 표시)
 
 예시:
 
@@ -57,7 +58,8 @@ asset-share-site/
   "path": "./assets/json/sample-loader.json",
   "thumbnail": "",
   "tags": ["sample", "loader"],
-  "updatedAt": "2026-04-22"
+  "updatedAt": "2026-04-22",
+  "note": "팀 공유용 설명 메모"
 }
 ```
 
@@ -76,15 +78,16 @@ asset-share-site/
 
 ## 7) 배포 체크리스트
 
-- [ ] `assets/index.json` 문법 오류 없음
-- [ ] 새 에셋이 카드 목록에 표시됨
-- [ ] JSON은 애니메이션 재생됨 (실패 시 에러 문구 표시)
-- [ ] APNG는 이미지로 재생/노출됨
-- [ ] 모바일/데스크톱에서 레이아웃 정상
-- [ ] PR 머지 후 Pages URL에서 최신 항목 확인
+- `assets/index.json` 문법 오류 없음
+- 새 에셋이 카드 목록에 표시됨
+- JSON은 애니메이션 재생됨 (실패 시 에러 문구 표시)
+- APNG는 이미지로 재생/노출됨
+- 모바일/데스크톱에서 레이아웃 정상
+- PR 머지 후 Pages URL에서 최신 항목 확인
 
 ## 8) PR 체크리스트 (권장)
 
-- [ ] 파일 추가 + `assets/index.json` 동시 수정
-- [ ] `type`/`path`/`updatedAt` 값 확인
-- [ ] 로컬 미리보기 확인 후 PR 생성
+- 파일 추가 + `assets/index.json` 동시 수정
+- `type`/`path`/`updatedAt` 값 확인
+- 로컬 미리보기 확인 후 PR 생성
+
