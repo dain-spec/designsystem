@@ -1,4 +1,4 @@
-import { primitiveColors, semanticColors, type ColorGroup } from '../tokens/color'
+import { primitiveColors, primitiveOpacity, semanticColors, semanticAlpha, type ColorGroup } from '../tokens/color'
 import './Color.css'
 
 function PageTitle() {
@@ -19,11 +19,27 @@ function SectionHeading({ title, description }: { title: string; description: st
   )
 }
 
-function isLight(hex: string) {
-  const h = hex.replace('#', '')
-  const r = parseInt(h.slice(0, 2), 16)
-  const g = parseInt(h.slice(2, 4), 16)
-  const b = parseInt(h.slice(4, 6), 16)
+function isLight(value: string) {
+  let r = 255
+  let g = 255
+  let b = 255
+  let a = 1
+  const rgbaMatch = value.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/)
+  if (rgbaMatch) {
+    r = Number(rgbaMatch[1])
+    g = Number(rgbaMatch[2])
+    b = Number(rgbaMatch[3])
+    a = rgbaMatch[4] !== undefined ? Number(rgbaMatch[4]) : 1
+    // 패널 배경(#fafafa) 위에 얹었을 때의 실제 밝기를 계산합니다.
+    r = r * a + 250 * (1 - a)
+    g = g * a + 250 * (1 - a)
+    b = b * a + 250 * (1 - a)
+  } else {
+    const h = value.replace('#', '')
+    r = parseInt(h.slice(0, 2), 16)
+    g = parseInt(h.slice(2, 4), 16)
+    b = parseInt(h.slice(4, 6), 16)
+  }
   return (r * 299 + g * 587 + b * 114) / 1000 > 200
 }
 
@@ -70,11 +86,20 @@ export default function ColorPage() {
         </div>
       </section>
       <section className="ds-section">
+        <SectionHeading title="Opacity" description="검정/흰색 위에 알파를 적용한 오퍼시티 스케일입니다." />
+        <div className="ds-panel">
+          {primitiveOpacity.map((g) => (
+            <ColorGroupPanel key={g.name} group={g} />
+          ))}
+        </div>
+      </section>
+      <section className="ds-section">
         <SectionHeading title="Semantic" description="의미 단위로 매핑된 색상 토큰입니다. UI 구현 시 이 토큰을 사용합니다." />
         <div className="ds-panel">
           {semanticColors.map((g) => (
             <ColorGroupPanel key={g.name} group={g} />
           ))}
+          <ColorGroupPanel group={semanticAlpha} />
         </div>
       </section>
     </div>
