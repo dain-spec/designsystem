@@ -1,6 +1,8 @@
 .ds-shell {
   display: flex;
   min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
   text-align: left;
 }
 
