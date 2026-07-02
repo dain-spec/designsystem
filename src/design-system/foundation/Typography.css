@@ -1,0 +1,172 @@
+.ds-typography-page {
+  --ds-text-strong: #222222;
+  --ds-text-heading: #333333;
+  --ds-text-sub: #777777;
+  --ds-border: #ededed;
+  --ds-divider: #d3d3d3;
+  --ds-section-bg: #fafafa;
+  --ds-titlebar-bg: #f7f8fa;
+  --ds-highlight: rgba(70, 74, 255, 0.1);
+  --ds-guide: #e71825;
+  --ds-core-accent: #105aff;
+
+  background: #ffffff;
+  color: var(--ds-text-strong);
+  text-align: left;
+}
+
+.ds-page-title {
+  background: var(--ds-titlebar-bg);
+  padding: 12px 40px;
+}
+
+.ds-page-title h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--ds-text-strong);
+}
+
+.ds-page-title p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ds-text-sub);
+  letter-spacing: -0.5px;
+}
+
+.ds-section {
+  padding: 40px;
+}
+
+.ds-section-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--ds-text-heading);
+}
+
+.ds-section-heading p {
+  margin: 6px 0 20px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--ds-text-sub);
+  letter-spacing: -0.5px;
+}
+
+.ds-panel {
+  background: var(--ds-section-bg);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* Typeface section */
+.ds-typeface-panel {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.ds-typeface-sample-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.ds-typeface-sample {
+  background: var(--ds-highlight);
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-typeface-sample span {
+  color: var(--ds-text-strong);
+  white-space: pre;
+}
+
+.ds-typeface-guide-w {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  height: 1px;
+  background: var(--ds-guide);
+}
+
+.ds-typeface-guide-h {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -14px;
+  width: 1px;
+  background: var(--ds-guide);
+}
+
+.ds-guide-label {
+  position: absolute;
+  font-size: 12px;
+  color: var(--ds-guide);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.ds-guide-label--top {
+  right: 0;
+  bottom: -40px;
+}
+
+.ds-guide-label--right {
+  left: calc(100% + 24px);
+  top: 24px;
+}
+
+/* Style rows (Heading / Body) */
+.ds-style-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.ds-style-row:last-child {
+  border-bottom: none;
+}
+
+.ds-style-row__sample {
+  color: var(--ds-text-heading);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 0 auto;
+}
+
+.ds-style-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-size: 12px;
+  color: var(--ds-text-heading);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.ds-style-row__name {
+  font-weight: 400;
+}
+
+.ds-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--ds-divider);
+}
+
+.ds-core-badge {
+  font-weight: 700;
+  color: var(--ds-core-accent);
+}

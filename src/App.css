@@ -1,0 +1,54 @@
+.ds-shell {
+  display: flex;
+  min-height: 100vh;
+  text-align: left;
+}
+
+.ds-nav {
+  width: 220px;
+  flex: 0 0 220px;
+  border-right: 1px solid #ededed;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.ds-nav__brand {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 24px;
+}
+
+.ds-nav__group {
+  font-size: 12px;
+  font-weight: 700;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+
+.ds-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ds-nav__item {
+  font-size: 14px;
+  color: #555555;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: default;
+}
+
+.ds-nav__item--active {
+  background: #f0f1ff;
+  color: #464aff;
+  font-weight: 700;
+}
+
+.ds-content {
+  flex: 1;
+  min-width: 0;
+}
