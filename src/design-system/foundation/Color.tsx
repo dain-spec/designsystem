@@ -88,9 +88,7 @@ export default function ColorPage() {
       <section className="ds-section">
         <SectionHeading title="Opacity" description="검정/흰색 위에 알파를 적용한 오퍼시티 스케일입니다." />
         <div className="ds-panel">
-          {primitiveOpacity.map((g) => (
-            <ColorGroupPanel key={g.name} group={g} />
-          ))}
+          <ColorGroupPanel group={primitiveOpacity} />
         </div>
       </section>
       <section className="ds-section">

@@ -121,34 +121,25 @@ export const primitiveColors: ColorGroup[] = [
   },
 ]
 
-// 검정/흰색 위에 알파를 적용한 오퍼시티 스케일입니다.
-// 참고: Figma 원본에서 White 600~1000 구간이 모두 16%로 동일하게 들어있어 확인이 필요합니다.
-export const primitiveOpacity: ColorGroup[] = [
-  {
-    name: 'Opacity Black',
-    swatches: [
-      { name: '0', value: 'rgba(0, 0, 0, 0.03)' },
-      { name: '25', value: 'rgba(0, 0, 0, 0.06)' },
-      { name: '50', value: 'rgba(0, 0, 0, 0.16)' },
-      { name: '100', value: 'rgba(0, 0, 0, 0.4)' },
-      { name: '150', value: 'rgba(0, 0, 0, 0.6)' },
-      { name: '200', value: 'rgba(0, 0, 0, 0.8)' },
-    ],
-  },
-  {
-    name: 'Opacity White',
-    swatches: [
-      { name: '300', value: 'rgba(255, 255, 255, 0.03)' },
-      { name: '400', value: 'rgba(255, 255, 255, 0.06)' },
-      { name: '500', value: 'rgba(255, 255, 255, 0.16)' },
-      { name: '600', value: 'rgba(255, 255, 255, 0.16)' },
-      { name: '700', value: 'rgba(255, 255, 255, 0.16)' },
-      { name: '800', value: 'rgba(255, 255, 255, 0.16)' },
-      { name: '900', value: 'rgba(255, 255, 255, 0.16)' },
-      { name: '1000', value: 'rgba(255, 255, 255, 0.16)' },
-    ],
-  },
-]
+// 검정/흰색 위에 알파를 적용한 오퍼시티 스케일입니다. 스와치 이름은 Figma 레이어명과 동일합니다.
+export const primitiveOpacity: ColorGroup = {
+  name: 'Opacity',
+  swatches: [
+    { name: 'black3', value: 'rgba(0, 0, 0, 0.03)' },
+    { name: 'black6', value: 'rgba(0, 0, 0, 0.06)' },
+    { name: 'black16', value: 'rgba(0, 0, 0, 0.16)' },
+    { name: 'black40', value: 'rgba(0, 0, 0, 0.4)' },
+    { name: 'black60', value: 'rgba(0, 0, 0, 0.6)' },
+    { name: 'black80', value: 'rgba(0, 0, 0, 0.8)' },
+    { name: 'white3', value: 'rgba(255, 255, 255, 0.03)' },
+    { name: 'white6', value: 'rgba(255, 255, 255, 0.06)' },
+    { name: 'white16', value: 'rgba(255, 255, 255, 0.16)' },
+    { name: 'white40', value: 'rgba(255, 255, 255, 0.4)' },
+    { name: 'white60', value: 'rgba(255, 255, 255, 0.6)' },
+    { name: 'white80', value: 'rgba(255, 255, 255, 0.8)' },
+    { name: 'blue6', value: 'rgba(16, 90, 255, 0.06)' },
+  ],
+}
 
 export const semanticColors: ColorGroup[] = [
   {
