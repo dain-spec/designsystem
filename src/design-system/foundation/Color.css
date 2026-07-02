@@ -1,0 +1,58 @@
+.ds-color-group {
+  margin-bottom: 24px;
+}
+
+.ds-color-group:last-child {
+  margin-bottom: 0;
+}
+
+.ds-color-group__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555555;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.ds-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.ds-swatch {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ededed;
+}
+
+.ds-swatch__color {
+  height: 56px;
+  display: flex;
+  align-items: flex-end;
+  padding: 6px 8px;
+}
+
+.ds-swatch__name {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ds-swatch__meta {
+  background: #ffffff;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ds-swatch__value {
+  font-size: 11px;
+  color: #555555;
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+.ds-swatch__ref {
+  font-size: 10px;
+  color: #999999;
+}

@@ -39,7 +39,11 @@
   color: #555555;
   padding: 8px 10px;
   border-radius: 6px;
-  cursor: default;
+  cursor: pointer;
+}
+
+.ds-nav__item:hover {
+  background: #f7f8fa;
 }
 
 .ds-nav__item--active {
