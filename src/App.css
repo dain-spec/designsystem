@@ -58,3 +58,11 @@
   flex: 1;
   min-width: 0;
 }
+
+@media (max-width: 1279px) {
+  .ds-nav {
+    width: 180px;
+    flex-basis: 180px;
+    padding: 20px 12px;
+  }
+}

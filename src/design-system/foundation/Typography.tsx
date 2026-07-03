@@ -33,8 +33,8 @@ function TypefaceSection() {
               style={{
                 fontFamily,
                 fontWeight: typeface.fontWeight,
-                fontSize: typeface.fontSize,
-                lineHeight: `${typeface.lineHeight}px`,
+                fontSize: `clamp(28px, 6vw, ${typeface.fontSize}px)`,
+                lineHeight: 1.5,
                 letterSpacing: typeface.letterSpacing,
               }}
             >
@@ -86,8 +86,8 @@ function StyleRow({
         <span>{weights.join(' / ')}</span>
         <span className="ds-divider" />
         <span>{fontSize}px</span>
-        <span className="ds-divider" />
-        <span>{usage}</span>
+        <span className="ds-divider ds-style-row__usage" />
+        <span className="ds-style-row__usage">{usage}</span>
         {isCoreSize && (
           <>
             <span className="ds-divider" />
