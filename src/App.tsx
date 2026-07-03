@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import TypographyPage from './design-system/foundation/Typography'
 import ColorPage from './design-system/foundation/Color'
+import ScalePage from './design-system/foundation/Scale'
 import './App.css'
 
 const pages = {
   Typography: TypographyPage,
   Color: ColorPage,
+  Scale: ScalePage,
 } as const
 
 type PageName = keyof typeof pages
