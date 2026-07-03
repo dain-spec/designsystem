@@ -45,11 +45,9 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 8px;
-  height: 8px;
   background: rgba(113, 155, 252, 0.4);
   border: 1px solid #447cfc;
-  border-radius: 4px;
+  border-radius: 50%;
 }
 
 .ds-scale-gap-bar {

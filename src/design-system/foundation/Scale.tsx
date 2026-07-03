@@ -19,12 +19,15 @@ function SectionHeading({ title, description }: { title: string; description: st
   )
 }
 
+const RADIUS_BOX_SIZE = 60
+
 function RadiusItem({ name, px }: ScaleItem) {
+  const dotSize = Math.min(px * 2, RADIUS_BOX_SIZE)
   return (
     <div className="ds-scale-item">
       <div className="ds-scale-item__demo">
         <div className="ds-scale-radius-box" style={{ borderRadius: px }}>
-          <div className="ds-scale-radius-dot" />
+          <div className="ds-scale-radius-dot" style={{ width: dotSize, height: dotSize }} />
         </div>
       </div>
       <span className="ds-scale-item__label">
