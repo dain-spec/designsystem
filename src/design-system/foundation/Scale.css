@@ -34,10 +34,22 @@
 }
 
 .ds-scale-radius-box {
+  position: relative;
   width: 60px;
   height: 60px;
   background: #f7f8fa;
   border: 1px solid #989898;
+}
+
+.ds-scale-radius-dot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(113, 155, 252, 0.4);
+  border: 1px solid #447cfc;
+  border-radius: 4px;
 }
 
 .ds-scale-gap-bar {

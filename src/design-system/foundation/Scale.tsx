@@ -23,7 +23,9 @@ function RadiusItem({ name, px }: ScaleItem) {
   return (
     <div className="ds-scale-item">
       <div className="ds-scale-item__demo">
-        <div className="ds-scale-radius-box" style={{ borderRadius: px }} />
+        <div className="ds-scale-radius-box" style={{ borderRadius: px }}>
+          <div className="ds-scale-radius-dot" />
+        </div>
       </div>
       <span className="ds-scale-item__label">
         radius/{name}({px}px)
