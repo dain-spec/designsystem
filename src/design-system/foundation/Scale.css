@@ -43,8 +43,10 @@
 
 .ds-scale-radius-dot {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  /* absolute 포지셔닝은 부모의 padding edge(테두리 안쪽) 기준이라
+     부모 border 두께(1px)만큼 보정해 테두리 바깥 모서리에 맞춥니다. */
+  right: -1px;
+  bottom: -1px;
   background: rgba(113, 155, 252, 0.4);
   border: 1px solid #447cfc;
   border-radius: 50%;
