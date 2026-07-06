@@ -52,10 +52,22 @@
   border-radius: 50%;
 }
 
+.ds-scale-gap-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.ds-scale-gap-block {
+  width: 36px;
+  height: 12px;
+  background: #e3e3e3;
+  flex: 0 0 auto;
+}
+
 .ds-scale-gap-bar {
   height: 20px;
-  background: linear-gradient(90deg, #719bfc66, #719bfc66);
-  border: 1px dashed #447cfc;
+  background: rgba(113, 155, 252, 0.4);
+  flex: 0 0 auto;
 }
 
 .ds-scale-padding-box {

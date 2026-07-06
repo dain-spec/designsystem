@@ -41,7 +41,11 @@ function GapItem({ name, px }: ScaleItem) {
   return (
     <div className="ds-scale-item">
       <div className="ds-scale-item__demo">
-        <div className="ds-scale-gap-bar" style={{ width: 60 + px }} />
+        <div className="ds-scale-gap-wrap">
+          <div className="ds-scale-gap-block" />
+          <div className="ds-scale-gap-bar" style={{ width: px }} />
+          <div className="ds-scale-gap-block" />
+        </div>
       </div>
       <span className="ds-scale-item__label">
         gap/{name}({px}px)
