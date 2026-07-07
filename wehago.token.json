@@ -638,13 +638,6 @@
           },
           "$type": "color",
           "$value": "#929292"
-        },
-        "30 2": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "color",
-          "$value": "#fcfcfc"
         }
       }
     }
