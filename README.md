@@ -13,4 +13,3 @@ npm run dev
 
 - `src/design-system/tokens` — Figma에서 추출한 디자인 토큰
 - `src/design-system/foundation` — Foundation 페이지 (Typography 등)
-- `token.json` — Figma Design Tokens export (색상 등 primitive 토큰)
