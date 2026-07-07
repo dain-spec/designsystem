@@ -4,10 +4,6 @@
   gap: 16px;
 }
 
-.ds-scale-grid--size {
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-}
-
 /* Gap/Padding은 8개 항목을 한 줄로 고정 배치합니다. */
 .ds-scale-grid--row {
   grid-template-columns: repeat(8, minmax(0, 1fr));
@@ -95,15 +91,29 @@
   border-color: rgba(113, 155, 252, 0.4);
 }
 
-.ds-scale-item--size {
-  justify-content: flex-end;
+/* Size는 세로로 쌓인 행 목록이며, 왼쪽 고정폭 바의 높이가 값에 따라 커집니다. */
+.ds-scale-size-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ds-scale-size-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .ds-scale-size-bar {
-  width: 100%;
-  max-width: 140px;
-  background: #719bfc66;
-  border: 1px solid #447cfc;
+  width: 500px;
+  max-width: 60%;
+  flex: 0 0 auto;
+  background: rgba(113, 155, 252, 0.4);
+}
+
+.ds-scale-size-label {
+  text-align: left;
+  white-space: nowrap;
 }
 
 .ds-scale-shadow-list {

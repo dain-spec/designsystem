@@ -71,9 +71,9 @@ function PaddingItem({ name, px }: ScaleItem) {
 
 function SizeItem({ name, px }: ScaleItem) {
   return (
-    <div className="ds-scale-item ds-scale-item--size">
+    <div className="ds-scale-size-row">
       <div className="ds-scale-size-bar" style={{ height: px }} />
-      <span className="ds-scale-item__label">
+      <span className="ds-scale-item__label ds-scale-size-label">
         size/{name}({px}px)
       </span>
     </div>
@@ -110,7 +110,7 @@ export default function ScalePage() {
       </section>
       <section className="ds-section">
         <SectionHeading title="Size" description="컴포넌트 높이/너비 스케일입니다." />
-        <div className="ds-panel ds-scale-grid ds-scale-grid--size">
+        <div className="ds-panel ds-scale-size-list">
           {sizeScale.map((item) => (
             <SizeItem key={item.name} {...item} />
           ))}
