@@ -146,6 +146,7 @@ export const semanticColors: ColorGroup[] = [
     name: 'Primary',
     swatches: [
       { name: '25', value: '#eff4ff' },
+      { name: '50', value: '#e7efff' },
       { name: '100', value: '#c3d7ff' },
       { name: '200', value: '#97baff' },
       { name: '300', value: '#719bfc' },
