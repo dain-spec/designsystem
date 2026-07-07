@@ -1,0 +1,30 @@
+.dt-demo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.dt-demo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.dt-demo-col__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555555;
+}
+
+.dt-demo-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dt-demo-row__label {
+  font-size: 12px;
+  color: #777777;
+}

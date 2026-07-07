@@ -2,13 +2,20 @@ import { useState } from 'react'
 import TypographyPage from './design-system/foundation/Typography'
 import ColorPage from './design-system/foundation/Color'
 import ScalePage from './design-system/foundation/Scale'
+import DateTimeInputDemo from './design-system/components/DateTimeInputDemo'
 import './App.css'
 
-const pages = {
+const foundationPages = {
   Typography: TypographyPage,
   Color: ColorPage,
   Scale: ScalePage,
 } as const
+
+const componentPages = {
+  DateTimeInput: DateTimeInputDemo,
+} as const
+
+const pages = { ...foundationPages, ...componentPages }
 
 type PageName = keyof typeof pages
 
@@ -23,7 +30,19 @@ function App() {
         <nav>
           <div className="ds-nav__group">Foundation</div>
           <ul>
-            {(Object.keys(pages) as PageName[]).map((name) => (
+            {(Object.keys(foundationPages) as PageName[]).map((name) => (
+              <li
+                key={name}
+                className={`ds-nav__item${active === name ? ' ds-nav__item--active' : ''}`}
+                onClick={() => setActive(name)}
+              >
+                {name}
+              </li>
+            ))}
+          </ul>
+          <div className="ds-nav__group">Components</div>
+          <ul>
+            {(Object.keys(componentPages) as PageName[]).map((name) => (
               <li
                 key={name}
                 className={`ds-nav__item${active === name ? ' ds-nav__item--active' : ''}`}

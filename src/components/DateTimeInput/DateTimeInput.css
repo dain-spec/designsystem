@@ -1,0 +1,86 @@
+.dt-input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 190px;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  letter-spacing: -0.5px;
+  color: #333333;
+}
+
+.dt-input--medium {
+  height: 32px;
+  padding: 0 10px;
+}
+
+.dt-input--small {
+  height: 28px;
+  padding: 0 8px;
+}
+
+.dt-input__field {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+}
+
+.dt-input--medium .dt-input__field {
+  font-size: 14px;
+}
+
+.dt-input--small .dt-input__field {
+  font-size: 13px;
+}
+
+.dt-input__field::placeholder {
+  color: #989898;
+}
+
+.dt-input__icon {
+  flex: 0 0 auto;
+  display: flex;
+  color: #777777;
+  margin-left: 8px;
+}
+
+.dt-input:focus-within,
+.dt-input--focused {
+  border-color: #222222;
+}
+
+.dt-input--focused .dt-input__field {
+  color: #000000;
+  font-weight: 500;
+}
+
+.dt-input--completed .dt-input__field {
+  color: #333333;
+}
+
+.dt-input--disabled {
+  background: #f4f4f4;
+  border-color: #ededed;
+  color: #b4b4b4;
+  cursor: not-allowed;
+}
+
+.dt-input--disabled .dt-input__field::placeholder {
+  color: #c6c6c6;
+}
+
+.dt-input--disabled .dt-input__icon {
+  color: #c6c6c6;
+}
+
+.dt-input__field:disabled {
+  cursor: not-allowed;
+}

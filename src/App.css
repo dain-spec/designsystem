@@ -33,6 +33,11 @@
   text-transform: uppercase;
   letter-spacing: 0.4px;
   margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.ds-nav__group:first-child {
+  margin-top: 0;
 }
 
 .ds-nav ul {
