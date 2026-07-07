@@ -8,11 +8,17 @@
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
 
+/* Gap/Padding은 8개 항목을 한 줄로 고정 배치합니다. */
+.ds-scale-grid--row {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
 .ds-scale-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   background: #ffffff;
   border: 1px solid #ededed;
   border-radius: 8px;
@@ -31,6 +37,9 @@
   color: #333333;
   letter-spacing: -0.5px;
   text-align: center;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .ds-scale-radius-box {

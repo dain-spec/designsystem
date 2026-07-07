@@ -94,7 +94,7 @@ export default function ScalePage() {
       </section>
       <section className="ds-section">
         <SectionHeading title="Gap" description="요소 사이 간격 스케일입니다." />
-        <div className="ds-panel ds-scale-grid">
+        <div className="ds-panel ds-scale-grid ds-scale-grid--row">
           {gapScale.map((item) => (
             <GapItem key={item.name} {...item} />
           ))}
@@ -102,7 +102,7 @@ export default function ScalePage() {
       </section>
       <section className="ds-section">
         <SectionHeading title="Padding" description="내부 여백 스케일입니다." />
-        <div className="ds-panel ds-scale-grid">
+        <div className="ds-panel ds-scale-grid ds-scale-grid--row">
           {paddingScale.map((item) => (
             <PaddingItem key={item.name} {...item} />
           ))}
