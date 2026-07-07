@@ -58,8 +58,8 @@ function PaddingItem({ name, px }: ScaleItem) {
   return (
     <div className="ds-scale-item">
       <div className="ds-scale-item__demo">
-        <div className="ds-scale-padding-box" style={{ padding: px }}>
-          <div className="ds-scale-padding-inner" />
+        <div className="ds-scale-padding-box">
+          <div className="ds-scale-padding-ring" style={{ borderWidth: px }} />
         </div>
       </div>
       <span className="ds-scale-item__label">

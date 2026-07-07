@@ -71,16 +71,19 @@
 }
 
 .ds-scale-padding-box {
+  position: relative;
+  width: 60px;
+  height: 60px;
   background: #f7f8fa;
   border: 1px solid #989898;
-  display: inline-flex;
 }
 
-.ds-scale-padding-inner {
-  width: 24px;
-  height: 24px;
-  background: #719bfc66;
-  border: 1px solid #447cfc;
+.ds-scale-padding-ring {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: rgba(113, 155, 252, 0.4);
 }
 
 .ds-scale-item--size {
