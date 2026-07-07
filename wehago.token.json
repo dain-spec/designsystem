@@ -631,13 +631,6 @@
           },
           "$type": "color",
           "$value": "#fcfcfc"
-        },
-        "00": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "color",
-          "$value": "#929292"
         }
       }
     }
