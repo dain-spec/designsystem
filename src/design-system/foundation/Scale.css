@@ -1,12 +1,14 @@
+/* Figma에서는 항목들이 패널 폭에 늘어나지 않고 고정 폭으로 중앙 정렬되어 있습니다. */
 .ds-scale-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(7, minmax(0, 140px));
+  justify-content: center;
   gap: 16px;
 }
 
 /* Gap/Padding은 8개 항목을 한 줄로 고정 배치합니다. */
 .ds-scale-grid--row {
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 140px));
 }
 
 .ds-scale-item {
