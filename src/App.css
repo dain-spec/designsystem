@@ -28,8 +28,8 @@
 
 .ds-nav__group {
   font-size: 12px;
-  font-weight: 700;
-  color: #999999;
+  font-weight: 600;
+  color: #6b6e76;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   margin-bottom: 8px;
@@ -47,8 +47,10 @@
 }
 
 .ds-nav__item {
+  position: relative;
   font-size: 14px;
-  color: #555555;
+  font-weight: 400;
+  color: #505258;
   padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
@@ -59,9 +61,20 @@
 }
 
 .ds-nav__item--active {
-  background: #f0f1ff;
-  color: #464aff;
-  font-weight: 700;
+  background: #e9f2fe;
+  color: #1868db;
+}
+
+.ds-nav__item--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 12px;
+  border-radius: 1px;
+  background: #1868db;
 }
 
 .ds-content {
