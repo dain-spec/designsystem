@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { primitiveColors, primitiveOpacity, semanticColors, semanticAlpha, type ColorGroup } from '../tokens/color'
 import './Color.css'
 
@@ -43,6 +44,57 @@ function isLight(value: string) {
   return (r * 299 + g * 587 + b * 114) / 1000 > 200
 }
 
+function contrastColor(value: string) {
+  return isLight(value) ? '#000000' : '#ffffff'
+}
+
+// rgba(r, g, b, a) -> "#RRGGBB, N%", Figma의 오퍼시티 라벨 표기와 동일한 형식입니다.
+function formatColorLabel(value: string) {
+  const rgbaMatch = value.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/)
+  if (!rgbaMatch) return value.toUpperCase()
+  const [, r, g, b, a] = rgbaMatch
+  const hex = [r, g, b]
+    .map((c) => Number(c).toString(16).padStart(2, '0'))
+    .join('')
+    .toUpperCase()
+  const pct = Math.round(Number(a ?? 1) * 100)
+  return `#${hex}, ${pct}%`
+}
+
+// Figma 원본처럼 카드 구분 없이 이어붙인 색상 띠로 렌더링합니다.
+function PrimitiveStrip({ swatches, style }: { swatches: { name: string; value: string }[]; style?: CSSProperties }) {
+  return (
+    <div className="ds-prim-strip" style={style}>
+      {swatches.map((s) => (
+        <div key={s.name} className="ds-prim-cell" style={{ background: s.value, color: contrastColor(s.value) }}>
+          <span className="ds-prim-cell__name">{s.name}</span>
+          <span className="ds-prim-cell__hex">{formatColorLabel(s.value)}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function PrimitiveHueGroup({ group }: { group: ColorGroup }) {
+  return <PrimitiveStrip swatches={group.swatches} />
+}
+
+function PrimitiveOpacityGroup({ group }: { group: ColorGroup }) {
+  const black = group.swatches.filter((s) => s.name.startsWith('black'))
+  const white = group.swatches.filter((s) => s.name.startsWith('white'))
+  const rest = group.swatches.filter((s) => !s.name.startsWith('black') && !s.name.startsWith('white'))
+  return (
+    <div className="ds-prim-opacity">
+      <div className="ds-color-group__label">{group.name}</div>
+      <div className="ds-prim-opacity-row">
+        <PrimitiveStrip swatches={black} style={{ flexGrow: black.length }} />
+        <PrimitiveStrip swatches={white} style={{ flexGrow: white.length }} />
+        <PrimitiveStrip swatches={rest} style={{ flexGrow: rest.length }} />
+      </div>
+    </div>
+  )
+}
+
 function Swatch({ name, value, ref }: { name: string; value: string; ref?: string }) {
   return (
     <div className="ds-swatch">
@@ -79,11 +131,11 @@ export default function ColorPage() {
       <PageTitle />
       <section className="ds-section">
         <SectionHeading title="Primitive" description="원시 색상 스케일입니다. 직접 사용하지 않고 semantic 토큰을 통해 참조합니다." />
-        <div className="ds-panel">
+        <div className="ds-panel ds-prim-panel">
           {primitiveColors.map((g) => (
-            <ColorGroupPanel key={g.name} group={g} />
+            <PrimitiveHueGroup key={g.name} group={g} />
           ))}
-          <ColorGroupPanel group={primitiveOpacity} />
+          <PrimitiveOpacityGroup group={primitiveOpacity} />
         </div>
       </section>
       <section className="ds-section">
