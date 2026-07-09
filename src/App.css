@@ -1,3 +1,27 @@
+.ds-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 71px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(11, 18, 14, 0.14);
+  display: flex;
+  align-items: center;
+}
+
+.ds-header__inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.48px;
+  color: #000000;
+  box-sizing: border-box;
+}
+
 .ds-shell {
   display: flex;
   min-height: 100vh;
@@ -13,17 +37,10 @@
   padding: 24px 16px;
   box-sizing: border-box;
   position: sticky;
-  top: 0;
+  top: 71px;
   align-self: flex-start;
-  height: 100vh;
+  height: calc(100vh - 71px);
   overflow-y: auto;
-}
-
-.ds-nav__brand {
-  font-size: 15px;
-  font-weight: 700;
-  color: #222222;
-  margin-bottom: 24px;
 }
 
 .ds-nav__group {
