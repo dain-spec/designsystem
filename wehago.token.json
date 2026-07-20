@@ -1526,6 +1526,39 @@
         },
         "$value": "{color.opacity.white40}",
         "$type": "color"
+      },
+      "alpha2-inverse": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "com.figma.hiddenFromPublishing": false
+        },
+        "$value": "{color.opacity.white6}",
+        "$type": "color"
+      },
+      "alpha5-inverse": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "com.figma.hiddenFromPublishing": false
+        },
+        "$value": "{color.opacity.white60}",
+        "$type": "color"
+      },
+      "alpha6-inverse": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "com.figma.hiddenFromPublishing": false
+        },
+        "$value": "{color.opacity.white80}",
+        "$type": "color"
       }
     },
     "gap": {
@@ -2435,7 +2468,7 @@
             ],
             "com.figma.hiddenFromPublishing": false
           },
-          "$value": "{color.neutral.25}",
+          "$value": "{color.secondary.0}",
           "$type": "color"
         },
         "inverse": {
@@ -2456,6 +2489,16 @@
             "com.figma.hiddenFromPublishing": false
           },
           "$value": "{alpha.alpha4}",
+          "$type": "color"
+        },
+        "subtle": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{color.neutral.25}",
           "$type": "color"
         }
       },
@@ -2681,7 +2724,7 @@
             ],
             "com.figma.hiddenFromPublishing": false
           },
-          "$value": "{color.neutral.25}",
+          "$value": "{color.gray.0}",
           "$type": "color"
         },
         "white": {
@@ -2692,6 +2735,26 @@
             "com.figma.hiddenFromPublishing": false
           },
           "$value": "{color.gray.0}",
+          "$type": "color"
+        },
+        "subtle-selected": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{color.secondary.700}",
+          "$type": "color"
+        },
+        "subtle": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{color.neutral.25}",
           "$type": "color"
         }
       },
@@ -2713,7 +2776,7 @@
             ],
             "com.figma.hiddenFromPublishing": false
           },
-          "$value": "{color.neutral.25}",
+          "$value": "{color.secondary.50}",
           "$type": "color"
         },
         "basic": {
@@ -2723,7 +2786,7 @@
             ],
             "com.figma.hiddenFromPublishing": false
           },
-          "$value": "{color.secondary.50}",
+          "$value": "{color.secondary.0}",
           "$type": "color"
         },
         "inverse": {
@@ -2764,6 +2827,16 @@
             "com.figma.hiddenFromPublishing": false
           },
           "$value": "{color.primary.25}",
+          "$type": "color"
+        },
+        "subtler": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{color.neutral.25}",
           "$type": "color"
         }
       }
