@@ -232,12 +232,15 @@ export const semanticAlpha: ColorGroup = {
   swatches: [
     { name: 'alpha1', value: 'rgba(0, 0, 0, 0.03)' },
     { name: 'alpha2', value: 'rgba(0, 0, 0, 0.06)' },
+    { name: 'alpha2-inverse', value: 'rgba(255, 255, 255, 0.06)' },
     { name: 'alpha3', value: 'rgba(0, 0, 0, 0.16)' },
     { name: 'alpha3-inverse', value: 'rgba(255, 255, 255, 0.16)' },
     { name: 'alpha4', value: 'rgba(0, 0, 0, 0.4)' },
     { name: 'alpha4-inverse', value: 'rgba(255, 255, 255, 0.4)' },
     { name: 'alpha5', value: 'rgba(0, 0, 0, 0.6)' },
+    { name: 'alpha5-inverse', value: 'rgba(255, 255, 255, 0.6)' },
     { name: 'alpha6', value: 'rgba(0, 0, 0, 0.8)' },
+    { name: 'alpha6-inverse', value: 'rgba(255, 255, 255, 0.8)' },
     { name: 'alpha2-primary', value: 'rgba(16, 90, 255, 0.06)' },
   ],
 }
