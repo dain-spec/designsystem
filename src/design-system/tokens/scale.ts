@@ -13,16 +13,16 @@ export const radiusScale: ScaleItem[] = [
 ]
 
 export const gapScale: ScaleItem[] = [
-  { name: '1', px: 4 },
-  { name: '2', px: 6 },
-  { name: '3', px: 8 },
-  { name: '4', px: 12 },
-  { name: '5', px: 16 },
-  { name: '6', px: 20 },
-  { name: '7', px: 24 },
-  { name: '8', px: 28 },
-  { name: '9', px: 32 },
-  { name: '10', px: 36 },
+  { name: '1', px: 2 },
+  { name: '2', px: 4 },
+  { name: '3', px: 6 },
+  { name: '4', px: 8 },
+  { name: '5', px: 12 },
+  { name: '6', px: 16 },
+  { name: '7', px: 20 },
+  { name: '8', px: 24 },
+  { name: '9', px: 28 },
+  { name: '10', px: 32 },
 ]
 
 export const paddingScale: ScaleItem[] = [
