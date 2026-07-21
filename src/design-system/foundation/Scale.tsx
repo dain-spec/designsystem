@@ -94,7 +94,10 @@ export default function ScalePage() {
       </section>
       <section className="ds-section">
         <SectionHeading title="Gap" description="요소 사이 간격 스케일입니다." />
-        <div className="ds-panel ds-scale-grid ds-scale-grid--row">
+        <div
+          className="ds-panel ds-scale-grid ds-scale-grid--row"
+          style={{ gridTemplateColumns: `repeat(${gapScale.length}, minmax(0, 140px))` }}
+        >
           {gapScale.map((item) => (
             <GapItem key={item.name} {...item} />
           ))}
