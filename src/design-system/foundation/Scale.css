@@ -23,8 +23,8 @@
   padding: 16px 8px;
 }
 
-/* Figma에는 카드 배경 없이 radius 도형만 패널 위에 바로 놓여 있습니다. */
-.ds-scale-item--radius {
+/* Figma에는 카드 배경 없이 도형이 패널 위에 바로 놓여 있습니다. */
+.ds-scale-item--bare {
   background: transparent;
   border: none;
   padding: 16px 8px 0;
