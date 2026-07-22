@@ -34,6 +34,7 @@ export const paddingScale: ScaleItem[] = [
   { name: '6', px: 20 },
   { name: '7', px: 24 },
   { name: '8', px: 28 },
+  { name: '9', px: 32 },
 ]
 
 export const sizeScale: ScaleItem[] = [

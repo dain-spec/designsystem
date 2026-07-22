@@ -105,7 +105,10 @@ export default function ScalePage() {
       </section>
       <section className="ds-section">
         <SectionHeading title="Padding" description="내부 여백 스케일입니다." />
-        <div className="ds-panel ds-scale-grid ds-scale-grid--row">
+        <div
+          className="ds-panel ds-scale-grid ds-scale-grid--row"
+          style={{ gridTemplateColumns: `repeat(${paddingScale.length}, minmax(0, 140px))` }}
+        >
           {paddingScale.map((item) => (
             <PaddingItem key={item.name} {...item} />
           ))}
