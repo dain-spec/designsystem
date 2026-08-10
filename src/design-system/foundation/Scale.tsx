@@ -1,4 +1,4 @@
-import { gapScale, paddingScale, radiusScale, shadowLevels, sizeScale, type ScaleItem } from '../tokens/scale'
+import { gapScale, paddingScale, radiusScale, shadowLevels, sizeScale, type ScaleItem, type ShadowLevel } from '../tokens/scale'
 import './Scale.css'
 
 function PageTitle() {
@@ -69,6 +69,20 @@ function PaddingItem({ name, px }: ScaleItem) {
   )
 }
 
+function ShadowItem({ name, x, y, blur, spread, color }: ShadowLevel) {
+  return (
+    <div className="ds-scale-shadow-item">
+      <div
+        className="ds-scale-shadow-box"
+        style={{ boxShadow: `${x}px ${y}px ${blur}px ${spread}px ${color}` }}
+      />
+      <span className="ds-scale-item__label">
+        {name}({x}, {y}, {blur}, {spread})
+      </span>
+    </div>
+  )
+}
+
 function SizeItem({ name, px }: ScaleItem) {
   return (
     <div className="ds-scale-size-row">
@@ -123,16 +137,11 @@ export default function ScalePage() {
         </div>
       </section>
       <section className="ds-section">
-        <SectionHeading
-          title="Shadow"
-          description="Figma 플러그인이 effect(그림자) 값을 지원하지 않아 레벨 이름만 표시합니다. 실제 blur/offset/color 값은 Figma에서 직접 확인해주세요."
-        />
-        <div className="ds-panel">
-          <ul className="ds-scale-shadow-list">
-            {shadowLevels.map((level) => (
-              <li key={level}>{level}</li>
-            ))}
-          </ul>
+        <SectionHeading title="Shadow" description="그림자 스케일입니다. (x, y, blur, spread)" />
+        <div className="ds-panel ds-scale-shadow-row">
+          {shadowLevels.map((level) => (
+            <ShadowItem key={level.name} {...level} />
+          ))}
         </div>
       </section>
     </div>
