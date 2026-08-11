@@ -37,7 +37,7 @@ Foundations 위에서 조합되는 최소 단위 UI 컴포넌트입니다. Figma
 | `SelectControl` | `ToggleSwitch`, `CheckboxSingle`, `Checkbox`, `Radio` — Size × State × Select(On/Off/Indeterminate) |
 | `Button` | `Button`(Primary/Secondary/Tertiary × Large/Medium/Small/XSmall × Default/Hovered/Disabled), `TextButton`, `ButtonIcon`, `Icon`, `GhostButton` |
 
-저장소 구현: `InputField`, `Dropdown`(트리거 필드), `TextArea`, `Search`(Searchbar/SearchbarFilter), `SelectControl`(ToggleSwitch/CheckboxSingle/Checkbox/Radio), `Button`(Primary/Secondary/Tertiary)이 `src/components/`에 구현되어 있고, `src/design-system/components/TypeBaseDemo.tsx`에서 전체 변형을 확인할 수 있습니다. `TextButton`/`ButtonIcon`/`Icon`/`GhostButton`, `DropdownField`의 실제 열림 메뉴, `DateTimeInput`을 제외한 나머지는 아직 구현 전입니다 (`DateTimeInput`은 별도로 `src/components/DateTimeInput/DateTimeInput.tsx`에 기존 구현이 있습니다).
+저장소 구현: `InputField`, `Dropdown`(트리거 필드 + 열림 메뉴), `TextArea`, `Search`(Searchbar/SearchbarFilter), `SelectControl`(ToggleSwitch/CheckboxSingle/Checkbox/Radio), `Button`(Primary/Secondary/Tertiary)이 `src/components/`에 구현되어 있고, `src/design-system/components/TypeBaseDemo.tsx`에서 전체 변형을 확인할 수 있습니다. `TextButton`/`ButtonIcon`/`Icon`/`GhostButton`, `DateTimeInput`을 제외한 나머지는 아직 구현 전입니다 (`DateTimeInput`은 별도로 `src/components/DateTimeInput/DateTimeInput.tsx`에 기존 구현이 있습니다).
 
 > `InputField`/`Dropdown`/`Search`는 Figma에 이미 다른(존재하지 않는) 코드 경로로 Code Connect가 걸려 있어 `get_design_context`가 실제 스타일 대신 자리표시자만 반환했습니다. 이 3개는 스크린샷과 `component/Light` 토큰(`input.*`, `text.*`, `icon.*`)을 근거로 이식했고, `Button`의 Medium/Small/XSmall 크기별 padding은 Large(Figma에서 직접 확인)를 기준으로 scale 토큰에 맞춰 비례 추정한 값이라 Figma 실측치와는 다를 수 있습니다.
 
@@ -64,6 +64,19 @@ Components를 여러 개 조합해 실제 화면 단위로 구성한 상위 레�
 
 `컴포넌트` 섹션은 위 패턴들을 Light/Dark 모드별로 재구성한 명세 섹션입니다.
 
+### 3-1. `--Type-Form` 구성 요소
+
+Figma 노드 `16160:26067`. `--Type-Base` 컴포넌트를 조합한 실제 폼 패턴입니다.
+
+| 요소 | 설명 | 저장소 구현 |
+|---|---|---|
+| `Dropdown`의 `DropdownMenu` | 열림 목록(리스트 아이템 32px, 스크롤) | 구현됨 — `Dropdown`의 `options`/`onSelect` prop |
+| `Picker`의 `DatePicker` | 월 이동 헤더 + 날짜 그리드, 일요일 빨강, 오늘 강조, `DefaultButton`(취소/확인 푸터) | 구현됨 — `src/components/DatePicker/` |
+| `Picker`의 `DateRangePicker` | 달력 2개(당월/익월) + 구분선 + "선택기간 N일" 푸터 | 구현됨 — `src/components/DateRangePicker/` |
+| `Picker`의 `TimePicker`, `DateTimePicker` | — | 미구현 — Figma Code Connect가 걸려 있어 `get_design_context`가 실제 코드를 반환하지 않음 (재조사 필요) |
+| `Search`의 `SearchbarMenu`, `SearchbarFilterView`, `Atomic/Searchbar/_*` | 검색 제안 목록, 필터 뷰 | 미구현 — 일부만 Code Connect 자리표시자로 확인, 실제 레이아웃 미확인 |
+| `Input`(Atomic), `DateTimeInput`/`Dropdown`/`TextArea`/`CheckboxLabel`/`RadioLabel`의 `*Label` 래퍼 | 라벨 + 컴포넌트 조합 | 미구현 |
+
 ## 4. Screens & Reference
 
 패턴을 실제로 적용한 화면과, 아직 정식 카테고리로 정리되지 않은 리서치/작업용 프레임입니다.
@@ -84,7 +97,8 @@ Components를 여러 개 조합해 실제 화면 단위로 구성한 상위 레�
 | `--Type-Base` (InputField/Dropdown/TextArea/Search/SelectControl/Button) | `src/components/{InputField,Dropdown,TextArea,SearchBar,ToggleSwitch,Checkbox,CheckboxSingle,Radio,Button}` | 구현됨 (필드 비주얼 기준, Dropdown 열림 메뉴·TextButton/ButtonIcon/Icon/GhostButton 제외) |
 | `--Type-Base`의 `DateTimeInput` | `src/components/DateTimeInput/DateTimeInput.tsx` | 구현됨 |
 | `Icon Library` (별도 파일 [Graphic Asset](https://www.figma.com/design/R6ZgOUWOgCZEgu38S8mhJl/Graphic-Asset?node-id=1866-6918)) | 없음 | 미착수 |
-| `--Type-Form` (DatePicker/DateRangePicker/DateTimePicker 등) | `src/components/DateTimeInput/DateTimeInput.tsx` | 일부 구현 (DateTimeInput만) |
+| `--Type-Form`의 `DropdownMenu`/`DatePicker`/`DateRangePicker` | `Dropdown`(options), `src/components/DatePicker/`, `src/components/DateRangePicker/` | 구현됨 |
+| `--Type-Form`의 `TimePicker`/`DateTimePicker`/Searchbar 열림 메뉴/`*Label` 래퍼 | 없음 | 미착수 (Figma 실제 코드 미확인) |
 | `--Type-Display`, `--Type-Feedback`, `--Type-Navi`, `--Type-Action` | 미구현 | 미착수 |
 | `컴포넌트` 섹션 (Light/Dark 명세) | 다크 테마 대응 미구현 | 미착수 |
 | `화면` (실제 스크린) | 해당 없음 (컴포넌트 단위 라이브러리) | 참고용 |
@@ -93,6 +107,6 @@ Components를 여러 개 조합해 실제 화면 단위로 구성한 상위 레�
 
 1. ~~`Design Token`(Figma) ↔ `wehago.token.json`을 기준으로 `tokens/` 폴더에 semantic/component 레벨 토큰 매핑 보강~~ — `scripts/generate-component-tokens.mjs`로 `component/Light`·`component/Dark`의 alias를 재귀적으로 풀어 `tokens/component.ts`를 자동 생성하도록 완료. `wehago.token.json`이 갱신되면 `npm run tokens:generate`로 재생성
 2. ~~`--Type-Base`의 InputField/Dropdown/TextArea/Search/SelectControl/Button부터 먼저 이식~~ — `src/components/`에 구현 완료 (`TypeBaseDemo`에서 확인 가능). Dropdown 열림 메뉴, TextButton/ButtonIcon/Icon/GhostButton, Button Medium/Small/XSmall 정확한 padding은 후속 확인 필요
-3. `--Type-Form`의 Searchbar, DatePicker류부터 순차적으로 `src/components`에 이식
+3. ~~`--Type-Form`의 Searchbar, DatePicker류부터 순차적으로 `src/components`에 이식~~ — `DropdownMenu`, `DatePicker`(+ 취소/확인 푸터), `DateRangePicker` 구현 완료(`TypeFormDemo`에서 확인 가능). `TimePicker`/`DateTimePicker`와 Searchbar의 열림 메뉴(`SearchbarMenu`/`SearchbarFilterView`)는 Figma에서 Code Connect 자리표시자만 반환되어 미구현 — 실제 컴포넌트를 골라 재조사 필요
 4. 컴포넌트 섹션의 Light/Dark 변형을 참고해 다크 테마 토큰 지원 검토
 5. `Icon Library`(Graphic Asset 파일)의 아이콘을 SVG 컴포넌트로 이식 — 640개 전량보다는 `--Type-Base`/`--Type-Form` 등에서 실제로 참조하는 아이콘부터 우선 추출

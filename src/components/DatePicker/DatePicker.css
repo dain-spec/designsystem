@@ -1,0 +1,178 @@
+.dp-card {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  width: fit-content;
+  background: #ffffff; /* surface/basic */
+  border: 1px solid #4a4a4a; /* input/border-focus */
+  border-radius: 8px; /* radius/small */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-level1 */
+  font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* MonthPanel: 헤더 내비게이션 + 달력 */
+.dp-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* gap/1 */
+  width: 186px;
+  padding: 12px; /* padding/5 */
+}
+
+.dp-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; /* gap/2 */
+  height: 18px;
+  padding: 0 16px; /* padding/6 */
+}
+
+.dp-panel__title {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333333; /* text/basic */
+  white-space: nowrap;
+}
+
+.dp-panel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #777777; /* icon/subtle */
+  cursor: pointer;
+}
+
+/* Calendar */
+.cal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cal__row {
+  display: flex;
+  height: 20px;
+}
+
+.cal__row--weekday {
+  height: 16px;
+}
+
+.cal__weekday {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #777777; /* text/subtle */
+}
+
+.cal__day {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  margin: 0 auto;
+  border: none;
+  background: transparent;
+  border-radius: 4px; /* radius/xxsmall */
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  color: #333333; /* text/basic */
+  cursor: pointer;
+}
+
+.cal__day--muted {
+  color: #989898; /* text/subtler */
+}
+
+.cal__day--sunday {
+  color: #fa4553; /* text/point */
+}
+
+.cal__day--sunday.cal__day--muted {
+  color: #fa4553;
+  opacity: 0.5;
+}
+
+.cal__day--today {
+  color: #105aff; /* text/primary */
+}
+
+.cal__day--inrange {
+  background: rgba(16, 90, 255, 0.06); /* action/select */
+}
+
+.cal__day--selected {
+  background: #105aff; /* action/primary */
+  color: #ffffff; /* text/basic-inverse */
+}
+
+.cal__day:hover:not(.cal__day--selected) {
+  background: rgba(0, 0, 0, 0.03); /* action/hover */
+}
+
+/* Footer: 취소/확인 */
+.dp-footer {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* gap/2 */
+  border-top: 1px solid #e1e1e1; /* border/subtle */
+  padding: 8px 12px; /* padding/4 padding/5 */
+}
+
+.dp-footer__spacer {
+  flex: 1;
+}
+
+.dp-footer__text {
+  flex: 1;
+  font-size: 13px;
+  color: #777777; /* text/subtle */
+}
+
+.dp-footer__text strong {
+  color: #333333; /* text/basic */
+  font-weight: 700;
+}
+
+.dp-footer__buttons {
+  display: flex;
+  gap: 2px; /* gap/1 */
+}
+
+.dp-btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 28px;
+  padding: 0 8px; /* padding/4 */
+  border-radius: 6px; /* radius/xsmall */
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+.dp-btn--cancel {
+  background: #ffffff; /* button/fill */
+  border: 1px solid #b4b4b4; /* button/tertiary-border */
+  color: #333333; /* text/basic */
+}
+
+.dp-btn--confirm {
+  background: #105aff; /* button/primary-fill */
+  border: 1px solid transparent;
+  color: #ffffff; /* text/basic-inverse */
+}

@@ -1,0 +1,10 @@
+.drp-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.drp-divider {
+  align-self: stretch;
+  width: 1px;
+  background: #e1e1e1; /* border/subtle */
+}

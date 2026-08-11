@@ -1,3 +1,53 @@
+.dd-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.dd-menu {
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 4px 0; /* padding/2 */
+  list-style: none;
+  width: 100%;
+  min-width: 170px;
+  background: #ffffff; /* surface/basic */
+  border: 1px solid #4a4a4a; /* input/border-focus */
+  border-radius: 6px; /* radius/xsmall */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-level1 */
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.dd-menu__item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  padding: 0 8px; /* padding/4 */
+  border: none;
+  background: transparent;
+  border-radius: 6px; /* radius/xsmall */
+  font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #333333; /* text/basic */
+  text-align: left;
+  cursor: pointer;
+}
+
+.dd-menu__item:hover {
+  background: rgba(0, 0, 0, 0.03); /* action/hover */
+}
+
+.dd-menu__item--selected {
+  color: #105aff; /* text/primary */
+}
+
 .dd-field {
   box-sizing: border-box;
   display: inline-flex;
