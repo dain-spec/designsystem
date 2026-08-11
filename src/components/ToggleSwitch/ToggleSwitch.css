@@ -1,0 +1,66 @@
+.ts-track {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  cursor: pointer;
+  background: #e1e1e1; /* element/subtle */
+  border-radius: 999px;
+}
+
+.ts-track--medium {
+  width: 32px;
+  height: 20px;
+  border-radius: 12px; /* radius/medium */
+}
+
+.ts-track--small {
+  width: 24px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+.ts-track--on {
+  background: #719bfc; /* element/primary-light */
+}
+
+.ts-input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.ts-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  transition: left 0.15s ease;
+}
+
+.ts-track--medium .ts-handle {
+  width: 16px;
+  height: 16px;
+}
+
+.ts-track--medium.ts-track--on .ts-handle {
+  left: 14px;
+}
+
+.ts-track--small .ts-handle {
+  width: 12px;
+  height: 12px;
+}
+
+.ts-track--small.ts-track--on .ts-handle {
+  left: 10px;
+}
+
+/* Disabled 정확한 색상은 Figma에서 미확인 — 톤을 낮춘 근사치입니다. */
+.ts-track--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

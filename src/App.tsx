@@ -3,6 +3,7 @@ import TypographyPage from './design-system/foundation/Typography'
 import ColorPage from './design-system/foundation/Color'
 import ScalePage from './design-system/foundation/Scale'
 import DateTimeInputDemo from './design-system/components/DateTimeInputDemo'
+import TypeBaseDemo from './design-system/components/TypeBaseDemo'
 import './App.css'
 
 const foundationPages = {
@@ -12,6 +13,7 @@ const foundationPages = {
 } as const
 
 const componentPages = {
+  'Type-Base': TypeBaseDemo,
   DateTimeInput: DateTimeInputDemo,
 } as const
 

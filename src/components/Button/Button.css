@@ -1,0 +1,108 @@
+.btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; /* gap/2 */
+  border-radius: 6px; /* radius/xsmall */
+  border: 1px solid transparent;
+  font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.5;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn__icon {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+/* 사이즈: Large는 Figma에서 직접 확인(height 36 / padding-x 16 / gap 4 / font 14).
+   Medium/Small/XSmall은 size 스케일에 맞춰 비례 추정한 값입니다. */
+.btn--large {
+  height: 36px; /* size/8 */
+  padding: 0 16px; /* padding/6 */
+  font-size: 14px;
+}
+.btn--large .btn__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn--medium {
+  height: 32px; /* size/7 */
+  padding: 0 12px; /* padding/5 */
+  font-size: 14px;
+}
+.btn--medium .btn__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn--small {
+  height: 28px; /* size/6 */
+  padding: 0 10px;
+  font-size: 13px;
+}
+.btn--small .btn__icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.btn--xsmall {
+  height: 24px; /* size/5 */
+  padding: 0 8px; /* padding/4 */
+  gap: 2px; /* gap/1 */
+  font-size: 13px;
+}
+.btn--xsmall .btn__icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Primary */
+.btn--primary {
+  background: #105aff; /* button/primary-fill */
+  color: #ffffff; /* text/basic-inverse */
+}
+.btn--primary:hover:not(.btn--disabled) {
+  background: #0943c6; /* button/primary-hover */
+}
+.btn--primary.btn--disabled {
+  background: #d3d3d3; /* button/primary-disabled */
+  cursor: not-allowed;
+}
+
+/* Secondary */
+.btn--secondary {
+  background: #ffffff; /* button/fill */
+  border-color: #105aff; /* button/secondary-border */
+  color: #105aff; /* text/primary */
+}
+.btn--secondary:hover:not(.btn--disabled) {
+  background: #eff4ff; /* button/secondary-hover */
+}
+.btn--secondary.btn--disabled {
+  background: #f4f4f4; /* button/fill-disabled */
+  border-color: #d3d3d3; /* button/border-disabled */
+  color: #b4b4b4; /* text/disabled */
+  cursor: not-allowed;
+}
+
+/* Tertiary */
+.btn--tertiary {
+  background: transparent;
+  border-color: #b4b4b4; /* button/tertiary-border */
+  color: #333333; /* text/basic */
+}
+.btn--tertiary:hover:not(.btn--disabled) {
+  border-color: #4a4a4a; /* button/tertiary-hover */
+  color: #4a4a4a;
+}
+.btn--tertiary.btn--disabled {
+  border-color: #d3d3d3; /* button/border-disabled */
+  color: #b4b4b4; /* text/disabled */
+  cursor: not-allowed;
+}

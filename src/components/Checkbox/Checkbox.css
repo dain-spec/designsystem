@@ -1,0 +1,60 @@
+.cb-box {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.cb-input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.cb-mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #c6c6c6; /* secondary/300 */
+  border-radius: 3px;
+}
+
+.cb-input:focus-visible ~ .cb-mark {
+  outline: 2px solid #719bfc; /* primary/300 */
+  outline-offset: 1px;
+}
+
+.cb-box--on .cb-mark,
+.cb-box--indeterminate .cb-mark {
+  background: #105aff; /* element/primary */
+  border-color: #105aff;
+}
+
+.cb-dash {
+  width: 8px;
+  height: 1.5px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+.cb-box--disabled {
+  cursor: not-allowed;
+}
+
+.cb-box--disabled .cb-mark {
+  background: #f4f4f4; /* secondary/50 */
+  border-color: #ededed; /* border/subtler */
+}
+
+.cb-box--disabled.cb-box--on .cb-mark,
+.cb-box--disabled.cb-box--indeterminate .cb-mark {
+  background: #d3d3d3; /* secondary/200 */
+  border-color: #d3d3d3;
+}

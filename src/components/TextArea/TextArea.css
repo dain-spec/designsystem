@@ -1,0 +1,40 @@
+.ta-field {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 96px;
+  padding: 10px 12px;
+  resize: vertical;
+  background: #ffffff;
+  border: 1px solid #d3d3d3; /* input/border */
+  border-radius: 8px;
+  font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  line-height: 1.5;
+  color: #333333; /* text/basic */
+  outline: none;
+}
+
+.ta-field::placeholder {
+  color: #989898; /* text/subtler */
+}
+
+.ta-field--focused,
+.ta-field--typing,
+.ta-field:focus-visible {
+  border-color: #4a4a4a; /* input/border-focus */
+}
+
+.ta-field--completed {
+  color: #333333;
+  font-weight: 500;
+}
+
+.ta-field--disabled,
+.ta-field:disabled {
+  background: #fafafa; /* input/field-disabled */
+  border-color: #ededed; /* border/subtler */
+  color: #b4b4b4; /* text/disabled */
+  cursor: not-allowed;
+  resize: none;
+}

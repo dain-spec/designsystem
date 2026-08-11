@@ -1,0 +1,62 @@
+.dd-field {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 190px;
+  max-width: 100%;
+  background: #ffffff;
+  border: 1px solid #d3d3d3; /* input/border */
+  border-radius: 8px;
+  font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  letter-spacing: -0.5px;
+  color: #333333; /* text/basic */
+  cursor: pointer;
+}
+
+.dd-field--medium {
+  height: 32px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.dd-field--small {
+  height: 28px;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+.dd-field__placeholder {
+  color: #989898; /* text/subtler */
+}
+
+.dd-field__icon {
+  flex: 0 0 auto;
+  display: flex;
+  color: #777777; /* icon/subtle */
+}
+
+.dd-field--focused,
+.dd-field:focus-visible {
+  border-color: #4a4a4a; /* input/border-focus */
+  outline: none;
+}
+
+.dd-field--completed {
+  color: #333333;
+  font-weight: 500;
+}
+
+.dd-field--disabled,
+.dd-field:disabled {
+  background: #fafafa; /* input/field-disabled */
+  border-color: #ededed; /* border/subtler */
+  color: #b4b4b4; /* text/disabled */
+  cursor: not-allowed;
+}
+
+.dd-field--disabled .dd-field__icon,
+.dd-field:disabled .dd-field__icon {
+  color: #c6c6c6;
+}

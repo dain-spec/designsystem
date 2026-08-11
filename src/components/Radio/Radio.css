@@ -1,0 +1,49 @@
+.rd-circle {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.rd-input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.rd-mark {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border: 1px solid #c6c6c6; /* secondary/300 */
+  border-radius: 999px;
+}
+
+.rd-circle--on .rd-mark {
+  border-color: #105aff; /* element/primary */
+}
+
+.rd-circle--on .rd-mark::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #105aff;
+  border-radius: 999px;
+}
+
+.rd-circle--disabled {
+  cursor: not-allowed;
+}
+
+.rd-circle--disabled .rd-mark {
+  background: #f4f4f4; /* secondary/50 */
+  border-color: #ededed; /* border/subtler */
+}
+
+.rd-circle--disabled.rd-circle--on .rd-mark::after {
+  background: #d3d3d3; /* secondary/200 */
+}

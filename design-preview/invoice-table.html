@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>세금계산서 업로드 목록</title>
+<style>
+  /* 토큰 출처: src/design-system/tokens/color.ts, scale.ts, typography.ts (design.md 매핑 기준) */
+  :root {
+    --color-secondary-0: #ffffff;
+    --color-secondary-25: #fafafa;
+    --color-secondary-150: #e1e1e1;
+    --color-secondary-300: #c6c6c6;
+    --color-secondary-500: #989898;
+    --color-secondary-800: #333333;
+
+    --color-negative-25: #fdf5f5;
+    --color-negative-100: #ffe8ea;
+    --color-negative-200: #ffbaba;
+    --color-negative-600: #ed2947;
+    --color-negative-700: #c4001e;
+
+    --color-success-100: #daf9e1;
+    --color-success-600: #007e47;
+
+    --color-primary-500: #105aff;
+
+    --radius-small: 8px;
+    --radius-max: 1000px;
+
+    --font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+    --letter-spacing: -0.5px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px;
+    background: var(--color-secondary-25);
+    font-family: var(--font-family);
+  }
+
+  .table-wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: var(--color-secondary-0);
+    border: 1px solid var(--color-secondary-150);
+    border-radius: var(--radius-small);
+    overflow: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  thead th {
+    padding: 16px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-secondary-800);
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--color-secondary-150);
+  }
+
+  thead th.num,
+  tbody td.num {
+    text-align: right;
+  }
+
+  thead th.center,
+  tbody td.center {
+    text-align: center;
+  }
+
+  tbody td {
+    padding: 14px 12px;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-secondary-800);
+    border-bottom: 1px solid var(--color-secondary-150);
+    white-space: nowrap;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* 체크박스 */
+  .checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--color-secondary-300);
+    border-radius: 4px;
+    accent-color: var(--color-primary-500);
+  }
+
+  /* 셀렉트 형태(청구유형/거래구분/사용자구분/과세구분) */
+  .cell-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: inherit;
+  }
+  .cell-select svg {
+    flex: 0 0 auto;
+    color: var(--color-secondary-500);
+  }
+
+  /* 상태 배지 */
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: var(--radius-max);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .badge--success {
+    background: var(--color-success-100);
+    color: var(--color-success-600);
+  }
+  .badge--error {
+    background: var(--color-negative-100);
+    color: var(--color-negative-700);
+  }
+
+  /* 삭제 버튼 */
+  .btn-remove {
+    border: none;
+    background: transparent;
+    color: var(--color-secondary-300);
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* 업로드 실패 행 */
+  tr.row--error td {
+    background: var(--color-negative-25);
+    color: var(--color-negative-700);
+    border-bottom: 1px solid var(--color-negative-200);
+  }
+  tr.row--error .cell-select svg {
+    color: var(--color-negative-700);
+  }
+  tr.row--error .field-invalid {
+    color: var(--color-secondary-300);
+    border: 1px solid var(--color-negative-200);
+    border-radius: 4px;
+    padding: 2px 6px;
+    background: var(--color-secondary-0);
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="center"><input type="checkbox" class="checkbox" /></th>
+          <th>행번호</th>
+          <th>청구유형</th>
+          <th>거래구분</th>
+          <th>사용자구분</th>
+          <th>과세구분</th>
+          <th>등록번호</th>
+          <th>상호명</th>
+          <th>작성일자</th>
+          <th class="num">공급가액</th>
+          <th class="num">세액</th>
+          <th class="center">상태</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center"><input type="checkbox" class="checkbox" /></td>
+          <td>2</td>
+          <td><span class="cell-select">청구 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">매출 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">사업자 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">과세 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td>208-81-11772</td>
+          <td>(주)남영상사</td>
+          <td>2026.07.14</td>
+          <td class="num">1,450,000</td>
+          <td class="num">145,000</td>
+          <td class="center"><span class="badge badge--success">업로드</span></td>
+          <td class="center"><button class="btn-remove">×</button></td>
+        </tr>
+        <tr>
+          <td class="center"><input type="checkbox" class="checkbox" /></td>
+          <td>3</td>
+          <td><span class="cell-select">청구 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">매출 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">사업자 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">과세 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td>134-81-20999</td>
+          <td>대한물산(주)</td>
+          <td>2026.07.14</td>
+          <td class="num">640,000</td>
+          <td class="num">64,000</td>
+          <td class="center"><span class="badge badge--success">업로드</span></td>
+          <td class="center"><button class="btn-remove">×</button></td>
+        </tr>
+        <tr>
+          <td class="center"><input type="checkbox" class="checkbox" /></td>
+          <td>4</td>
+          <td><span class="cell-select">영수 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">매출 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">사업자 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">영세 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td>220-88-40561</td>
+          <td>서울테크(주)</td>
+          <td>2026.07.13</td>
+          <td class="num">99,000</td>
+          <td class="num">0</td>
+          <td class="center"><span class="badge badge--success">업로드</span></td>
+          <td class="center"><button class="btn-remove">×</button></td>
+        </tr>
+        <tr class="row--error">
+          <td class="center"><input type="checkbox" class="checkbox" disabled /></td>
+          <td>5</td>
+          <td><span class="cell-select">청구 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">매출 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">사업자 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">과세 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="field-invalid">000-00-00000</span></td>
+          <td>행복유통(주)</td>
+          <td>2026.07.13</td>
+          <td class="num">880,000</td>
+          <td class="num">88,000</td>
+          <td class="center"><span class="badge badge--error">업로드 실패</span></td>
+          <td class="center"><button class="btn-remove">×</button></td>
+        </tr>
+        <tr class="row--error">
+          <td class="center"><input type="checkbox" class="checkbox" disabled /></td>
+          <td>6</td>
+          <td><span class="cell-select">청구 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">매출 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">사업자 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td><span class="cell-select">과세 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></span></td>
+          <td>129-81-33055</td>
+          <td>미래테크</td>
+          <td>20260712</td>
+          <td class="num">500,000</td>
+          <td class="num">50,000</td>
+          <td class="center"><span class="badge badge--error">업로드 실패</span></td>
+          <td class="center"><button class="btn-remove">×</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

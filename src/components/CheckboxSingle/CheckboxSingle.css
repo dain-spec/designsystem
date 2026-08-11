@@ -1,0 +1,46 @@
+.cbs-circle {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.cbs-input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.cbs-mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1.5px solid #c6c6c6; /* secondary/300 */
+  border-radius: 999px;
+}
+
+.cbs-circle--on .cbs-mark {
+  background: #105aff; /* element/primary */
+  border-color: #105aff;
+}
+
+.cbs-circle--disabled {
+  cursor: not-allowed;
+}
+
+.cbs-circle--disabled .cbs-mark {
+  background: #f4f4f4; /* secondary/50 */
+  border-color: #ededed; /* border/subtler */
+}
+
+.cbs-circle--disabled.cbs-circle--on .cbs-mark {
+  background: #d3d3d3; /* secondary/200 */
+  border-color: #d3d3d3;
+}

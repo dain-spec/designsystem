@@ -1,0 +1,69 @@
+.if-field {
+  box-sizing: border-box;
+  width: 190px;
+  max-width: 100%;
+  background: #ffffff;
+  border: 1px solid #d3d3d3; /* input/border */
+  border-radius: 8px;
+  font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  letter-spacing: -0.5px;
+  color: #333333; /* text/basic */
+  outline: none;
+}
+
+.if-field--medium {
+  height: 32px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.if-field--small {
+  height: 28px;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+.if-field::placeholder {
+  color: #989898; /* text/subtler */
+}
+
+.if-field--focused,
+.if-field--typing,
+.if-field:focus-visible {
+  border-color: #4a4a4a; /* input/border-focus */
+}
+
+.if-field--completed {
+  color: #333333; /* text/basic */
+  font-weight: 500;
+}
+
+.if-field--readonly {
+  background: #f5f6fa; /* background/subtle */
+  border-color: #e1e1e1; /* border/subtle */
+}
+
+.if-field--success {
+  border-color: #27c36f; /* input/border-success */
+}
+
+.if-field--warning {
+  border-color: #ffa000; /* input/border-warning */
+}
+
+.if-field--error {
+  border-color: #fa4553; /* input/border-error */
+}
+
+.if-field--disabled,
+.if-field:disabled {
+  background: #fafafa; /* input/field-disabled */
+  border-color: #ededed; /* border/subtler */
+  color: #b4b4b4; /* text/disabled */
+  cursor: not-allowed;
+}
+
+.if-field--disabled::placeholder,
+.if-field:disabled::placeholder {
+  color: #c6c6c6;
+}

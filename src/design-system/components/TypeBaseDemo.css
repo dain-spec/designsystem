@@ -1,0 +1,37 @@
+.tb-demo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.tb-demo-fieldcol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.tb-demo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tb-demo-col__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555555;
+}
+
+.tb-demo-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tb-demo-row__label {
+  font-size: 12px;
+  color: #777777;
+  min-width: 60px;
+}
