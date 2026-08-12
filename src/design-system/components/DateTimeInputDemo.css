@@ -22,6 +22,28 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 6px;
+  margin: -6px;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dt-demo-row:hover {
+  background: #f7f8fa;
+}
+
+.dt-demo-row:focus-visible {
+  outline: 2px solid #1868db;
+  outline-offset: 1px;
+}
+
+.dt-demo-row--active {
+  background: #e9f2fe;
+  border-color: #1868db;
 }
 
 .dt-demo-row__label {
