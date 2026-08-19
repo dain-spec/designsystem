@@ -3546,7 +3546,7 @@
             ],
             "com.figma.hiddenFromPublishing": false
           },
-          "$value": "{color.green.400}",
+          "$value": "{color.positive.400}",
           "$type": "color"
         },
         "success-bolder": {
@@ -3556,7 +3556,7 @@
             ],
             "com.figma.hiddenFromPublishing": false
           },
-          "$value": "{color.green.600}",
+          "$value": "{color.positive.600}",
           "$type": "color"
         },
         "warning-bolder": {
