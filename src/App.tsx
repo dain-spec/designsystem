@@ -1,15 +1,17 @@
 import { useState } from 'react'
-import TypographyPage from './design-system/foundation/Typography'
-import ColorTabs from './design-system/foundation/ColorTabs'
-import ScalePage from './design-system/foundation/Scale'
+import DesignTokenPage from './design-system/foundation/DesignToken'
 import LayoutPage from './design-system/foundation/Layout'
+import ColorTabs from './design-system/foundation/ColorTabs'
+import TypographyPage from './design-system/foundation/Typography'
+import ScalePage from './design-system/foundation/Scale'
 import './App.css'
 
 const foundationPages = {
-  Typography: TypographyPage,
-  Color: ColorTabs,
-  Scale: ScalePage,
+  'Design Token': DesignTokenPage,
   Layout: LayoutPage,
+  Color: ColorTabs,
+  Typography: TypographyPage,
+  Scale: ScalePage,
 } as const
 
 const componentPages = {} as const
@@ -27,7 +29,7 @@ function Header() {
 }
 
 function App() {
-  const [active, setActive] = useState<PageName>('Typography')
+  const [active, setActive] = useState<PageName>('Design Token')
   const ActivePage = pages[active]
 
   return (
