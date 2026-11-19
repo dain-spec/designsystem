@@ -1,0 +1,44 @@
+.ds-tabs {
+  display: flex;
+  gap: 24px;
+  padding: 0 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #ededed;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.ds-tabs__tab {
+  padding: 14px 0 12px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font: inherit;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  color: #777777;
+  cursor: pointer;
+}
+
+.ds-tabs__tab:hover {
+  color: #333333;
+}
+
+.ds-tabs__tab--active {
+  color: #105aff;
+  font-weight: 700;
+  border-bottom-color: #105aff;
+}
+
+.ds-tabs__tab:focus-visible {
+  outline: 2px solid #105aff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1279px) {
+  .ds-tabs {
+    padding: 0 24px;
+  }
+}
