@@ -1,4 +1,4 @@
-// Figma 'Color_2.0' 프레임(node 12726:25695)에서 추출한 색상 토큰
+// Figma 'Color_2.0' 프레임(node 21397:62170)에서 추출한 색상 토큰
 // 2026-07-02 기준 최신 컬러 스케일 (0/25/50/100/150/200/300~1000)
 
 export type ColorSwatch = { name: string; value: string; ref?: string }
@@ -220,7 +220,7 @@ export const semanticColors: ColorGroup[] = [
     ],
   },
   {
-    name: 'Success',
+    name: 'Positive',
     swatches: [
       { name: '25', value: '#f2fffa' },
       { name: '100', value: '#daf9e1' },
