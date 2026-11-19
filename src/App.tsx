@@ -5,6 +5,7 @@ import ScalePage from './design-system/foundation/Scale'
 import DateTimeInputDemo from './design-system/components/DateTimeInputDemo'
 import TypeBaseDemo from './design-system/components/TypeBaseDemo'
 import TypeFormDemo from './design-system/components/TypeFormDemo'
+import InputFieldDemo from './design-system/components/InputFieldDemo'
 import './App.css'
 
 const foundationPages = {
@@ -17,6 +18,7 @@ const componentPages = {
   'Type-Base': TypeBaseDemo,
   'Type-Form': TypeFormDemo,
   DateTimeInput: DateTimeInputDemo,
+  InputField: InputFieldDemo,
 } as const
 
 const pages = { ...foundationPages, ...componentPages }
