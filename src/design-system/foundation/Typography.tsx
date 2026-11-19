@@ -137,7 +137,7 @@ function BodySection() {
 
 export default function TypographyPage() {
   return (
-    <div className="ds-typography-page">
+    <div className="ds-typography-page ds-typography-page--figma">
       <PageTitle />
       <TypefaceSection />
       <HeadingSection />
