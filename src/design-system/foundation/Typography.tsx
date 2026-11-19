@@ -1,11 +1,22 @@
-import { bodyStyles, fontFamily, headingStyles, sampleText, typeface } from '../tokens/typography'
+import {
+  bodyStyles,
+  fontFamily,
+  headingStyles,
+  letterSpacing,
+  pageDescription,
+  sampleText,
+  sectionDescriptions,
+  textColor,
+  typeface,
+} from '../tokens/typography'
+import type { TypeStyle } from '../tokens/typography'
 import './Typography.css'
 
 function PageTitle() {
   return (
     <div className="ds-page-title">
       <h1>Typography</h1>
-      <p>사용자가 UI 상 텍스트 입력 및 확인 시 활용되는 컴포넌트입니다.</p>
+      <p>{pageDescription}</p>
     </div>
   )
 }
@@ -24,7 +35,7 @@ function TypefaceSection() {
     <section className="ds-section">
       <SectionHeading
         title="Typeface"
-        description="기본 글꼴로 국문과 영문, 숫자 모두 Noto Sans CJK KR 폰트를 사용합니다."
+        description={sectionDescriptions.typeface}
       />
       <div className="ds-panel ds-typeface-panel">
         <div className="ds-typeface-sample-wrap">
@@ -33,9 +44,10 @@ function TypefaceSection() {
               style={{
                 fontFamily,
                 fontWeight: typeface.fontWeight,
-                fontSize: `clamp(28px, 6vw, ${typeface.fontSize}px)`,
-                lineHeight: 1.5,
+                fontSize: typeface.fontSize,
+                lineHeight: `${typeface.lineHeight}px`,
                 letterSpacing: typeface.letterSpacing,
+                whiteSpace: 'pre',
               }}
             >
               {typeface.sample}
@@ -52,46 +64,44 @@ function TypefaceSection() {
 }
 
 function StyleRow({
+  group,
   name,
   fontSize,
   lineHeight,
   weights,
+  sampleWeight,
   usage,
   isCoreSize,
-}: {
-  name: string
-  fontSize: number
-  lineHeight: number
-  weights: string[]
-  usage: string
-  isCoreSize?: boolean
-}) {
+}: TypeStyle & { group: string }) {
   return (
     <div className="ds-style-row">
       <span
         className="ds-style-row__sample"
         style={{
           fontFamily,
-          fontWeight: 500,
+          fontWeight: sampleWeight,
           fontSize,
           lineHeight: `${lineHeight}px`,
-          letterSpacing: -0.5,
+          letterSpacing,
+          color: textColor,
         }}
       >
         {sampleText}
       </span>
       <div className="ds-style-row__meta">
-        <span className="ds-style-row__name">{name}</span>
+        <span className="ds-style-row__name">{group}/{name}</span>
         <span className="ds-divider" />
         <span>{weights.join(' / ')}</span>
-        <span className="ds-divider" />
-        <span>{fontSize}px</span>
-        <span className="ds-divider ds-style-row__usage" />
-        <span className="ds-style-row__usage">{usage}</span>
+        {usage && (
+          <>
+            <span className="ds-divider ds-style-row__usage" />
+            <span className="ds-style-row__usage">{usage}</span>
+          </>
+        )}
         {isCoreSize && (
           <>
             <span className="ds-divider" />
-            <span className="ds-core-badge">Core size</span>
+            <span className="ds-core-badge">Core</span>
           </>
         )}
       </div>
@@ -99,13 +109,13 @@ function StyleRow({
   )
 }
 
-function OverviewSection() {
+function HeadingSection() {
   return (
     <section className="ds-section">
-      <SectionHeading title="Heading" description="페이지단위 타이틀 쓰임새로 사용 권장합니다." />
+      <SectionHeading title="Heading" description={sectionDescriptions.heading} />
       <div className="ds-panel">
         {headingStyles.map((style) => (
-          <StyleRow key={style.name} {...style} />
+          <StyleRow key={style.name} group="Heading" {...style} />
         ))}
       </div>
     </section>
@@ -115,10 +125,10 @@ function OverviewSection() {
 function BodySection() {
   return (
     <section className="ds-section">
-      <SectionHeading title="Body" description="페이지단위 타이틀 쓰임새로 사용 권장합니다." />
+      <SectionHeading title="Body" description={sectionDescriptions.body} />
       <div className="ds-panel">
         {bodyStyles.map((style) => (
-          <StyleRow key={style.name} {...style} />
+          <StyleRow key={style.name} group="Body" {...style} />
         ))}
       </div>
     </section>
@@ -130,7 +140,7 @@ export default function TypographyPage() {
     <div className="ds-typography-page">
       <PageTitle />
       <TypefaceSection />
-      <OverviewSection />
+      <HeadingSection />
       <BodySection />
     </div>
   )
