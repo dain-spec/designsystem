@@ -2,12 +2,14 @@ import { useState } from 'react'
 import TypographyPage from './design-system/foundation/Typography'
 import ColorTabs from './design-system/foundation/ColorTabs'
 import ScalePage from './design-system/foundation/Scale'
+import LayoutPage from './design-system/foundation/Layout'
 import './App.css'
 
 const foundationPages = {
   Typography: TypographyPage,
   Color: ColorTabs,
   Scale: ScalePage,
+  Layout: LayoutPage,
 } as const
 
 const componentPages = {} as const

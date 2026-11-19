@@ -1,0 +1,98 @@
+.ds-layout-page .ds-multiline {
+  white-space: pre-line;
+}
+
+.ds-layout-list {
+  margin: 0 0 16px;
+  padding-left: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-layout-note {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-layout-note--small {
+  margin: 12px 0 0;
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+.ds-layout-sub {
+  margin: 40px 0 12px;
+}
+
+.ds-layout-sub:first-of-type {
+  margin-top: 0;
+}
+
+.ds-layout-sub h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-layout-sub p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-layout-sub-note {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-layout-page .ds-diagram-panel {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ds-layout-page .ds-diagram {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.ds-layout-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-layout-table th,
+.ds-layout-table td {
+  padding: 9px 8px;
+  text-align: left;
+  border: 1px solid #e1e1e1;
+  border-left: none;
+  border-right: none;
+}
+
+.ds-layout-table th {
+  background: #f7f8fa;
+  font-weight: 500;
+}
+
+.ds-layout-table td:first-child {
+  font-weight: 500;
+}
