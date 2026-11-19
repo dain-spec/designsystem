@@ -1,5 +1,5 @@
 .ds-color-group {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .ds-color-group:last-child {
@@ -7,61 +7,57 @@
 }
 
 .ds-color-group__label {
-  font-size: 13px;
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 27px;
   font-weight: 700;
-  color: #555555;
-  text-transform: capitalize;
-  margin-bottom: 10px;
+  color: #333333;
+  letter-spacing: -0.5px;
 }
 
 .ds-swatch-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
 }
 
 .ds-swatch {
-  border-radius: 8px;
+  box-sizing: border-box;
+  width: 52px;
+  height: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  background-clip: padding-box;
   overflow: hidden;
-  border: 1px solid #ededed;
-}
-
-.ds-swatch__color {
-  height: 56px;
-  display: flex;
-  align-items: flex-end;
-  padding: 6px 8px;
-}
-
-.ds-swatch__name {
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.ds-swatch__meta {
-  background: #ffffff;
-  padding: 6px 8px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  justify-content: flex-end;
 }
 
-.ds-swatch__value {
+.ds-swatch__caption {
+  box-sizing: border-box;
+  min-height: 33px;
+  padding: 8px 4px;
+  background: #ffffff;
   font-size: 11px;
-  color: #555555;
-  font-family: ui-monospace, Consolas, monospace;
-}
-
-.ds-swatch__ref {
-  font-size: 10px;
-  color: #999999;
+  line-height: 17px;
+  color: #333333;
+  letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
 }
 
 /* Figma 원본과 동일하게, 카드 구분 없이 이어붙인 색상 띠로 표현합니다. */
 .ds-prim-panel {
   display: flex;
   flex-direction: column;
+}
+
+.ds-prim-rows {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
+  margin-bottom: 32px;
 }
 
 .ds-prim-strip {
@@ -103,9 +99,120 @@
 
 .ds-prim-opacity-row {
   display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
-.ds-prim-opacity-row .ds-prim-strip {
-  min-width: 0;
+/* Figma처럼 오퍼시티 셀은 98px 고정 폭이며 검정, 흰색, 파랑 순서로 줄을 나눕니다. */
+.ds-prim-strip--opacity {
+  align-self: flex-start;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.ds-prim-strip--opacity .ds-prim-cell {
+  flex: 0 0 98px;
+  padding-left: 16px;
+}
+
+/* Color 개요 페이지 (Color01_2.0) */
+.ds-multiline {
+  white-space: pre-line;
+}
+
+.ds-color-sub {
+  margin: 32px 0 12px;
+}
+
+.ds-color-sub h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-color-sub p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-role-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 40px;
+}
+
+.ds-role-chip {
+  box-sizing: border-box;
+  width: 160px;
+  min-height: 71px;
+  padding: 15px 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.ds-role-chip strong {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.ds-role-chip span {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.ds-color-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-color-table th,
+.ds-color-table td {
+  padding: 9px 8px;
+  text-align: left;
+  border: 1px solid #e1e1e1;
+  border-left: none;
+  border-right: none;
+}
+
+.ds-color-table th {
+  background: #f7f8fa;
+  font-weight: 500;
+}
+
+.ds-color-table td:first-child,
+.ds-color-table th:first-child {
+  width: 120px;
+  font-weight: 500;
+}
+
+.ds-diagram-panel {
+  display: flex;
+  justify-content: center;
+}
+
+.ds-diagram {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1279px) {
+  .ds-role-panel {
+    padding: 24px;
+  }
 }

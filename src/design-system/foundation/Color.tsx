@@ -6,16 +6,15 @@ function PageTitle() {
   return (
     <div className="ds-page-title">
       <h1>Color</h1>
-      <p>Figma Variables에서 추출한 primitive/semantic 색상 토큰입니다.</p>
+      <p>색상 시스템은 역할 기반 색상과 팔레트 색상으로 구성되어 있으며, 모두를 위한 글로벌 접근성 충족을 목표로 설계되었습니다. 이를 통해 인터페이스 내에서 충분한 명도 대비를 보장하고, 명확성과 가시성을 확보할 수 있습니다.</p>
     </div>
   )
 }
 
-function SectionHeading({ title, description }: { title: string; description: string }) {
+function SectionHeading({ title }: { title: string }) {
   return (
     <div className="ds-section-heading">
       <h2>{title}</h2>
-      <p>{description}</p>
     </div>
   )
 }
@@ -62,13 +61,23 @@ function formatColorLabel(value: string) {
 }
 
 // Figma 원본처럼 카드 구분 없이 이어붙인 색상 띠로 렌더링합니다.
-function PrimitiveStrip({ swatches, style }: { swatches: { name: string; value: string }[]; style?: CSSProperties }) {
+function PrimitiveStrip({
+  swatches,
+  style,
+  showValue = false,
+  className = '',
+}: {
+  swatches: { name: string; value: string }[]
+  style?: CSSProperties
+  showValue?: boolean
+  className?: string
+}) {
   return (
-    <div className="ds-prim-strip" style={style}>
+    <div className={`ds-prim-strip ${className}`} style={style}>
       {swatches.map((s) => (
         <div key={s.name} className="ds-prim-cell" style={{ background: s.value, color: contrastColor(s.value) }}>
           <span className="ds-prim-cell__name">{s.name}</span>
-          <span className="ds-prim-cell__hex">{formatColorLabel(s.value)}</span>
+          {showValue && <span className="ds-prim-cell__hex">{formatColorLabel(s.value)}</span>}
         </div>
       ))}
     </div>
@@ -85,29 +94,20 @@ function PrimitiveOpacityGroup({ group }: { group: ColorGroup }) {
   const rest = group.swatches.filter((s) => !s.name.startsWith('black') && !s.name.startsWith('white'))
   return (
     <div className="ds-prim-opacity">
-      <div className="ds-color-group__label">{group.name}</div>
+      <h3 className="ds-color-group__label">{group.name}</h3>
       <div className="ds-prim-opacity-row">
-        <PrimitiveStrip swatches={black} style={{ flexGrow: black.length }} />
-        <PrimitiveStrip swatches={white} style={{ flexGrow: white.length }} />
-        <PrimitiveStrip swatches={rest} style={{ flexGrow: rest.length }} />
+        <PrimitiveStrip swatches={black} showValue className="ds-prim-strip--opacity" />
+        <PrimitiveStrip swatches={white} showValue className="ds-prim-strip--opacity" />
+        <PrimitiveStrip swatches={rest} showValue className="ds-prim-strip--opacity" />
       </div>
     </div>
   )
 }
 
-function Swatch({ name, value, ref }: { name: string; value: string; ref?: string }) {
+function Swatch({ name, value }: { name: string; value: string }) {
   return (
-    <div className="ds-swatch">
-      <div
-        className="ds-swatch__color"
-        style={{ background: value, color: isLight(value) ? '#333333' : '#ffffff' }}
-      >
-        <span className="ds-swatch__name">{name}</span>
-      </div>
-      <div className="ds-swatch__meta">
-        <span className="ds-swatch__value">{value}</span>
-        {ref && <span className="ds-swatch__ref">{ref}</span>}
-      </div>
+    <div className="ds-swatch" style={{ backgroundColor: value }}>
+      <span className="ds-swatch__caption">{name}</span>
     </div>
   )
 }
@@ -115,37 +115,57 @@ function Swatch({ name, value, ref }: { name: string; value: string; ref?: strin
 function ColorGroupPanel({ group }: { group: ColorGroup }) {
   return (
     <div className="ds-color-group">
-      <div className="ds-color-group__label">{group.name}</div>
+      <h3 className="ds-color-group__label">{group.name}</h3>
       <div className="ds-swatch-grid">
         {group.swatches.map((s) => (
-          <Swatch key={s.name} {...s} />
+          <Swatch key={s.name} name={s.name} value={s.value} />
         ))}
       </div>
     </div>
   )
 }
 
+// Alpha는 Figma처럼 검정 기반, 흰색 기반(inverse), 기타 순서로 줄을 나눠 보여줍니다.
+function AlphaGroupPanel({ group }: { group: ColorGroup }) {
+  const inverse = group.swatches.filter((s) => s.name.endsWith('-inverse'))
+  const rest = group.swatches.filter((s) => s.name.includes('primary'))
+  const base = group.swatches.filter((s) => !inverse.includes(s) && !rest.includes(s))
+  return (
+    <div className="ds-color-group">
+      <h3 className="ds-color-group__label">{group.name}</h3>
+      {[base, inverse, rest].map((row, i) => (
+        <div key={i} className="ds-swatch-grid ds-swatch-grid--alpha">
+          {row.map((s) => (
+            <Swatch key={s.name} name={s.name} value={s.value} />
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function ColorPage() {
   return (
-    <div className="ds-typography-page ds-color-page">
+    <div className="ds-typography-page ds-typography-page--figma ds-color-page">
       <PageTitle />
       <section className="ds-section">
-        <SectionHeading title="Primitive" description="원시 색상 스케일입니다. 직접 사용하지 않고 semantic 토큰을 통해 참조합니다." />
-        <div className="ds-panel ds-prim-panel">
-          {primitiveColors.map((g) => (
-            <PrimitiveHueGroup key={g.name} group={g} />
-          ))}
+        <SectionHeading title="Primitive" />
+        <div className="ds-prim-panel">
+          <h3 className="ds-color-group__label">Color</h3>
+          <div className="ds-prim-rows">
+            {primitiveColors.map((g) => (
+              <PrimitiveHueGroup key={g.name} group={g} />
+            ))}
+          </div>
           <PrimitiveOpacityGroup group={primitiveOpacity} />
         </div>
       </section>
       <section className="ds-section">
-        <SectionHeading title="Semantic" description="의미 단위로 매핑된 색상 토큰입니다. UI 구현 시 이 토큰을 사용합니다." />
-        <div className="ds-panel">
-          {semanticColors.map((g) => (
-            <ColorGroupPanel key={g.name} group={g} />
-          ))}
-          <ColorGroupPanel group={semanticAlpha} />
-        </div>
+        <SectionHeading title="Semantic" />
+        {semanticColors.map((g) => (
+          <ColorGroupPanel key={g.name} group={g} />
+        ))}
+        <AlphaGroupPanel group={semanticAlpha} />
       </section>
     </div>
   )
