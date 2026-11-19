@@ -13,27 +13,29 @@ export default function ColorTabs() {
   const [active, setActive] = useState<(typeof tabs)[number]['id']>('color1')
   const ActivePage = tabs.find((t) => t.id === active)!.Page
 
+  const tabBar = (
+    <div className="ds-tabs" role="tablist" aria-label="Color">
+      {tabs.map((t) => (
+        <button
+          key={t.id}
+          type="button"
+          role="tab"
+          id={`tab-${t.id}`}
+          aria-selected={active === t.id}
+          aria-controls="color-tabpanel"
+          className={`ds-tabs__tab${active === t.id ? ' ds-tabs__tab--active' : ''}`}
+          onClick={() => setActive(t.id)}
+        >
+          {t.label}
+        </button>
+      ))}
+    </div>
+  )
+
+  // 탭 줄은 각 페이지의 제목과 설명 바로 아래에 놓입니다.
   return (
-    <div>
-      <div className="ds-tabs" role="tablist" aria-label="Color">
-        {tabs.map((t) => (
-          <button
-            key={t.id}
-            type="button"
-            role="tab"
-            id={`tab-${t.id}`}
-            aria-selected={active === t.id}
-            aria-controls="color-tabpanel"
-            className={`ds-tabs__tab${active === t.id ? ' ds-tabs__tab--active' : ''}`}
-            onClick={() => setActive(t.id)}
-          >
-            {t.label}
-          </button>
-        ))}
-      </div>
-      <div id="color-tabpanel" role="tabpanel" aria-labelledby={`tab-${active}`}>
-        <ActivePage />
-      </div>
+    <div id="color-tabpanel" role="tabpanel" aria-labelledby={`tab-${active}`}>
+      <ActivePage afterTitle={tabBar} />
     </div>
   )
 }

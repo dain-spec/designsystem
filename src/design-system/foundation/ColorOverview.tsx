@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import colorUpdatesImage from '../assets/color-updates.png'
 import colorThemeImage from '../assets/color-theme.png'
 import './Typography.css'
@@ -53,10 +54,11 @@ function SubHeading({ title, description }: { title: string; description: string
   )
 }
 
-export default function ColorOverviewPage() {
+export default function ColorOverviewPage({ afterTitle }: { afterTitle?: ReactNode }) {
   return (
     <div className="ds-typography-page ds-typography-page--figma ds-color-page">
       <PageTitle />
+      {afterTitle}
 
       <section className="ds-section">
         <SectionHeading

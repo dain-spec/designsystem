@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { primitiveColors, primitiveOpacity, semanticColors, semanticAlpha, type ColorGroup } from '../tokens/color'
 import './Color.css'
 
@@ -144,10 +144,11 @@ function AlphaGroupPanel({ group }: { group: ColorGroup }) {
   )
 }
 
-export default function ColorPage() {
+export default function ColorPage({ afterTitle }: { afterTitle?: ReactNode }) {
   return (
     <div className="ds-typography-page ds-typography-page--figma ds-color-page">
       <PageTitle />
+      {afterTitle}
       <section className="ds-section">
         <SectionHeading title="Primitive" />
         <div className="ds-prim-panel">
