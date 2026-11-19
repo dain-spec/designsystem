@@ -5,8 +5,8 @@ import './ColorTabs.css'
 
 // Figma Color01_2.0, Color02_2.0 두 프레임을 Color 메뉴 안의 탭으로 구성합니다.
 const tabs = [
-  { id: 'color1', label: 'Color 1', Page: ColorOverviewPage },
-  { id: 'color2', label: 'Color 2', Page: ColorPaletteTab },
+  { id: 'color1', label: 'Role', Page: ColorOverviewPage },
+  { id: 'color2', label: 'Palette', Page: ColorPaletteTab },
 ] as const
 
 export default function ColorTabs() {
