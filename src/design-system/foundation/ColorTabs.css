@@ -4,9 +4,7 @@
   padding: 0 40px;
   background: #ffffff;
   border-bottom: 1px solid #ededed;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  margin-top: 32px;
 }
 
 .ds-tabs__tab {
