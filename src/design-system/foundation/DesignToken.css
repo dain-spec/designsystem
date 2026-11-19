@@ -1,0 +1,25 @@
+.ds-token-list {
+  margin: 0 0 24px;
+  padding-left: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.ds-token-list li + li {
+  margin-top: 12px;
+}
+
+.ds-typography-page--figma .ds-token-panel {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 50px 30px;
+}
+
+.ds-token-diagram {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
