@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import TypographyPage from './design-system/foundation/Typography'
-import ColorOverviewPage from './design-system/foundation/ColorOverview'
-import ColorPage from './design-system/foundation/Color'
+import ColorTabs from './design-system/foundation/ColorTabs'
 import ScalePage from './design-system/foundation/Scale'
 import './App.css'
 
 const foundationPages = {
   Typography: TypographyPage,
-  'Color 1': ColorOverviewPage,
-  'Color 2': ColorPage,
+  Color: ColorTabs,
   Scale: ScalePage,
 } as const
 
