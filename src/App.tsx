@@ -2,9 +2,6 @@ import { useState } from 'react'
 import TypographyPage from './design-system/foundation/Typography'
 import ColorPage from './design-system/foundation/Color'
 import ScalePage from './design-system/foundation/Scale'
-import DateTimeInputDemo from './design-system/components/DateTimeInputDemo'
-import TypeBaseDemo from './design-system/components/TypeBaseDemo'
-import TypeFormDemo from './design-system/components/TypeFormDemo'
 import './App.css'
 
 const foundationPages = {
@@ -13,11 +10,7 @@ const foundationPages = {
   Scale: ScalePage,
 } as const
 
-const componentPages = {
-  'Type-Base': TypeBaseDemo,
-  'Type-Form': TypeFormDemo,
-  DateTimeInput: DateTimeInputDemo,
-} as const
+const componentPages = {} as const
 
 const pages = { ...foundationPages, ...componentPages }
 
