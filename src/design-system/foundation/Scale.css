@@ -1,148 +1,161 @@
-/* Figma에서는 항목들이 패널 폭에 늘어나지 않고 고정 폭으로 중앙 정렬되어 있습니다. */
-.ds-scale-grid {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 140px));
+/* Figma Scale_2.0: 패널 배경은 #f7f8fa, 모서리 8px이며 항목은 패널 안에서 가운데 정렬됩니다. */
+.ds-scale-page .ds-scale-panel {
+  display: flex;
   justify-content: center;
-  gap: 16px;
 }
 
-/* Gap/Padding은 8개 항목을 한 줄로 고정 배치합니다. */
-.ds-scale-grid--row {
-  grid-template-columns: repeat(8, minmax(0, 140px));
+/* Radius */
+.ds-scale-page .ds-scale-panel--radius {
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 70px 30px;
 }
 
-.ds-scale-item {
+.ds-scale-radius {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  min-width: 0;
-  background: #ffffff;
-  border: 1px solid #ededed;
-  border-radius: 8px;
-  padding: 16px 8px;
+  gap: 2px;
+  width: 80px;
 }
 
-/* Figma에는 카드 배경 없이 도형이 패널 위에 바로 놓여 있습니다. */
-.ds-scale-item--bare {
-  background: transparent;
-  border: none;
-  padding: 16px 8px 0;
-}
-
-.ds-scale-item__demo {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ds-scale-item__label {
-  font-size: 12px;
-  color: #333333;
-  letter-spacing: -0.5px;
-  text-align: center;
-  min-width: 0;
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
-.ds-scale-radius-box {
+.ds-scale-radius__box {
   position: relative;
+  box-sizing: border-box;
   width: 60px;
   height: 60px;
   background: #f7f8fa;
   border: 1px solid #989898;
 }
 
-.ds-scale-radius-dot {
+.ds-scale-radius__dot {
   position: absolute;
-  /* absolute 포지셔닝은 부모의 padding edge(테두리 안쪽) 기준이라
-     부모 border 두께(1px)만큼 보정해 테두리 바깥 모서리에 맞춥니다. */
+  box-sizing: border-box;
+  /* 부모 테두리(1px) 안쪽 기준이라 1px 보정해 바깥 모서리에 맞춥니다. */
   right: -1px;
   bottom: -1px;
   background: rgba(113, 155, 252, 0.4);
-  border: 1px solid #447cfc;
-  border-radius: 50%;
+  border: 0.5px solid #447cfc;
 }
 
-.ds-scale-gap-wrap {
-  display: flex;
-  align-items: center;
+.ds-scale-radius__label {
+  width: 100%;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  color: #333333;
+  text-align: center;
 }
 
-.ds-scale-gap-block {
-  width: 36px;
-  height: 12px;
-  background: #e3e3e3;
-  flex: 0 0 auto;
+/* Gap · Padding */
+.ds-scale-page .ds-scale-panel--gap {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  /* Figma처럼 한 줄에 7개가 들어가도록 항목 영역 폭을 700px로 제한합니다. */
+  padding: 50px max(40px, calc((100% - 700px) / 2));
 }
 
-.ds-scale-gap-bar {
-  height: 20px;
-  background: rgba(113, 155, 252, 0.4);
-  flex: 0 0 auto;
-}
-
-.ds-scale-padding-box {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: #f7f8fa;
-  border: 1px solid #989898;
-}
-
-.ds-scale-padding-ring {
-  position: absolute;
-  inset: 0;
-  box-sizing: border-box;
-  border-style: solid;
-  border-color: rgba(113, 155, 252, 0.4);
-}
-
-/* Size는 세로로 쌓인 행 목록이며, 왼쪽 고정폭 바의 높이가 값에 따라 커집니다. */
-.ds-scale-size-list {
+.ds-scale-gap {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 2px;
+  width: 76px;
+}
+
+.ds-scale-gap__wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ds-scale-gap__block {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 12px;
+  background: #e3e3e3;
+}
+
+.ds-scale-gap__bar {
+  flex: 0 0 auto;
+  height: 20px;
+  background: rgba(113, 155, 252, 0.4);
+}
+
+.ds-scale-gap__label {
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  color: #333333;
+  text-align: center;
+}
+
+/* Size: 고정 폭 500px 바의 높이가 값에 따라 커지고, 오른쪽에 라벨이 붙습니다. */
+.ds-scale-page .ds-scale-panel--size {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 40px;
 }
 
 .ds-scale-size-row {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 16px;
+  width: 584px;
+  max-width: 100%;
 }
 
 .ds-scale-size-bar {
-  width: 500px;
-  max-width: 60%;
-  flex: 0 0 auto;
+  flex: 0 1 500px;
+  min-width: 0;
   background: rgba(113, 155, 252, 0.4);
 }
 
 .ds-scale-size-label {
-  text-align: left;
+  flex: 0 0 auto;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  color: #333333;
   white-space: nowrap;
 }
 
-.ds-scale-shadow-row {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+/* Shadow */
+.ds-scale-page .ds-scale-panel--shadow {
+  gap: 20px;
+  padding: 50px 40px;
 }
 
 .ds-scale-shadow-item {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 12px;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ds-scale-shadow-label {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  color: #333333;
+  white-space: nowrap;
 }
 
 .ds-scale-shadow-box {
-  width: 200px;
-  height: 100px;
+  height: 120px;
   background: #ffffff;
   border-radius: 12px;
+}
+
+@media (max-width: 1279px) {
+  .ds-scale-page .ds-scale-panel--radius,
+  .ds-scale-page .ds-scale-panel--size,
+  .ds-scale-page .ds-scale-panel--shadow {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
