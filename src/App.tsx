@@ -4,6 +4,7 @@ import LayoutPage from './design-system/foundation/Layout'
 import ColorTabs from './design-system/foundation/ColorTabs'
 import TypographyPage from './design-system/foundation/Typography'
 import ScalePage from './design-system/foundation/Scale'
+import IcongraphPage from './design-system/icongraph/Icongraph'
 import './App.css'
 
 const foundationPages = {
@@ -12,6 +13,7 @@ const foundationPages = {
   Color: ColorTabs,
   Typography: TypographyPage,
   Scale: ScalePage,
+  Icongraph: IcongraphPage,
 } as const
 
 const componentPages = {} as const

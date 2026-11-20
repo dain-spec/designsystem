@@ -1,0 +1,136 @@
+/* Douzone 11단 컬러 팔레트 — docs/build-color-palette.py 로 생성됨 */
+:root {
+  --color-gray-0: #FFFFFF;
+  --color-gray-50: #E6ECF2;
+  --color-gray-100: #D0D8E6;
+  --color-gray-200: #B0BFCF;
+  --color-gray-300: #97A7B8;
+  --color-gray-400: #7D8D9E;
+  --color-gray-500: #687B8C;
+  --color-gray-600: #58697A;
+  --color-gray-700: #3D4B59;
+  --color-gray-800: #2E3B47;
+  --color-gray-900: #1F252C;
+
+  --color-yellow-0: #FBF8ED;
+  --color-yellow-50: #FFF7C2;
+  --color-yellow-100: #FFE96B;
+  --color-yellow-200: #FFDC38;
+  --color-yellow-300: #FFC311;
+  --color-yellow-400: #FFA800;
+  --color-yellow-500: #FF8A00;
+  --color-yellow-600: #EF6D00;
+  --color-yellow-700: #793605;
+  --color-yellow-800: #602B04;
+  --color-yellow-900: #3C1C03;
+
+  --color-brown-0: #FEF7F4;
+  --color-brown-50: #F4D0BE;
+  --color-brown-100: #E9B08D;
+  --color-brown-200: #D08C64;
+  --color-brown-300: #B66F49;
+  --color-brown-400: #A05225;
+  --color-brown-500: #91391D;
+  --color-brown-600: #803017;
+  --color-brown-700: #6B240E;
+  --color-brown-800: #561903;
+  --color-brown-900: #3D1402;
+
+  --color-red-0: #FFF6F7;
+  --color-red-50: #FFD6D9;
+  --color-red-100: #FFB9C0;
+  --color-red-200: #FF929F;
+  --color-red-300: #FF6F80;
+  --color-red-400: #F65369;
+  --color-red-500: #DF3E56;
+  --color-red-600: #A9233B;
+  --color-red-700: #91142F;
+  --color-red-800: #760823;
+  --color-red-900: #4F0414;
+
+  --color-green-0: #EEFBF4;
+  --color-green-50: #CDF4E0;
+  --color-green-100: #86E5B7;
+  --color-green-200: #5BD59A;
+  --color-green-300: #12BA73;
+  --color-green-400: #009F5E;
+  --color-green-500: #008951;
+  --color-green-600: #006840;
+  --color-green-700: #095535;
+  --color-green-800: #064328;
+  --color-green-900: #022B18;
+
+  --color-teal-0: #EEFBF9;
+  --color-teal-50: #DEF7F4;
+  --color-teal-100: #90E5E2;
+  --color-teal-200: #50D1CE;
+  --color-teal-300: #19B6B6;
+  --color-teal-400: #009C9C;
+  --color-teal-500: #0B807D;
+  --color-teal-600: #006562;
+  --color-teal-700: #0A5250;
+  --color-teal-800: #06413F;
+  --color-teal-900: #032A28;
+
+  --color-blue-0: #F2F9FF;
+  --color-blue-50: #E3F3FF;
+  --color-blue-100: #BBE0FF;
+  --color-blue-200: #7AC7FF;
+  --color-blue-300: #4BA9FF;
+  --color-blue-400: #1088FF;
+  --color-blue-500: #0B72E6;
+  --color-blue-600: #0A58CC;
+  --color-blue-700: #13449E;
+  --color-blue-800: #0D357F;
+  --color-blue-900: #062155;
+
+  --color-indigo-0: #F7F8FF;
+  --color-indigo-50: #E7EAFF;
+  --color-indigo-100: #CED6FF;
+  --color-indigo-200: #A9BBFF;
+  --color-indigo-300: #87A1FF;
+  --color-indigo-400: #6582FE;
+  --color-indigo-500: #4C6DF4;
+  --color-indigo-600: #3059E7;
+  --color-indigo-700: #163FAE;
+  --color-indigo-800: #0F318C;
+  --color-indigo-900: #071E5F;
+
+  --color-purple-0: #F8F7FF;
+  --color-purple-50: #ECE9FF;
+  --color-purple-100: #D9D2FF;
+  --color-purple-200: #BFB4FF;
+  --color-purple-300: #A698FF;
+  --color-purple-400: #8B77FF;
+  --color-purple-500: #755EFF;
+  --color-purple-600: #6049F1;
+  --color-purple-700: #3D2FBE;
+  --color-purple-800: #2A22A0;
+  --color-purple-900: #111174;
+
+  /* 다크 모드 틴트 표면 */
+  --color-yellow-dark-bg: #36331E;
+  --color-yellow-dark-bg-hover: #413E24;
+  --color-yellow-dark-border: #524F2E;
+  --color-brown-dark-bg: #432E22;
+  --color-brown-dark-bg-hover: #523729;
+  --color-brown-dark-border: #674635;
+  --color-red-dark-bg: #472B2E;
+  --color-red-dark-bg-hover: #573438;
+  --color-red-dark-border: #6D4246;
+  --color-green-dark-bg: #1E382C;
+  --color-green-dark-bg-hover: #234435;
+  --color-green-dark-border: #2D5543;
+  --color-teal-dark-bg: #143835;
+  --color-teal-dark-bg-hover: #154541;
+  --color-teal-dark-border: #1C5652;
+  --color-blue-dark-bg: #193645;
+  --color-blue-dark-bg-hover: #1D4155;
+  --color-blue-dark-border: #25526B;
+  --color-indigo-dark-bg: #2D3246;
+  --color-indigo-dark-bg-hover: #363C56;
+  --color-indigo-dark-border: #454C6C;
+  --color-purple-dark-bg: #323045;
+  --color-purple-dark-bg-hover: #3D3B55;
+  --color-purple-dark-border: #4D4A6A;
+}
