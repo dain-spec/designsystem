@@ -1,0 +1,2592 @@
+{
+  "repoUrl": "https://github.com/dain-spec/motion",
+  "assets": [
+    {
+      "id": "loader",
+      "type": "json",
+      "title": "원형",
+      "path": "./assets/Loader/loader.json",
+      "thumbnail": "",
+      "tags": [
+        "loader",
+        "circle"
+      ],
+      "updatedAt": "2026-04-22",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-gray",
+      "type": "json",
+      "title": "그레이 원형",
+      "path": "./assets/Loader/loading_gray.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-spinner",
+      "type": "json",
+      "title": "스피너",
+      "path": "./assets/Loader/loading_spinner.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-spinner-2",
+      "type": "json",
+      "title": "스피너 2",
+      "path": "./assets/Loader/loading_spinner_0.json",
+      "thumbnail": "",
+      "tags": [
+        "loader",
+        "spinner"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_GEN AI DEWS PE Portal"
+    },
+    {
+      "id": "loading-record",
+      "type": "json",
+      "title": "점",
+      "path": "./assets/Loader/loading_record.json",
+      "thumbnail": "",
+      "tags": [
+        "loader",
+        "dot"
+      ],
+      "updatedAt": "2026-05-11",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-dot",
+      "type": "json",
+      "title": "점 그라데이션",
+      "path": "./assets/Loader/loading_dot.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-dot-loop",
+      "type": "json",
+      "title": "점 4개",
+      "path": "./assets/Loader/loading_dot_loop.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-dot-wave",
+      "type": "json",
+      "title": "물결 점",
+      "path": "./assets/Loader/loading_dot_wave.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-dotblue",
+      "type": "json",
+      "title": "블루 점",
+      "path": "./assets/Loader/loading_dotblue.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-listen",
+      "type": "json",
+      "title": "음성 웨이브",
+      "path": "./assets/Loader/loading_listen.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-voice",
+      "type": "json",
+      "title": "막대",
+      "path": "./assets/Loader/loading_voice.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 로딩"
+    },
+    {
+      "id": "loading-dot-circle",
+      "type": "json",
+      "title": "점 원형",
+      "path": "./assets/Loader/loader_dot_circle.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T AI 세무조정 에이전트"
+    },
+    {
+      "id": "loading-throbber",
+      "type": "json",
+      "title": "링",
+      "path": "./assets/Loader/loading_throbber.json",
+      "thumbnail": "",
+      "tags": [
+        "loader"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO VET"
+    },
+    {
+      "id": "ic-folder",
+      "type": "json",
+      "title": "폴더",
+      "path": "./assets/3d/folder.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "folder"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "search-folder-3d-lottie",
+      "type": "lottie",
+      "title": "폴더 검색",
+      "path": "./assets/3d/search_folder.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "folder",
+        "search",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "ic-docbox",
+      "type": "json",
+      "title": "문서함",
+      "path": "./assets/3d/docbox.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "document",
+        "box"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "bluemit-clipboard",
+      "type": "json",
+      "title": "클립보드",
+      "path": "./assets/3d/Bluemit_clipboard.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "clipboard"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Bluemit Mobile"
+    },
+    {
+      "id": "tax-clipboard-3d-lottie",
+      "type": "lottie",
+      "title": "세금 클립보드",
+      "path": "./assets/3d/tax_clipboard.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "tax",
+        "clipboard",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "send-document",
+      "type": "json",
+      "title": "문서 전송",
+      "path": "./assets/3d/send_document.json",
+      "thumbnail": "",
+      "tags": [
+        "document",
+        "send"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "ic-book",
+      "type": "json",
+      "title": "책",
+      "path": "./assets/3d/book.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "book"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "ic-sign",
+      "type": "json",
+      "title": "서명",
+      "path": "./assets/3d/sign.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "sign"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "vote",
+      "type": "json",
+      "title": "투표",
+      "path": "./assets/3d/vote.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "vote"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web 메신저"
+    },
+    {
+      "id": "certification-3d",
+      "type": "json",
+      "title": "인증",
+      "path": "./assets/3d/certification.json",
+      "thumbnail": "",
+      "tags": [
+        "certification"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "ic-mail",
+      "type": "json",
+      "title": "메일",
+      "path": "./assets/3d/mail.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "mail"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "ic-send",
+      "type": "json",
+      "title": "종이비행기",
+      "path": "./assets/3d/send.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "send"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "ic-airplane",
+      "type": "json",
+      "title": "비행기",
+      "path": "./assets/3d/airplane.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "airplane"
+      ],
+      "updatedAt": "2026-08-06",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "ic-card",
+      "type": "json",
+      "title": "카드",
+      "path": "./assets/3d/card.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "card"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "credit-card-3d-lottie",
+      "type": "lottie",
+      "title": "신용카드",
+      "path": "./assets/3d/credit_card.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "credit card",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "passbook-3d-lottie",
+      "type": "lottie",
+      "title": "통장",
+      "path": "./assets/3d/passbook.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "passbook",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "ic-moneybag",
+      "type": "json",
+      "title": "돈주머니",
+      "path": "./assets/3d/moneybag.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "money"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "cash",
+      "type": "json",
+      "title": "환급",
+      "path": "./assets/3d/cash.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "refund"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Mobile 연말정산 미리해보기"
+    },
+    {
+      "id": "piggy-default",
+      "type": "json",
+      "title": "저금통 기본",
+      "path": "./assets/3d/piggy_default.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "piggy"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Mobile 연말정산 미리해보기"
+    },
+    {
+      "id": "piggy-happy",
+      "type": "json",
+      "title": "저금통 행복",
+      "path": "./assets/3d/piggy_happy.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "piggy"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Mobile 연말정산 미리해보기"
+    },
+    {
+      "id": "piggy-sad",
+      "type": "json",
+      "title": "저금통 슬픔",
+      "path": "./assets/3d/piggy_sad.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "piggy"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Mobile 연말정산 미리해보기"
+    },
+    {
+      "id": "asset-piggybank",
+      "type": "json",
+      "title": "자산",
+      "path": "./assets/3d/자산_돼지저금통.json",
+      "thumbnail": "",
+      "tags": [
+        "asset",
+        "piggy"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "bank-main",
+      "type": "image",
+      "title": "은행",
+      "path": "./assets/3d/main.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "bank"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web 제주은행"
+    },
+    {
+      "id": "ic-shinhanbank-search",
+      "type": "image",
+      "title": "신한은행 뱅크인",
+      "path": "./assets/3d/ic_shinhanbank_search@2x.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "bank",
+        "search"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2026_Smart A 10 급여바로이체"
+    },
+    {
+      "id": "ic-calcu",
+      "type": "json",
+      "title": "계산기",
+      "path": "./assets/3d/calcu.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "calculator"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "paper-calcu-3d-lottie",
+      "type": "lottie",
+      "title": "종이 계산기",
+      "path": "./assets/3d/paper_calcu.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "calculator",
+        "paper",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "company-3d-lottie",
+      "type": "lottie",
+      "title": "회사",
+      "path": "./assets/3d/company.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "company",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "building-sun",
+      "type": "lottie",
+      "title": "빌딩 맑음",
+      "path": "./assets/3d/building_sun.lottie",
+      "thumbnail": "",
+      "tags": [
+        "빌딩",
+        "건물",
+        "날씨",
+        "맑음"
+      ],
+      "updatedAt": "2026-09-09",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "building-rain",
+      "type": "lottie",
+      "title": "빌딩 비",
+      "path": "./assets/3d/building_rain.lottie",
+      "thumbnail": "",
+      "tags": [
+        "빌딩",
+        "건물",
+        "날씨",
+        "비"
+      ],
+      "updatedAt": "2026-09-09",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "ic-briefcase",
+      "type": "json",
+      "title": "서류가방",
+      "path": "./assets/3d/briefcase.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "briefcase"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "shield",
+      "type": "json",
+      "title": "보안",
+      "path": "./assets/3d/shield.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "shield",
+        "security"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_DJ Bank 임직원신용대출"
+    },
+    {
+      "id": "padlock-3d-lottie",
+      "type": "lottie",
+      "title": "자물쇠",
+      "path": "./assets/3d/padlock.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "padlock",
+        "lock",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "login-unlock",
+      "type": "json",
+      "title": "잠금해제",
+      "path": "./assets/3d/login_unlock.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "unlock"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Bluemit Mobile"
+    },
+    {
+      "id": "login-face-id",
+      "type": "json",
+      "title": "얼굴인식",
+      "path": "./assets/3d/login_face_id.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "faceid"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Bluemit Mobile"
+    },
+    {
+      "id": "check-3d-lottie",
+      "type": "lottie",
+      "title": "체크",
+      "path": "./assets/3d/check.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "check",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "fail-3d-lottie",
+      "type": "lottie",
+      "title": "실패",
+      "path": "./assets/3d/fail.lottie",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "fail",
+        "lottie"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "ic-scan",
+      "type": "json",
+      "title": "스캔",
+      "path": "./assets/3d/scan.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "scan"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO Web AI Flow"
+    },
+    {
+      "id": "ic-alarm",
+      "type": "json",
+      "title": "알람",
+      "path": "./assets/3d/alarm.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "alarm"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "ic-calender",
+      "type": "json",
+      "title": "달력",
+      "path": "./assets/3d/calender.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "calendar"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "step-q1-consult",
+      "type": "json",
+      "title": "상담",
+      "path": "./assets/3d/Step1.json",
+      "thumbnail": "",
+      "tags": [
+        "step",
+        "consult"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "step-q2-check",
+      "type": "json",
+      "title": "자료확인",
+      "path": "./assets/3d/Step2.json",
+      "thumbnail": "",
+      "tags": [
+        "step",
+        "check"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "step-q3-lookup",
+      "type": "json",
+      "title": "조회",
+      "path": "./assets/3d/Step3.json",
+      "thumbnail": "",
+      "tags": [
+        "step",
+        "lookup"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "step-01-receipt",
+      "type": "image",
+      "title": "접수",
+      "path": "./assets/3d/step_01.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "bank"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web 제주은행"
+    },
+    {
+      "id": "step-02-review",
+      "type": "image",
+      "title": "심사",
+      "path": "./assets/3d/step_02.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "bank"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web 제주은행"
+    },
+    {
+      "id": "step-03-completed",
+      "type": "image",
+      "title": "완료",
+      "path": "./assets/3d/step_03.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "bank"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web 제주은행"
+    },
+    {
+      "id": "wehagoq-bomb",
+      "type": "json",
+      "title": "폭탄",
+      "path": "./assets/3d/bomb.json",
+      "thumbnail": "",
+      "tags": [
+        "bomb"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "wehagoq-bomb-complete",
+      "type": "json",
+      "title": "폭탄 완료",
+      "path": "./assets/3d/bomb_complete.json",
+      "thumbnail": "",
+      "tags": [
+        "bomb",
+        "complete"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "loading-pdf",
+      "type": "json",
+      "title": "PDF 변환",
+      "path": "./assets/기본/loading_pdf.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "pdf"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGOT 신고서 PDF 변환"
+    },
+    {
+      "id": "loading-address",
+      "type": "json",
+      "title": "연락처",
+      "path": "./assets/기본/loading_address.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "contact"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web 연락처"
+    },
+    {
+      "id": "loading-graph",
+      "type": "json",
+      "title": "그래프 로딩",
+      "path": "./assets/기본/loading_graph_48.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "loading",
+        "graph"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "loading-table",
+      "type": "json",
+      "title": "테이블 로딩",
+      "path": "./assets/기본/loading_table_48.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "loading",
+        "table"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "loading-ai-recommendation",
+      "type": "json",
+      "title": "AI 추천 로딩",
+      "path": "./assets/기본/loading_ai_recommendation.json",
+      "thumbnail": "",
+      "tags": [
+        "loading",
+        "ai",
+        "recommendation"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_Amaranth10 Web 연말정산총괄현황"
+    },
+    {
+      "id": "loading-docs",
+      "type": "json",
+      "title": "문서 로딩",
+      "path": "./assets/기본/loading_docs.json",
+      "thumbnail": "",
+      "tags": [
+        "loading",
+        "docs"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_Amaranth10 Web AI 분석 리포트"
+    },
+    {
+      "id": "alert-lock",
+      "type": "json",
+      "title": "잠금 경고",
+      "path": "./assets/기본/ic_alert_lock_48.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "lock",
+        "alert"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web"
+    },
+    {
+      "id": "noti-fin-loop",
+      "type": "json",
+      "title": "완료 알림 반복",
+      "path": "./assets/기본/ico_noti_fin_loop.json",
+      "thumbnail": "",
+      "tags": [
+        "notification",
+        "complete",
+        "loop"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web 자료수집및자동분개처리"
+    },
+    {
+      "id": "ic-ai-star",
+      "type": "json",
+      "title": "AI 별",
+      "path": "./assets/기본/star0.json",
+      "thumbnail": "",
+      "tags": [
+        "star",
+        "ai"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2026_WEHAGO Web 화상회의"
+    },
+    {
+      "id": "ic-analysis",
+      "type": "json",
+      "title": "분석",
+      "path": "./assets/기본/ic_analysis.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "analysis"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_ONE AI 상담챗봇"
+    },
+    {
+      "id": "ic-generating",
+      "type": "json",
+      "title": "생성",
+      "path": "./assets/기본/ic_generating.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "generating"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_ONE AI 상담챗봇"
+    },
+    {
+      "id": "star",
+      "type": "json",
+      "title": "별",
+      "path": "./assets/기본/star.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "star"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T 수임처AI연말정산 안내문"
+    },
+    {
+      "id": "ic-image",
+      "type": "json",
+      "title": "이미지 생성",
+      "path": "./assets/기본/ic_image.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "image"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "ic-searching",
+      "type": "json",
+      "title": "검색",
+      "path": "./assets/기본/ic_searching.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "search"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "ic-chart-square",
+      "type": "json",
+      "title": "차트",
+      "path": "./assets/기본/ic_chart_square.json",
+      "thumbnail": "",
+      "tags": [
+        "chart"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_Amaranth10 Web AI 분석리포트"
+    },
+    {
+      "id": "ic-code-doc-search",
+      "type": "json",
+      "title": "문서 검색",
+      "path": "./assets/기본/ic_code_doc_search.json",
+      "thumbnail": "",
+      "tags": [
+        "document",
+        "search"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_Amaranth10 Web AI 분석리포트"
+    },
+    {
+      "id": "ic-report",
+      "type": "json",
+      "title": "보고서",
+      "path": "./assets/기본/ic_report.json",
+      "thumbnail": "",
+      "tags": [
+        "report"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_ONE AI Web 시각화 보고서 생성"
+    },
+    {
+      "id": "ic-aibox-18",
+      "type": "json",
+      "title": "보관함",
+      "path": "./assets/기본/ic_aibox_18_bk.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "box"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "ic-ailaw-18",
+      "type": "json",
+      "title": "법률",
+      "path": "./assets/기본/ic_ailaw_18_bk.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "law"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "ic-aimy-18",
+      "type": "json",
+      "title": "마이페이지",
+      "path": "./assets/기본/ic_aimy_18_bk.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "my"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "ic-aitool-18",
+      "type": "json",
+      "title": "도구",
+      "path": "./assets/기본/ic_aitool_18_bk.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "tool"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "ic-data-18",
+      "type": "json",
+      "title": "데이터",
+      "path": "./assets/기본/ic_data_18_bk.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "data"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "ic-globe-18-bk",
+      "type": "json",
+      "title": "글로브",
+      "path": "./assets/기본/ic_globe_18_bk.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "globe"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "ic-search-star-18",
+      "type": "json",
+      "title": "AI 검색",
+      "path": "./assets/기본/ic_search_star_18_bk.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "search"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Web"
+    },
+    {
+      "id": "ic-aibox",
+      "type": "json",
+      "title": "보관함",
+      "path": "./assets/기본/ic_aibox.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "box"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "ic-aiimg",
+      "type": "json",
+      "title": "이미지",
+      "path": "./assets/기본/ic_aiimg.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "image"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "ic-ailense",
+      "type": "json",
+      "title": "렌즈",
+      "path": "./assets/기본/ic_ailense.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "lens"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "ic-aivoice",
+      "type": "json",
+      "title": "음성",
+      "path": "./assets/기본/ic_aivoice.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "voice"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "ic-data",
+      "type": "json",
+      "title": "데이터",
+      "path": "./assets/기본/ic_data.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "data"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "user-star",
+      "type": "json",
+      "title": "즐겨찾기",
+      "path": "./assets/기본/ic_user_star_24.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "favorite"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI OmniEsol"
+    },
+    {
+      "id": "ic-list-time",
+      "type": "json",
+      "title": "히스토리",
+      "path": "./assets/기본/ic_list_time_24.json",
+      "thumbnail": "",
+      "tags": [
+        "history",
+        "list",
+        "time"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_ONE AI Web ONECHAMBER"
+    },
+    {
+      "id": "account-card-link",
+      "type": "json",
+      "title": "계좌카드 연결",
+      "path": "./assets/기본/계좌카드 연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "account-card-info-loading",
+      "type": "json",
+      "title": "계좌카드정보 찾는중",
+      "path": "./assets/기본/계좌카드정보 찾는중.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "utility-bill-link",
+      "type": "json",
+      "title": "공과금연결",
+      "path": "./assets/기본/공과금연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "delivery-app-link",
+      "type": "json",
+      "title": "배달앱연결",
+      "path": "./assets/기본/배달앱연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "identity-verification",
+      "type": "json",
+      "title": "본인인증",
+      "path": "./assets/기본/본인인증.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "vat-estimate-link",
+      "type": "json",
+      "title": "부가세 예상금액 연결",
+      "path": "./assets/기본/부가세 예상금액 연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "business-insurance-link",
+      "type": "json",
+      "title": "사업장보험 연결",
+      "path": "./assets/기본/사업장보험 연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "business-address-link",
+      "type": "json",
+      "title": "사업장주소 연결",
+      "path": "./assets/기본/사업장주소 연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "credit-rating-lookup",
+      "type": "json",
+      "title": "신용등급 조회",
+      "path": "./assets/기본/신용등급 조회.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "card-sales-link",
+      "type": "json",
+      "title": "카드매출 연결",
+      "path": "./assets/기본/카드매출 연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "wehagoq-bomb-complete-trans",
+      "type": "json",
+      "title": "폭탄 완료 (투명)",
+      "path": "./assets/3d/bomb_complete_trans.json",
+      "thumbnail": "",
+      "tags": [
+        "bomb",
+        "complete",
+        "transparent"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "wehagoq-bomb-money",
+      "type": "json",
+      "title": "폭탄 자산",
+      "path": "./assets/3d/bomb_money.json",
+      "thumbnail": "",
+      "tags": [
+        "bomb",
+        "money"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "card-link",
+      "type": "json",
+      "title": "카드연결",
+      "path": "./assets/기본/카드연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "pos-link",
+      "type": "json",
+      "title": "포스연결",
+      "path": "./assets/기본/포스연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "hometax-link",
+      "type": "json",
+      "title": "홈택스 연결",
+      "path": "./assets/기본/홈택스 연결.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "connection-error",
+      "type": "json",
+      "title": "연결오류",
+      "path": "./assets/기본/연결오류.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "connection-complete",
+      "type": "json",
+      "title": "연결완료",
+      "path": "./assets/기본/연결완료.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "connect"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Q Mobile"
+    },
+    {
+      "id": "check-grayblue",
+      "type": "json",
+      "title": "체크 그레이블루",
+      "path": "./assets/기본/check_grayblue.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "check"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T AI 세무조정 에이전트"
+    },
+    {
+      "id": "emoji-clapping",
+      "type": "json",
+      "title": "박수",
+      "path": "./assets/기본/emoji-clapping-hands.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "dobi-doc-complete",
+      "type": "image",
+      "title": "완료",
+      "path": "./assets/character/ai_document_complete.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "completed"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web 세법도우미"
+    },
+    {
+      "id": "dobi-doc-inprogress",
+      "type": "image",
+      "title": "작성중",
+      "path": "./assets/character/ai_document_inprogress.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "inprogress"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web 세법도우미"
+    },
+    {
+      "id": "dobi-expert1-completed",
+      "type": "image",
+      "title": "엄지척",
+      "path": "./assets/character/Dobi_Expert1_completed.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "expert"
+      ],
+      "updatedAt": "2026-05-12",
+      "note": "2026_Expert1"
+    },
+    {
+      "id": "dobi-expert1-document",
+      "type": "image",
+      "title": "설명",
+      "path": "./assets/character/Dobi_Expert1_document.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "expert",
+        "document"
+      ],
+      "updatedAt": "2026-05-12",
+      "note": "2026_Expert1"
+    },
+    {
+      "id": "dobi-expert1-inprogress",
+      "type": "image",
+      "title": "돋보기",
+      "path": "./assets/character/Dobi_Expert1_inprogress.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "expert",
+        "progress"
+      ],
+      "updatedAt": "2026-05-12",
+      "note": "2026_Expert1"
+    },
+    {
+      "id": "dobi-expert1-welcome",
+      "type": "image",
+      "title": "프로필",
+      "path": "./assets/character/Dobi_Expert1_welcome.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "expert",
+        "welcome"
+      ],
+      "updatedAt": "2026-05-12",
+      "note": "2026_Expert1"
+    },
+    {
+      "id": "dobi-default",
+      "type": "image",
+      "title": "팔짱",
+      "path": "./assets/character/img_dobi.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "character"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2026_WEHAGO AI Edition 체험하기"
+    },
+    {
+      "id": "dobi-guide",
+      "type": "image",
+      "title": "안내",
+      "path": "./assets/character/Dobi_Guide.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "guide"
+      ],
+      "updatedAt": "2026-05-12",
+      "note": "2025_WEHAGO ONE AI 이용가이드"
+    },
+    {
+      "id": "dobi-notice-1",
+      "type": "image",
+      "title": "안내",
+      "path": "./assets/character/character_dobi_01.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "guide"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T 수임처AI 연말정산 안내문"
+    },
+    {
+      "id": "dobi-notice-2",
+      "type": "image",
+      "title": "안내",
+      "path": "./assets/character/character_dobi_02.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "guide"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T 수임처AI 연말정산 안내문"
+    },
+    {
+      "id": "dobi-greeting-2",
+      "type": "image",
+      "title": "인사",
+      "path": "./assets/character/dobi_greeting_2.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "greeting"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T AI Edition AI 브리핑 알림"
+    },
+    {
+      "id": "dobi-loading",
+      "type": "image",
+      "title": "로딩",
+      "path": "./assets/character/Dobi_Loading.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "loading"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Expert1"
+    },
+    {
+      "id": "dobi-welcome-2",
+      "type": "image",
+      "title": "프로필",
+      "path": "./assets/character/dobi_welcome.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "welcome"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Expert1"
+    },
+    {
+      "id": "dobe-meet-summary",
+      "type": "json",
+      "title": "메모",
+      "path": "./assets/character/Dobe_Meet_summary.json",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "meet",
+        "summary"
+      ],
+      "updatedAt": "2026-05-12",
+      "note": "2025_WEHAGO Meet Mobile 회의요약"
+    },
+    {
+      "id": "dobi-review",
+      "type": "image",
+      "title": "검토",
+      "path": "./assets/character/apngb-animated.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "review"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T AI세무조정 에이전트"
+    },
+    {
+      "id": "dobi-data-check",
+      "type": "image",
+      "title": "데이터확인",
+      "path": "./assets/character/데이터확인.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "data"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2025_WEHAGO T AI세무조정 에이전트"
+    },
+    {
+      "id": "dobi-form-check",
+      "type": "image",
+      "title": "서식확인",
+      "path": "./assets/character/서식확인.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "form"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2025_WEHAGO T AI세무조정 에이전트"
+    },
+    {
+      "id": "dobi-intro",
+      "type": "image",
+      "title": "소개",
+      "path": "./assets/character/dobi_handpoint.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "intro"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2025_WEHAGO T AI세무조정 에이전트"
+    },
+    {
+      "id": "dobi-salute",
+      "type": "image",
+      "title": "경례",
+      "path": "./assets/character/character_03.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "salute"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T AI세무조정 에이전트"
+    },
+    {
+      "id": "dobi-celebrate",
+      "type": "image",
+      "title": "축하",
+      "path": "./assets/character/character_s05.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "celebrate"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T AI세무조정 에이전트"
+    },
+    {
+      "id": "dobi-send",
+      "type": "image",
+      "title": "전송",
+      "path": "./assets/character/apngb-animated_send.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "send"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO T AI세무조정 에이전트"
+    },
+    {
+      "id": "dobi-desk-work",
+      "type": "image",
+      "title": "업무",
+      "path": "./assets/character/character_dobi_desk.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "work"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "dobi-labor-inprogress",
+      "type": "image",
+      "title": "돋보기",
+      "path": "./assets/character/dobi_Inprogress.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "progress"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_세법노무도우미"
+    },
+    {
+      "id": "dobi-float-calc",
+      "type": "image",
+      "title": "계산",
+      "path": "./assets/character/dobi_floating.png",
+      "thumbnail": "",
+      "tags": [
+        "dobi",
+        "calculator"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2026_WEHAGO Web 메인 세법도우미"
+    },
+    {
+      "id": "domi-calculate",
+      "type": "image",
+      "title": "계산",
+      "path": "./assets/character/Domi_apngb-animated_calculate.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "calculate"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web AI세무조정"
+    },
+    {
+      "id": "domi-analysis",
+      "type": "image",
+      "title": "분석",
+      "path": "./assets/character/Domi_character_01.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "analysis"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web AI세무조정"
+    },
+    {
+      "id": "domi-default",
+      "type": "image",
+      "title": "기본",
+      "path": "./assets/character/Domi_character_03.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "character"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web AI세무조정"
+    },
+    {
+      "id": "domi-memo",
+      "type": "image",
+      "title": "메모",
+      "path": "./assets/character/Domi_character_floating.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "memo"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web AI세무조정"
+    },
+    {
+      "id": "domi-greeting",
+      "type": "image",
+      "title": "인사",
+      "path": "./assets/character/Domi_character_popup.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "greeting"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web AI세무조정"
+    },
+    {
+      "id": "domi-search",
+      "type": "image",
+      "title": "조회",
+      "path": "./assets/character/Domi_ai_loading01.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "search"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web 연말정산"
+    },
+    {
+      "id": "domi-payment",
+      "type": "image",
+      "title": "납부",
+      "path": "./assets/character/Domi_character_step5_payment.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "payment"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web 연말정산"
+    },
+    {
+      "id": "domi-refund",
+      "type": "image",
+      "title": "환급",
+      "path": "./assets/character/Domi_character_step5_refund.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "refund"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web 연말정산"
+    },
+    {
+      "id": "domi-zero",
+      "type": "image",
+      "title": "0원",
+      "path": "./assets/character/Domi_character_step5_zero.png",
+      "thumbnail": "",
+      "tags": [
+        "domi",
+        "zero"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Amaranth10 Web 연말정산"
+    },
+    {
+      "id": "dochi-disappointed",
+      "type": "image",
+      "title": "실망",
+      "path": "./assets/character/Dochi_disappointed.png",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "disappointed"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Bluemit Mobile"
+    },
+    {
+      "id": "emoji-fire",
+      "type": "json",
+      "title": "불꽃",
+      "path": "./assets/기본/emoji-fire.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "dochi-greet",
+      "type": "image",
+      "title": "인사",
+      "path": "./assets/character/Dochi_greet.png",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "greet"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Bluemit Mobile"
+    },
+    {
+      "id": "dochi-laugh",
+      "type": "image",
+      "title": "웃음",
+      "path": "./assets/character/Dochi_laugh.png",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "laugh"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_Bluemit Mobile"
+    },
+    {
+      "id": "dochi-carrot",
+      "type": "json",
+      "title": "당근",
+      "path": "./assets/character/carrot.json",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "carrot"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "dochi-glasses",
+      "type": "json",
+      "title": "돋보기",
+      "path": "./assets/character/glasses.json",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "glasses"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "dochi-happy",
+      "type": "json",
+      "title": "기쁨",
+      "path": "./assets/character/happy.json",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "happy"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "dochi-glasses-lottie",
+      "type": "lottie",
+      "title": "돋보기 (Lottie)",
+      "path": "./assets/character/dochi_reading_glasses.lottie",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "glasses",
+        "lottie"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "dochi-happy-lottie",
+      "type": "lottie",
+      "title": "기쁨 (Lottie)",
+      "path": "./assets/character/happy.lottie",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "happy",
+        "lottie"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "dochi-hi",
+      "type": "json",
+      "title": "인사",
+      "path": "./assets/character/hi.json",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "hi"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "dochi-ipad-full",
+      "type": "json",
+      "title": "아이패드",
+      "path": "./assets/character/ipad_full.json",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "ipad"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "emoji-hundred",
+      "type": "json",
+      "title": "백점",
+      "path": "./assets/기본/emoji-hundred-points.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "emoji-ok",
+      "type": "json",
+      "title": "오케이",
+      "path": "./assets/기본/emoji-ok-hand.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "emoji-party",
+      "type": "json",
+      "title": "축포",
+      "path": "./assets/기본/emoji-party-popper.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "emoji-heart-eyes",
+      "type": "json",
+      "title": "하트눈",
+      "path": "./assets/기본/emoji-smiling-face-with-heart-eyes.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "emoji-thumbsup",
+      "type": "json",
+      "title": "좋아요",
+      "path": "./assets/기본/emoji-thumbs-up.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "emoji-two-hearts",
+      "type": "json",
+      "title": "하트",
+      "path": "./assets/기본/emoji-two-hearts.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "emoji"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Meet Mobile"
+    },
+    {
+      "id": "luckyball",
+      "type": "json",
+      "title": "럭키볼",
+      "path": "./assets/3d/luckyball.json",
+      "thumbnail": "",
+      "tags": [
+        "luckyball",
+        "lottery"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "confetti",
+      "type": "json",
+      "title": "컨페티",
+      "path": "./assets/3d/confetti.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "confetti"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Agent Market"
+    },
+    {
+      "id": "ic-videocall",
+      "type": "json",
+      "title": "화상통화",
+      "path": "./assets/3d/videocall.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "video",
+        "call"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "videocall-web",
+      "type": "json",
+      "title": "화상통화",
+      "path": "./assets/3d/videocall0.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "video",
+        "call"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web 화상회의"
+    },
+    {
+      "id": "ic-hand",
+      "type": "json",
+      "title": "손",
+      "path": "./assets/3d/hand.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "hand"
+      ],
+      "updatedAt": "2026-08-07",
+      "note": "2025_WEHAGO 공통 3D 아이콘"
+    },
+    {
+      "id": "ic-news-3d",
+      "type": "image",
+      "title": "뉴스",
+      "path": "./assets/3d/ic_news_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "news"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "dochi-ipad-crop",
+      "type": "json",
+      "title": "아이패드 (크롭)",
+      "path": "./assets/character/ipad_crop.json",
+      "thumbnail": "",
+      "tags": [
+        "dochi",
+        "ipad",
+        "crop"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_정밀의료빅데이터플랫폼 Mindmit"
+    },
+    {
+      "id": "qri-listen",
+      "type": "json",
+      "title": "듣기",
+      "path": "./assets/character/Qri_listen.json",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "listen",
+        "이전 버전"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-smile",
+      "type": "json",
+      "title": "미소",
+      "path": "./assets/character/smile.json",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "smile",
+        "이전 버전"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-walking",
+      "type": "json",
+      "title": "걷기",
+      "path": "./assets/character/walking.json",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "walking",
+        "이전 버전"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-greeting",
+      "type": "lottie",
+      "title": "인사",
+      "path": "./assets/character/Qri_greeting.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "greeting",
+        "이전 버전"
+      ],
+      "updatedAt": "2026-09-21",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-magnifier",
+      "type": "lottie",
+      "title": "돋보기",
+      "path": "./assets/character/Qri_magnifier.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "magnifier",
+        "이전 버전"
+      ],
+      "updatedAt": "2026-09-21",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-thinking",
+      "type": "lottie",
+      "title": "생각",
+      "path": "./assets/character/Qri_thinking.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "thinking",
+        "이전 버전"
+      ],
+      "updatedAt": "2026-09-21",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-answering",
+      "type": "lottie",
+      "title": "답변",
+      "path": "./assets/character/answering.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "answering",
+        "이전 버전"
+      ],
+      "updatedAt": "2026-09-21",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-listen-lottie",
+      "type": "lottie",
+      "title": "듣기 (Lottie)",
+      "path": "./assets/character/qri_listen.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "listen",
+        "lottie",
+        "최종 버전"
+      ],
+      "updatedAt": "2026-10-12",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-talk",
+      "type": "lottie",
+      "title": "말하기",
+      "path": "./assets/character/qri_talk.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "talk",
+        "최종 버전"
+      ],
+      "updatedAt": "2026-09-22",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-talk-2",
+      "type": "lottie",
+      "title": "말하기 2",
+      "path": "./assets/character/qri_talk_1.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "talk",
+        "최종 버전"
+      ],
+      "updatedAt": "2026-09-28",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-hello",
+      "type": "lottie",
+      "title": "안녕",
+      "path": "./assets/character/qri_hello.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "hello",
+        "최종 버전"
+      ],
+      "updatedAt": "2026-09-28",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-calculation",
+      "type": "lottie",
+      "title": "계산",
+      "path": "./assets/character/qri_calculation.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "calculation",
+        "최종 버전"
+      ],
+      "updatedAt": "2026-09-28",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-megaphone",
+      "type": "lottie",
+      "title": "확성기",
+      "path": "./assets/character/qri_megaphone.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "megaphone",
+        "최종 버전"
+      ],
+      "updatedAt": "2026-09-28",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "qri-mission",
+      "type": "lottie",
+      "title": "미션",
+      "path": "./assets/character/mission.lottie",
+      "thumbnail": "",
+      "tags": [
+        "qri",
+        "mission",
+        "최종 버전"
+      ],
+      "updatedAt": "2026-09-28",
+      "note": "2026_WEHAGO Q Mobile"
+    },
+    {
+      "id": "webot-guide",
+      "type": "image",
+      "title": "안내",
+      "path": "./assets/character/character.png",
+      "thumbnail": "",
+      "tags": [
+        "webot",
+        "guide"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2026_WE봇"
+    },
+    {
+      "id": "webot-guide-crop",
+      "type": "image",
+      "title": "안내 (크롭)",
+      "path": "./assets/character/character_01.png",
+      "thumbnail": "",
+      "tags": [
+        "webot",
+        "guide",
+        "crop"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2026_WE봇"
+    },
+    {
+      "id": "webot-profile",
+      "type": "image",
+      "title": "프로필",
+      "path": "./assets/character/character_02.png",
+      "thumbnail": "",
+      "tags": [
+        "webot",
+        "profile"
+      ],
+      "updatedAt": "2026-08-14",
+      "note": "2026_WE봇"
+    },
+    {
+      "id": "oneai",
+      "type": "json",
+      "title": "ONE AI",
+      "path": "./assets/3d/oneai.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "brand"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "oneai-loading",
+      "type": "json",
+      "title": "ONE AI 로딩",
+      "path": "./assets/3d/oneai_loading.json",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "brand",
+        "loading"
+      ],
+      "updatedAt": "2026-08-13",
+      "note": "2025_ONE AI Mobile"
+    },
+    {
+      "id": "ic-weather-3d",
+      "type": "image",
+      "title": "기본",
+      "path": "./assets/3d/ic_weather_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-sun-3d",
+      "type": "image",
+      "title": "맑음",
+      "path": "./assets/3d/ic_weather_sun_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-gray-3d",
+      "type": "image",
+      "title": "구름조금",
+      "path": "./assets/3d/ic_weather_gray_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-cloudy-3d",
+      "type": "image",
+      "title": "흐림",
+      "path": "./assets/3d/ic_weather_cloudy_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-cloudy-rain-3d",
+      "type": "image",
+      "title": "비",
+      "path": "./assets/3d/ic_weather_cloudy_rain_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-shower-rain-3d",
+      "type": "image",
+      "title": "소나기",
+      "path": "./assets/3d/ic_weather_shower_rain_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-flash-3d",
+      "type": "image",
+      "title": "번개",
+      "path": "./assets/3d/ic_weather_flash_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-rain-flash-3d",
+      "type": "image",
+      "title": "비+번개",
+      "path": "./assets/3d/ic_weather_rain_flash_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-snow-3d",
+      "type": "image",
+      "title": "눈",
+      "path": "./assets/3d/ic_weather_snow_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    },
+    {
+      "id": "ic-weather-ice-3d",
+      "type": "image",
+      "title": "영하",
+      "path": "./assets/3d/ic_weather_ice_3d.png",
+      "thumbnail": "",
+      "tags": [
+        "icon",
+        "weather"
+      ],
+      "updatedAt": "2026-08-12",
+      "note": "2025_WEHAGO Web Proactive AI"
+    }
+  ]
+}
