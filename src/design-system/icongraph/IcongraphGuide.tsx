@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { assetUrl } from './assetUrl'
 
 interface GuideSection {
   title: string
@@ -9,7 +10,7 @@ interface GuideSection {
   extra?: { title: string; badge: string; description: string; image: { src: string; alt: string } }
 }
 
-const img = (n: string) => `/icongraph/guide/${n}.png`
+const img = (n: string) => assetUrl(`/icongraph/guide/${n}.png`)
 
 const sections: GuideSection[] = [
   {

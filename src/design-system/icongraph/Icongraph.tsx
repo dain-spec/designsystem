@@ -22,14 +22,14 @@ export default function IcongraphPage() {
   return (
     <div className="ds-typography-page ds-typography-page--figma ig-page">
       <div className="ds-page-title">
-        <h1>Icongraph</h1>
+        <h1>Icongraphy</h1>
         <p>
           아이콘은 서비스 내 기능과 정보를 직관적으로 전달하는 그래픽 요소입니다. Guide에서 제작 기준을 확인하고,
           MultiColor·3D·Motion 탭에서 아이콘을 검색하고 내려받을 수 있습니다.
         </p>
       </div>
 
-      <div className="ds-tabs" role="tablist" aria-label="Icongraph">
+      <div className="ds-tabs" role="tablist" aria-label="Icongraphy">
         {tabs.map((t) => (
           <button
             key={t.id}

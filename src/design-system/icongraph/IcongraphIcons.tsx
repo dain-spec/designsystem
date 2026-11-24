@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-import manifest from './manifest.json'
+import rawManifest from './manifest.json'
+import { withBase } from './assetUrl'
 import IconExplorer from './IconExplorer'
 import { ActionButton, CodeBlock, DetailHeader, DownloadLink, Preview, SubTabs } from './DetailParts'
 import LottieSvg from './LottieSvg'
@@ -13,6 +14,8 @@ import {
   rgb01ToHex,
   type LottieColorGroup,
 } from './lottieColor'
+
+const manifest = withBase(rawManifest)
 
 const FIGMA_FILE_KEY = manifest.figmaFileKey
 const figmaLink = (nodeId: string) =>
