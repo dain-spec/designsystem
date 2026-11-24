@@ -113,9 +113,19 @@
 
 /* 페이지 타이틀: Figma InputField_2.0 PageTitle (제목 60px Bold, 설명 18px Medium) + BadgeWrap */
 /* 위쪽 여백은 Typography 페이지 타이틀과 같습니다. */
-.ds-if-head { padding: 60px 40px 4px; }
+.ds-if-head { padding: 60px 40px 0; }
 @media (max-width: 1279px) {
-  .ds-if-head { padding: 40px 24px 4px; }
+  .ds-if-head { padding: 40px 24px 0; }
 }
 .ds-if-head h1 { margin: 0; font-size: 60px; line-height: 90px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
 .ds-if-head p { margin: 16px 0 0; font-size: 18px; line-height: 27px; font-weight: 500; letter-spacing: -0.5px; color: #333; }
+
+/* 섹션 타이포: Figma 기준 (섹션 제목 24/36 Bold, 섹션 설명 16/24, 섹션 간격 44px) */
+.ds-if-page .ds-section { padding: 44px 40px 0; }
+.ds-if-page .ds-section:last-child { padding-bottom: 60px; }
+.ds-if-page .ds-section-heading h2 { margin: 0 0 24px; font-size: 24px; line-height: 36px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
+.ds-if-section-desc { margin: -12px 0 24px; font-size: 16px; line-height: 24px; letter-spacing: -0.5px; color: #333; }
+@media (max-width: 1279px) {
+  .ds-if-page .ds-section { padding: 32px 24px 0; }
+  .ds-if-page .ds-section:last-child { padding-bottom: 60px; }
+}
