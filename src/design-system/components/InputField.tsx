@@ -88,14 +88,6 @@ export default function InputFieldPage() {
   return (
     <div className="ds-typography-page ds-if-page">
       <header className="ds-if-head">
-        <div className="ds-if-head__badges">
-          <span className="ds-if-badge">
-            <i className="ds-if-badge__icon">✓</i>Done<i className="ds-if-badge__arrow" />
-          </span>
-          <span className="ds-if-link">
-            <i className="ds-if-link__icon">↗</i>메인 컴포넌트
-          </span>
-        </div>
         <h1>InputField</h1>
         <p>한 줄의 텍스트를 입력하거나 입력된 값을 확인할 때 사용하는 기본 폼 컴포넌트입니다.</p>
       </header>

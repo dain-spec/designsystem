@@ -112,13 +112,6 @@
 .ds-if-dropdown__title b { color: #105aff; font-weight: 500; }
 
 /* 페이지 타이틀: Figma InputField_2.0 PageTitle (제목 60px Bold, 설명 18px Medium) + BadgeWrap */
-.ds-if-head { padding: 56px 24px 4px; }
-.ds-if-head__badges { display: flex; gap: 4px; margin-bottom: 44px; }
-.ds-if-badge, .ds-if-link { display: inline-flex; align-items: center; height: 24px; box-sizing: border-box; border-radius: 4px; font-size: 11px; letter-spacing: -0.5px; }
-.ds-if-badge { gap: 4px; padding: 0 4px; background: #e9f9f1; color: #007e47; font-weight: 500; }
-.ds-if-badge__icon { display: grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; background: #27c36f; color: #fff; font-size: 9px; font-style: normal; font-weight: 700; }
-.ds-if-badge__arrow { width: 4px; height: 4px; margin: -2px 3px 0 2px; border-right: 1.5px solid #007e47; border-bottom: 1.5px solid #007e47; transform: rotate(45deg); }
-.ds-if-link { gap: 4px; padding: 0 6px; background: #ededed; color: #333; font-weight: 400; }
-.ds-if-link__icon { font-size: 11px; font-style: normal; }
+.ds-if-head { padding: 40px 24px 4px; }
 .ds-if-head h1 { margin: 0; font-size: 60px; line-height: 90px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
 .ds-if-head p { margin: 16px 0 0; font-size: 18px; line-height: 27px; font-weight: 500; letter-spacing: -0.5px; color: #333; }
