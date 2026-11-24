@@ -112,7 +112,8 @@
 .ds-if-dropdown__title b { color: #105aff; font-weight: 500; }
 
 /* 페이지 타이틀: Figma InputField_2.0 PageTitle (제목 60px Bold, 설명 18px Medium) + BadgeWrap */
-.ds-if-head { padding: 40px 40px 4px; }
+/* 위쪽 여백은 Typography 페이지 타이틀과 같습니다. */
+.ds-if-head { padding: 60px 40px 4px; }
 @media (max-width: 1279px) {
   .ds-if-head { padding: 40px 24px 4px; }
 }
