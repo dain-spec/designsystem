@@ -112,6 +112,9 @@
 .ds-if-dropdown__title b { color: #105aff; font-weight: 500; }
 
 /* 페이지 타이틀: Figma InputField_2.0 PageTitle (제목 60px Bold, 설명 18px Medium) + BadgeWrap */
-.ds-if-head { padding: 40px 24px 4px; }
+.ds-if-head { padding: 40px 40px 4px; }
+@media (max-width: 1279px) {
+  .ds-if-head { padding: 40px 24px 4px; }
+}
 .ds-if-head h1 { margin: 0; font-size: 60px; line-height: 90px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
 .ds-if-head p { margin: 16px 0 0; font-size: 18px; line-height: 27px; font-weight: 500; letter-spacing: -0.5px; color: #333; }
