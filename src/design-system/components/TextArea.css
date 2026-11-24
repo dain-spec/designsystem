@@ -1,0 +1,32 @@
+/* TextArea 가이드: 컨테이너 324×114, radius 8, 패딩 12(테두리 포함), 글자 14/21. 나머지는 InputField.css 공통 */
+.ds-ta {
+  position: relative; box-sizing: border-box; flex: none; width: 324px; height: 114px; padding: 11px; overflow: hidden;
+  background: #fff; border: 1px solid #d3d3d3; border-radius: 8px;
+  font-size: 14px; line-height: 21px; letter-spacing: -0.5px; color: #333;
+}
+.ds-ta__placeholder { color: #b4b4b4; }
+.ds-ta__value { color: #333; }
+.ds-ta__caret { display: inline-block; width: 1px; height: 16px; margin: 0 1px; background: #333; vertical-align: middle; }
+.ds-ta--focused, .ds-ta--typing { border-color: #4a4a4a; }
+.ds-ta--disabled, .ds-ta--readonly { background: #fafafa; }
+.ds-ta--readonly .ds-ta__placeholder { color: #777; }
+/* 스크롤바: 4×30, 오른쪽 4px, 위에서 36px */
+.ds-ta__scroll { position: absolute; top: 35px; right: 3px; width: 4px; height: 30px; border-radius: 1000px; background: rgba(0, 0, 0, 0.16); }
+
+.ds-ta-labeled { width: 324px; }
+
+/* Anatomy: 패널 가운데에 TextArea, 가이드선은 좌표 기준 배치 (필드 왼쪽 0, 레이블 위 0) */
+.ds-ta-anatomy { position: relative; padding: 12px 0; }
+.ds-ta-anatomy__label { position: absolute; top: -18px; left: 12px; transform: translateX(-50%); height: 17px; --pin-len: 11px; }
+.ds-ta-anatomy__scroll { position: absolute; top: -18px; left: 318px; transform: translateX(-50%); height: 17px; --pin-len: 70px; }
+.ds-ta-anatomy__container { position: absolute; top: 39px; left: 332px; }
+
+/* State: 2열, 열 간격 20px */
+.ds-ta-states { display: grid; grid-template-columns: repeat(2, 324px); gap: 20px; }
+
+/* Size: 두 TextArea를 위쪽 정렬로 나란히, 치수선은 필드에서 4px */
+.ds-ta-sizes { display: flex; align-items: flex-start; gap: 20px; }
+.ds-ta-size { position: relative; }
+.ds-ta-size .ds-if-dim { position: absolute; top: 0; white-space: nowrap; }
+.ds-ta-size__before { right: calc(100% + 4px); }
+.ds-ta-size__after { left: calc(100% + 4px); }
