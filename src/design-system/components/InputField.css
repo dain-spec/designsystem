@@ -44,10 +44,10 @@
 /* Guide */
 .ds-if-guide { font-family: Pretendard, inherit; font-size: 12px; line-height: 17px; letter-spacing: -0.24px; color: #e71825; white-space: nowrap; }
 .ds-if-anatomy { position: relative; padding: 12px 130px 12px 70px; }
-.ds-if-anatomy__label { position: absolute; top: -18px; left: 0; }
-.ds-if-anatomy__icon { position: absolute; top: -18px; left: 150px; }
-.ds-if-anatomy__container { position: absolute; top: 39px; right: 20px; }
-.ds-if-anatomy__helper { position: absolute; bottom: 12px; left: -75px; }
+.ds-if-anatomy__label { position: absolute; top: -18px; left: 81px; transform: translateX(-50%); height: 17px; }
+.ds-if-anatomy__icon { position: absolute; top: -18px; left: 241px; transform: translateX(-50%); height: 17px; }
+.ds-if-anatomy__container { position: absolute; top: 39px; left: 268px; }
+.ds-if-anatomy__helper { position: absolute; top: 74px; left: 65px; transform: translateX(-100%); }
 
 .ds-if-row { display: flex; align-items: flex-end; gap: 6px; }
 .ds-if-row--gap4 { align-items: center; gap: 4px; }
@@ -62,7 +62,7 @@
 .ds-if-dropdown li:nth-child(3) { background: linear-gradient(#00000008, #00000008), #fff; }
 .ds-if-dropdown__title { font-size: 13px; font-weight: 500; line-height: 20px !important; border-bottom: 1px solid #ededed; }
 .ds-if-dropdown::after { content: ''; position: absolute; right: 2px; top: 52px; width: 4px; height: 30px; border-radius: 1000px; background: #00000029; }
-.ds-if-typing__note { position: absolute; left: 198px; top: 66px; width: 170px; white-space: normal; }
+.ds-if-typing__note { position: absolute; left: 198px; top: 66px; white-space: nowrap; }
 
 /* State grid */
 .ds-if-states { display: grid; grid-template-columns: repeat(3, 190px); gap: 20px; }
@@ -71,8 +71,41 @@
 .ds-if-state__label { font-family: Pretendard, inherit; font-size: 12px; line-height: 18px; color: #7d32ff; }
 .ds-if-state .ds-if-helper { margin-top: -6px; }
 
-/* 간격 표기: 4px 폭 자리에 숫자를 걸쳐 둡니다. */
-.ds-if-gap { position: relative; flex: none; display: flex; justify-content: center; align-items: flex-start; width: 4px; height: 32px; background: linear-gradient(#e71825, #e71825) center 22px / 4px 1px no-repeat; }
-.ds-if-typing > .ds-if-gap { position: absolute; left: 4px; top: 32px; width: 4px; height: 4px; background: none; }
-.ds-if-typing > .ds-if-gap::before { content: ''; }
-.ds-if-gap--v { width: 12px; height: 6px; margin-left: 0; background: none; }
+/* 가이드 화살표: Figma .가이드설명(선 1px + 점 3px), .가이드사이즈(치수선) */
+.ds-if-pin { --pin: #e71825; }
+.ds-if-pin::before { content: ''; position: absolute; background: var(--pin); }
+.ds-if-pin::after { content: ''; position: absolute; width: 3px; height: 3px; border-radius: 50%; background: var(--pin); }
+/* 아래로: 글자 중앙에서 아래로 선, 끝에 점 */
+.ds-if-pin--down::before { left: calc(50% - 0.5px); top: 17px; width: 1px; height: var(--pin-len, 8px); }
+.ds-if-pin--down::after { left: calc(50% - 1px); top: calc(17px + var(--pin-len, 8px) - 1px); }
+.ds-if-anatomy__label { --pin-len: 11px; }
+.ds-if-anatomy__icon { --pin-len: 45px; }
+/* 오른쪽: 글자 뒤에 가로선, 끝에 점 */
+.ds-if-pin--right { padding-right: 15px; }
+.ds-if-pin--right::before { right: 3px; top: 8px; width: 12px; height: 1px; }
+.ds-if-pin--right::after { right: 0; top: 7px; }
+/* 왼쪽: 글자 앞에 점과 가로선 */
+.ds-if-pin--left { padding-left: 20px; }
+.ds-if-pin--left::before { left: 3px; top: 25px; width: 13px; height: 1px; }
+.ds-if-pin--left::after { left: 0; top: 24px; }
+
+/* 치수선: 양 끝 눈금이 있는 막대 */
+.ds-if-dim { display: inline-flex; align-items: center; gap: 4px; }
+.ds-if-bar { position: relative; flex: none; width: 4px; background: linear-gradient(#e71825, #e71825) center / 1px 100% no-repeat; }
+.ds-if-bar::before, .ds-if-bar::after { content: ''; position: absolute; left: 0; width: 4px; height: 1px; background: #e71825; }
+.ds-if-bar::before { top: 0; }
+.ds-if-bar::after { bottom: 0; }
+.ds-if-anatomy__container { align-items: center; }
+
+/* 간격 표기(4): 숫자 아래에 가로 치수선 */
+.ds-if-gap { position: relative; flex: none; display: flex; justify-content: center; align-items: flex-start; width: 4px; height: 32px; margin-top: -7px; line-height: 17px; background:
+  linear-gradient(#e71825, #e71825) 0 19px / 1px 4px no-repeat, linear-gradient(#e71825, #e71825) 100% 19px / 1px 4px no-repeat, linear-gradient(#e71825, #e71825) 0 21px / 100% 1px no-repeat; }
+.ds-if-typing > .ds-if-gap { position: absolute; left: 10px; top: 25px; width: 4px; height: 4px; margin: 0; background: none; transform: none; }
+.ds-if-typing > .ds-if-gap::after { content: ''; position: absolute; left: 10px; top: 9px; width: 1px; height: 4px; background: #e71825; }
+/* 간격 표기(6): Label과 필드 사이 세로 */
+.ds-if-labeled { position: relative; }
+.ds-if-gap6 { position: absolute; left: 6px; top: 12px; display: flex; gap: 2px; align-items: center; font-family: Pretendard, inherit; font-size: 12px; line-height: 17px; color: #e71825; }
+.ds-if-gap6::after { content: ''; width: 1px; height: 6px; margin-top: 12px; background: #e71825; box-shadow: -1px 0 #e71825 inset; }
+
+.ds-if-dropdown { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16); }
+.ds-if-dropdown__title b { color: #105aff; font-weight: 500; }
