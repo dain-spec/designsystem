@@ -5,6 +5,7 @@ import ColorTabs from './design-system/foundation/ColorTabs'
 import TypographyPage from './design-system/foundation/Typography'
 import ScalePage from './design-system/foundation/Scale'
 import IcongraphPage from './design-system/icongraph/Icongraph'
+import InputFieldPage from './design-system/components/InputField'
 import './App.css'
 
 const foundationPages = {
@@ -16,7 +17,9 @@ const foundationPages = {
   Icongraph: IcongraphPage,
 } as const
 
-const componentPages = {} as const
+const componentPages = {
+  InputField: InputFieldPage,
+} as const
 
 const pages = { ...foundationPages, ...componentPages }
 
