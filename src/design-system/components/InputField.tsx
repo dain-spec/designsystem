@@ -95,10 +95,10 @@ export default function InputFieldPage() {
       <Section title="Anatomy">
         <Block description="InputField는 입력 영역인 Container로 구성되며, 필요에 따라 Label, Trailing Icon, Helper Text를 함께 표시할 수 있습니다.">
           <div className="ds-if-anatomy">
-            <Guide className="ds-if-anatomy__label">Label (Optional)</Guide>
-            <Guide className="ds-if-anatomy__icon">Trailing Icon (Optional)</Guide>
-            <Guide className="ds-if-anatomy__container">Container</Guide>
-            <Guide className="ds-if-anatomy__helper">Helper text (Optional)</Guide>
+            <Guide className="ds-if-anatomy__label ds-if-pin ds-if-pin--down">Label (Optional)</Guide>
+            <Guide className="ds-if-anatomy__icon ds-if-pin ds-if-pin--down">Trailing Icon (Optional)</Guide>
+            <span className="ds-if-dim ds-if-anatomy__container"><i className="ds-if-bar" style={{ height: 32 }} /><Guide>Container</Guide></span>
+            <Guide className="ds-if-anatomy__helper ds-if-pin ds-if-pin--right">Helper text (Optional)</Guide>
             <Label>
               <Field state="success" value="내용 입력완료" width={190} />
               <span className="ds-if-helper ds-if-helper--success">사용 가능합니다.</span>
@@ -112,8 +112,8 @@ export default function InputFieldPage() {
           <div className="ds-if-row">
             <Label>
               <Field placeholder="이름을 입력하세요." width={190} />
+              <Guide className="ds-if-gap6">6</Guide>
             </Label>
-            <Guide className="ds-if-gap ds-if-gap--v">6</Guide>
           </div>
         </Block>
         <Block title="Dropdown + Button" description="Dropdown이나 Button 등 다른 컴포넌트와 가로로 배치할 때는 간격을 4px로 둡니다.">
@@ -133,12 +133,12 @@ export default function InputFieldPage() {
             <Field state="typing" value="내용 입력" width={190} />
             <Guide className="ds-if-gap">4</Guide>
             <ul className="ds-if-dropdown">
-              <li className="ds-if-dropdown__title">카테고리명 99건</li>
+              <li className="ds-if-dropdown__title">카테고리명 <b>99</b>건</li>
               {Array.from({ length: 5 }, (_, i) => (
                 <li key={i}>douzonekim</li>
               ))}
             </ul>
-            <Guide className="ds-if-typing__note">
+            <Guide className="ds-if-typing__note ds-if-pin ds-if-pin--left">
               상단 타이틀 있는 경우
               <br />
               타이틀 리스트 고정, border 추가
@@ -166,7 +166,7 @@ export default function InputFieldPage() {
           <div className="ds-if-row ds-if-row--sizes">
             {([['large', 44], ['medium', 32], ['small', 28]] as const).map(([size, h]) => (
               <div key={size} className="ds-if-size">
-                <Guide>{h}</Guide>
+                <span className="ds-if-dim"><Guide>{h}</Guide><i className="ds-if-bar" style={{ height: h }} /></span>
                 <Field size={size} width={190} />
               </div>
             ))}
