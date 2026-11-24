@@ -6,6 +6,7 @@ import TypographyPage from './design-system/foundation/Typography'
 import ScalePage from './design-system/foundation/Scale'
 import IcongraphPage from './design-system/icongraph/Icongraph'
 import InputFieldPage from './design-system/components/InputField'
+import TextAreaPage from './design-system/components/TextArea'
 import HeaderPage from './design-system/components/Header'
 import './App.css'
 
@@ -20,6 +21,7 @@ const foundationPages = {
 
 const componentPages = {
   InputField: InputFieldPage,
+  TextArea: TextAreaPage,
   Header: HeaderPage,
 } as const
 
