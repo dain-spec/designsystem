@@ -14,7 +14,7 @@ const foundationPages = {
   Color: ColorTabs,
   Typography: TypographyPage,
   Scale: ScalePage,
-  Icongraph: IcongraphPage,
+  Icongraphy: IcongraphPage,
 } as const
 
 const componentPages = {
