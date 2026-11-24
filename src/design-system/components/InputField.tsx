@@ -142,11 +142,14 @@ export default function InputFieldPage() {
                 <li key={i}>douzonekim</li>
               ))}
             </ul>
-            <Guide className="ds-if-typing__note ds-if-pin ds-if-pin--left">
-              상단 타이틀 있는 경우
-              <br />
-              타이틀 리스트 고정, border 추가
-            </Guide>
+            <span className="ds-if-dim ds-if-typing__note">
+              <i className="ds-if-bar" style={{ height: 36 }} />
+              <Guide>
+                상단 타이틀 있는 경우
+                <br />
+                타이틀 리스트 고정, border 추가
+              </Guide>
+            </span>
           </div>
         </Block>
       </Section>
