@@ -51,22 +51,23 @@ function Guide({ children, className = '' }: { children: React.ReactNode; classN
   return <span className={`ds-if-guide ${className}`}>{children}</span>
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, description, children }: { title: string; description?: string; children: React.ReactNode }) {
   return (
     <section className="ds-section">
       <div className="ds-section-heading">
         <h2>{title}</h2>
       </div>
+      {description && <p className="ds-if-section-desc">{description}</p>}
       {children}
     </section>
   )
 }
 
-function Block({ title, description, children }: { title?: string; description: string; children: React.ReactNode }) {
+function Block({ title, description, children }: { title?: string; description?: string; children: React.ReactNode }) {
   return (
     <div className="ds-if-block">
       {title && <h3>{title}</h3>}
-      <p>{description}</p>
+      {description && <p>{description}</p>}
       <div className="ds-panel ds-if-panel">{children}</div>
     </div>
   )
@@ -92,8 +93,11 @@ export default function InputFieldPage() {
         <p>한 줄의 텍스트를 입력하거나 입력된 값을 확인할 때 사용하는 기본 폼 컴포넌트입니다.</p>
       </header>
 
-      <Section title="Anatomy">
-        <Block description="InputField는 입력 영역인 Container로 구성되며, 필요에 따라 Label, Trailing Icon, Helper Text를 함께 표시할 수 있습니다.">
+      <Section
+        title="Anatomy"
+        description="InputField는 입력 영역인 Container로 구성되며, 필요에 따라 Label, Trailing Icon, Helper Text를 함께 표시할 수 있습니다."
+      >
+        <Block>
           <div className="ds-if-anatomy">
             <Guide className="ds-if-anatomy__label ds-if-pin ds-if-pin--down">Label (Optional)</Guide>
             <Guide className="ds-if-anatomy__icon ds-if-pin ds-if-pin--down">Trailing Icon (Optional)</Guide>
