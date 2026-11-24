@@ -87,10 +87,18 @@ const STATES: { label: string; state: FieldState; value?: string; helper?: strin
 export default function InputFieldPage() {
   return (
     <div className="ds-typography-page ds-if-page">
-      <div className="ds-page-title">
+      <header className="ds-if-head">
+        <div className="ds-if-head__badges">
+          <span className="ds-if-badge">
+            <i className="ds-if-badge__icon">✓</i>Done<i className="ds-if-badge__arrow" />
+          </span>
+          <span className="ds-if-link">
+            <i className="ds-if-link__icon">↗</i>메인 컴포넌트
+          </span>
+        </div>
         <h1>InputField</h1>
         <p>한 줄의 텍스트를 입력하거나 입력된 값을 확인할 때 사용하는 기본 폼 컴포넌트입니다.</p>
-      </div>
+      </header>
 
       <Section title="Anatomy">
         <Block description="InputField는 입력 영역인 Container로 구성되며, 필요에 따라 Label, Trailing Icon, Helper Text를 함께 표시할 수 있습니다.">
