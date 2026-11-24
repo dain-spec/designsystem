@@ -100,7 +100,7 @@ export default function InputFieldPage() {
             <Guide className="ds-if-anatomy__container">Container</Guide>
             <Guide className="ds-if-anatomy__helper">Helper text (Optional)</Guide>
             <Label>
-              <Field state="success" value="내용 입력완료" width={180} />
+              <Field state="success" value="내용 입력완료" width={190} />
               <span className="ds-if-helper ds-if-helper--success">사용 가능합니다.</span>
             </Label>
           </div>
@@ -111,27 +111,27 @@ export default function InputFieldPage() {
         <Block title="Label" description="Label을 입력 영역 위에 배치할 때는 두 요소 사이에 6px의 간격을 둡니다.">
           <div className="ds-if-row">
             <Label>
-              <Field placeholder="이름을 입력하세요." width={180} />
+              <Field placeholder="이름을 입력하세요." width={190} />
             </Label>
-            <Guide>6px</Guide>
+            <Guide className="ds-if-gap ds-if-gap--v">6</Guide>
           </div>
         </Block>
         <Block title="Dropdown + Button" description="Dropdown이나 Button 등 다른 컴포넌트와 가로로 배치할 때는 간격을 4px로 둡니다.">
           <div className="ds-if-row ds-if-row--gap4">
-            <Field placeholder="이름을 입력하세요." width={140} />
-            <Guide>4px</Guide>
-            <div className="ds-if ds-if--medium ds-if--default ds-if--select" style={{ width: 140 }}>
+            <Field placeholder="이름을 입력하세요." width={190} />
+            <Guide className="ds-if-gap">4</Guide>
+            <div className="ds-if ds-if--medium ds-if--default ds-if--select" style={{ width: 190 }}>
               <span className="ds-if__value">소속을 선택해주세요.</span>
               <span className="ds-if__chevron">⌄</span>
             </div>
-            <Guide>4px</Guide>
+            <Guide className="ds-if-gap">4</Guide>
             <button type="button" className="ds-if-button">저장</button>
           </div>
         </Block>
         <Block title="Typing" description="입력 중 하단에 자동완성 Dropdown이 나타날 경우, 세로 간격을 4px로 둡니다.">
           <div className="ds-if-typing">
-            <Field state="typing" value="내용 입력" width={180} />
-            <Guide>4px</Guide>
+            <Field state="typing" value="내용 입력" width={190} />
+            <Guide className="ds-if-gap">4</Guide>
             <ul className="ds-if-dropdown">
               <li className="ds-if-dropdown__title">카테고리명 99건</li>
               {Array.from({ length: 5 }, (_, i) => (
@@ -167,7 +167,7 @@ export default function InputFieldPage() {
             {([['large', 44], ['medium', 32], ['small', 28]] as const).map(([size, h]) => (
               <div key={size} className="ds-if-size">
                 <Guide>{h}</Guide>
-                <Field size={size} width={150} />
+                <Field size={size} width={190} />
               </div>
             ))}
           </div>

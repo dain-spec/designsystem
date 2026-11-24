@@ -1,67 +1,78 @@
-.ds-if-page .ds-if-block { margin-top: 24px; }
-.ds-if-page .ds-if-block:first-of-type { margin-top: 0; }
-.ds-if-block h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
-.ds-if-block > p { margin: 0 0 12px; font-size: 13px; letter-spacing: -0.5px; color: #333; }
-.ds-if-panel { display: flex; justify-content: center; padding: 40px 30px; background: #f7f8fa; border-radius: 8px; }
+/* Figma InputField_2.0 실측값: 필드 190px, radius 6(Large 8), 글자 14px, 패널 #f7f8fa·radius 8 */
+.ds-if-block { margin-top: 24px; }
+.ds-if-block:first-of-type { margin-top: 0; }
+.ds-if-block h3 { margin: 0 0 4px; font-size: 20px; line-height: 30px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
+.ds-if-block > p { margin: 0 0 16px; font-size: 15px; line-height: 22.5px; letter-spacing: -0.5px; color: #333; }
+.ds-if-panel { display: flex; justify-content: center; padding: 28px; background: #f7f8fa; border-radius: 8px; }
 
 /* Container */
 .ds-if {
   --if-border: #d3d3d3;
-  box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 6px;
-  padding: 0 10px; background: #fff; border: 1px solid var(--if-border); border-radius: 4px;
-  font-size: 12px; letter-spacing: -0.5px; color: #222; width: 200px;
+  box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 4px;
+  width: 190px; padding: 0 8px; background: #fff; border: 1px solid var(--if-border); border-radius: 6px;
+  font-size: 14px; line-height: 21px; letter-spacing: -0.5px; color: #333;
 }
-.ds-if--large { height: 44px; }
+.ds-if--large { height: 44px; border-radius: 8px; font-size: 15px; line-height: 23px; }
 .ds-if--medium { height: 32px; }
-.ds-if--small { height: 28px; }
-.ds-if__placeholder { color: #aaa; }
-.ds-if__value { color: #222; }
-.ds-if__caret { display: inline-block; width: 1px; height: 14px; margin: 0 1px; background: #222; vertical-align: middle; }
-.ds-if__clear { display: grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; background: #aaa; color: #fff; font-size: 11px; line-height: 1; }
+.ds-if--small { height: 28px; font-size: 12px; line-height: 18px; }
+.ds-if__placeholder { color: #b4b4b4; }
+.ds-if__value { color: #333; }
+.ds-if__caret { display: inline-block; width: 1px; height: 16px; margin: 0 1px; background: #333; vertical-align: middle; }
+.ds-if__clear, .ds-if__status { flex: none; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; color: #fff; font-size: 12px; font-weight: 700; line-height: 1; }
+.ds-if__clear { background: #b4b4b4; }
 .ds-if--focused, .ds-if--typing { --if-border: #4a4a4a; }
 .ds-if--disabled { background: #fafafa; }
 .ds-if--disabled .ds-if__placeholder { color: #c4c4c4; }
-.ds-if--readonly { background: #f7f8fa; }
+.ds-if--readonly { background: #fafafa; }
 .ds-if--success { --if-border: #27c36f; }
 .ds-if--warning { --if-border: #ffa000; }
 .ds-if--error { --if-border: #fa4553; }
-.ds-if__status { display: grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; color: #fff; font-size: 10px; font-weight: 700; }
 .ds-if__status--success { background: #27c36f; }
 .ds-if__status--warning { background: #ffa000; }
 .ds-if__status--error { background: #fa4553; }
-.ds-if__chevron { color: #777; }
+.ds-if__chevron { flex: none; width: 12px; text-align: center; color: #777; }
 
 /* Label · Helper */
-.ds-if-labeled { display: flex; flex-direction: column; gap: 6px; }
-.ds-if-label { font-size: 12px; font-weight: 700; letter-spacing: -0.5px; color: #222; }
-.ds-if-label em { margin-left: 2px; font-style: normal; color: #fa4553; }
-.ds-if-helper { margin-top: -2px; font-size: 11px; letter-spacing: -0.5px; }
+.ds-if-labeled { display: flex; flex-direction: column; gap: 6px; width: 190px; }
+.ds-if-label { font-size: 14px; line-height: 21px; font-weight: 500; letter-spacing: -0.5px; color: #333; }
+.ds-if-label em { margin-left: 2px; font-size: 13px; font-style: normal; color: #fa4553; }
+.ds-if-helper { margin-top: -4px; font-size: 12px; line-height: 18px; letter-spacing: -0.5px; }
 .ds-if-helper--success { color: #27c36f; }
 .ds-if-helper--warning { color: #ffa000; }
 .ds-if-helper--error { color: #fa4553; }
 
 /* Guide */
-.ds-if-guide { font-size: 11px; letter-spacing: -0.5px; color: #e71825; white-space: nowrap; }
-.ds-if-anatomy { display: block; position: relative; padding: 28px 110px 0 70px; }
-.ds-if-anatomy__label { position: absolute; top: 0; left: 10px; }
-.ds-if-anatomy__icon { position: absolute; top: 0; left: 190px; }
-.ds-if-anatomy__container { position: absolute; top: 46px; right: 40px; }
-.ds-if-anatomy__helper { position: absolute; bottom: 0; left: -40px; }
+.ds-if-guide { font-family: Pretendard, inherit; font-size: 12px; line-height: 17px; letter-spacing: -0.24px; color: #e71825; white-space: nowrap; }
+.ds-if-anatomy { position: relative; padding: 12px 130px 12px 70px; }
+.ds-if-anatomy__label { position: absolute; top: -18px; left: 0; }
+.ds-if-anatomy__icon { position: absolute; top: -18px; left: 150px; }
+.ds-if-anatomy__container { position: absolute; top: 39px; right: 20px; }
+.ds-if-anatomy__helper { position: absolute; bottom: 12px; left: -75px; }
 
-.ds-if-row { display: flex; align-items: flex-end; gap: 8px; }
+.ds-if-row { display: flex; align-items: flex-end; gap: 6px; }
 .ds-if-row--gap4 { align-items: center; gap: 4px; }
-.ds-if-row--sizes { gap: 24px; align-items: flex-end; }
+.ds-if-row--sizes { gap: 20px; align-items: center; }
 .ds-if-size { display: flex; align-items: center; gap: 6px; }
-.ds-if-button { height: 32px; padding: 0 12px; border: 1px solid #d3d3d3; border-radius: 4px; background: #fff; font-size: 12px; color: #222; }
+.ds-if-button { width: 50px; height: 32px; padding: 0; border: 1px solid #b4b4b4; border-radius: 6px; background: #fff; font: inherit; font-size: 14px; letter-spacing: -0.5px; color: #333; }
 
 /* Typing dropdown */
-.ds-if-typing { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-height: 190px; }
-.ds-if-dropdown { margin: 0; padding: 0; list-style: none; width: 200px; max-height: 150px; overflow: hidden; border: 1px solid #d3d3d3; border-radius: 4px; background: #fff; font-size: 12px; color: #222; }
-.ds-if-dropdown li { padding: 6px 10px; }
-.ds-if-dropdown__title { font-weight: 700; border-bottom: 1px solid #ededed; }
-.ds-if-typing__note { position: absolute; left: 210px; top: 66px; width: 170px; white-space: normal; }
+.ds-if-typing { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.ds-if-dropdown { position: relative; box-sizing: border-box; width: 190px; height: 200px; margin: 0; padding: 3px 0; list-style: none; overflow: hidden; border: 1px solid #4a4a4a; border-radius: 6px; background: #fff; font-size: 14px; color: #333; }
+.ds-if-dropdown li { box-sizing: border-box; height: 32px; padding: 5px 8px; line-height: 21px; }
+.ds-if-dropdown li:nth-child(3) { background: linear-gradient(#00000008, #00000008), #fff; }
+.ds-if-dropdown__title { font-size: 13px; font-weight: 500; line-height: 20px !important; border-bottom: 1px solid #ededed; }
+.ds-if-dropdown::after { content: ''; position: absolute; right: 2px; top: 52px; width: 4px; height: 30px; border-radius: 1000px; background: #00000029; }
+.ds-if-typing__note { position: absolute; left: 198px; top: 66px; width: 170px; white-space: normal; }
 
 /* State grid */
-.ds-if-states { display: grid; grid-template-columns: repeat(3, 180px); gap: 24px 20px; }
-.ds-if-state { display: flex; flex-direction: column; gap: 4px; }
-.ds-if-state__label { font-size: 11px; color: #7a3cf0; }
+.ds-if-states { display: grid; grid-template-columns: repeat(3, 190px); gap: 20px; }
+.ds-if-state { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.ds-if-state > .ds-if { width: 190px; }
+.ds-if-state__label { font-family: Pretendard, inherit; font-size: 12px; line-height: 18px; color: #7d32ff; }
+.ds-if-state .ds-if-helper { margin-top: -6px; }
+
+/* 간격 표기: 4px 폭 자리에 숫자를 걸쳐 둡니다. */
+.ds-if-gap { position: relative; flex: none; display: flex; justify-content: center; align-items: flex-start; width: 4px; height: 32px; background: linear-gradient(#e71825, #e71825) center 22px / 4px 1px no-repeat; }
+.ds-if-typing > .ds-if-gap { position: absolute; left: 4px; top: 32px; width: 4px; height: 4px; background: none; }
+.ds-if-typing > .ds-if-gap::before { content: ''; }
+.ds-if-gap--v { width: 12px; height: 6px; margin-left: 0; background: none; }
