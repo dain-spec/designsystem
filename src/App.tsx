@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import DesignTokenPage from './design-system/foundation/DesignToken'
 import LayoutPage from './design-system/foundation/Layout'
 import ColorTabs from './design-system/foundation/ColorTabs'
@@ -25,6 +25,14 @@ const pages = { ...foundationPages, ...componentPages }
 
 type PageName = keyof typeof pages
 
+// 새로고침해도 현재 페이지를 유지하도록 URL 해시(#InputField)에 페이지 이름을 저장합니다.
+const DEFAULT_PAGE: PageName = 'Design Token'
+
+function pageFromHash(): PageName {
+  const name = decodeURIComponent(window.location.hash.slice(1))
+  return name in pages ? (name as PageName) : DEFAULT_PAGE
+}
+
 function Header() {
   return (
     <header className="ds-header">
@@ -34,7 +42,18 @@ function Header() {
 }
 
 function App() {
-  const [active, setActive] = useState<PageName>('Design Token')
+  const [active, setActive] = useState<PageName>(pageFromHash)
+
+  useEffect(() => {
+    const onHashChange = () => setActive(pageFromHash())
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
+  const goTo = (name: PageName) => {
+    window.location.hash = encodeURIComponent(name)
+    setActive(name)
+  }
   const ActivePage = pages[active]
 
   return (
@@ -49,7 +68,7 @@ function App() {
                 <li
                   key={name}
                   className={`ds-nav__item${active === name ? ' ds-nav__item--active' : ''}`}
-                  onClick={() => setActive(name)}
+                  onClick={() => goTo(name)}
                 >
                   {name}
                 </li>
@@ -61,7 +80,7 @@ function App() {
                 <li
                   key={name}
                   className={`ds-nav__item${active === name ? ' ds-nav__item--active' : ''}`}
-                  onClick={() => setActive(name)}
+                  onClick={() => goTo(name)}
                 >
                   {name}
                 </li>
