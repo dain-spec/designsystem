@@ -63,7 +63,8 @@
 .ds-if-dropdown li:nth-child(3) { background: linear-gradient(#00000008, #00000008), #fff; }
 .ds-if-dropdown__title { font-size: 13px; font-weight: 500; line-height: 20px !important; border-bottom: 1px solid #ededed; }
 .ds-if-dropdown::after { content: ''; position: absolute; right: 2px; top: 52px; width: 4px; height: 30px; border-radius: 1000px; background: #00000029; }
-.ds-if-typing__note { position: absolute; left: 198px; top: 38px; white-space: nowrap; }
+/* 목록 제목 행(36px) 높이를 가리키는 치수선: 목록 오른쪽에서 5px */
+.ds-if-typing__note { position: absolute; left: 195px; top: 36px; white-space: nowrap; }
 
 /* State grid */
 .ds-if-states { display: grid; grid-template-columns: repeat(3, 190px); gap: 20px; }
