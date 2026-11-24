@@ -1,0 +1,37 @@
+/* Header 가이드: Figma Header_2.0 (제목 60px, 섹션 24px, 카테고리 32px, 블록 20px) */
+.hd-page { padding-bottom: 60px; }
+.hd-head { padding: 60px 40px 0; }
+.hd-head h1 { margin: 0; font-size: 60px; line-height: 90px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
+.hd-head p { margin: 16px 0 0; font-size: 18px; line-height: 27px; font-weight: 500; letter-spacing: -0.5px; color: #333; }
+
+.hd-page .ds-section { padding: 44px 40px 0; }
+.hd-h2 { margin: 0 0 24px; font-size: 24px; line-height: 36px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
+.hd-h2-desc { margin: -12px 0 24px; font-size: 16px; line-height: 24px; letter-spacing: -0.5px; color: #333; }
+.hd-h2--sub { margin-top: 44px; }
+.hd-h1 { margin: 0 0 12px; font-size: 32px; line-height: 48px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
+.hd-h1-desc { margin: 0 0 24px; font-size: 16px; line-height: 24px; letter-spacing: -0.5px; color: #333; }
+.hd-category { padding-top: 60px !important; }
+.hd-category > .hd-h2--sub:first-of-type { margin-top: 0; }
+.hd-block { margin-top: 24px; }
+.hd-block:first-of-type { margin-top: 0; }
+.hd-block h3 { margin: 0 0 4px; font-size: 20px; line-height: 30px; font-weight: 700; letter-spacing: -0.5px; color: #333; }
+.hd-block > p { margin: 0 0 16px; font-size: 15px; line-height: 22.5px; letter-spacing: -0.5px; color: #333; }
+
+.hd-panel { position: relative; display: flex; flex-direction: column; gap: 20px; padding: 28px 40px; background: #f7f8fa; border-radius: 8px; overflow-x: auto; }
+.hd-panel--anatomy { padding: 40px; }
+.hd-spec, .hd-group { display: flex; flex-direction: column; gap: 8px; }
+.hd-spec__label { font-family: Pretendard, inherit; font-size: 12px; line-height: 18px; color: #7d32ff; }
+.hd-stack { display: flex; flex-direction: column; gap: 16px; }
+.hd-panel--stack { gap: 20px; }
+
+/* Anatomy 가이드: Header 안쪽(좌우 20px) 폭에 맞춰 정렬 */
+.hd-guide { position: absolute; top: 15px; left: 60px; right: 60px; display: flex; gap: 8px; }
+.hd-gs { display: flex; flex-direction: column; align-items: center; gap: 2px; height: 21px; }
+.hd-gs__label { font-family: Pretendard, inherit; font-size: 12px; line-height: 1.4; letter-spacing: -0.24px; color: #e71825; white-space: nowrap; }
+.hd-gs img { display: block; width: 100%; height: 2px; }
+
+@media (max-width: 1279px) {
+  .hd-head { padding: 40px 24px 0; }
+  .hd-page .ds-section { padding: 32px 24px 0; }
+  .hd-category { padding-top: 44px !important; }
+}
