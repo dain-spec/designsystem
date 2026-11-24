@@ -83,6 +83,61 @@ export function MultiColorTab() {
   )
 }
 
+/* ───────── Monochrome ───────── */
+
+const monochrome = manifest.monochrome.map((i) => ({ ...i, title: i.id }))
+type MonoItem = (typeof monochrome)[number]
+
+function MonoDetail({ icon, search }: { icon: MonoItem; search: (q: string) => void }) {
+  const [tab, setTab] = useState<'react' | 'figma'>('react')
+  const name = toComponentName(icon.id)
+  return (
+    <>
+      <DetailHeader title={icon.id} tags={icon.tags} onTag={search} />
+      <Preview large={<span className="ig-svg ig-svg--mono ig-svg--48" dangerouslySetInnerHTML={{ __html: icon.svg }} />}>
+        <span className="ig-svg ig-svg--mono ig-svg--48" dangerouslySetInnerHTML={{ __html: icon.svg }} />
+      </Preview>
+      <DownloadLink href={icon.src} filename={`${icon.id}.svg`} />
+      <SubTabs
+        tabs={[
+          { key: 'react', label: 'React' },
+          ...(icon.figmaNodeId ? [{ key: 'figma' as const, label: 'Figma' }] : []),
+        ]}
+        active={tab}
+        onChange={setTab}
+      />
+      {tab === 'react' || !icon.figmaNodeId ? (
+        <>
+          <CodeBlock
+            label={name}
+            code={`import { ${name} } from "@/components/icon"\n\n<${name} name="${icon.id}" />`}
+          />
+          <CodeBlock label="SVG" code={icon.svg} />
+        </>
+      ) : (
+        <>
+          <a className="ig-download" href={figmaLink(icon.figmaNodeId)} target="_blank" rel="noopener noreferrer">
+            Figma에서 열기
+          </a>
+          <CodeBlock label="SVG" code={icon.svg.replace(/^<svg /, `<svg id="${icon.id}" `)} />
+        </>
+      )}
+    </>
+  )
+}
+
+export function MonochromeTab() {
+  return (
+    <IconExplorer
+      items={monochrome}
+      showCategoryLabels
+      placeholder="이름, 태그로 검색 (예: 화살표, 메일, arrow)"
+      renderCard={(i) => <span className="ig-svg ig-svg--mono ig-svg--24" dangerouslySetInnerHTML={{ __html: i.svg }} />}
+      renderDetail={(i, h) => <MonoDetail key={i.id} icon={i} search={h.search} />}
+    />
+  )
+}
+
 /* ───────── 3D ───────── */
 
 type D3Item = (typeof manifest.icons3d)[number]
