@@ -53,7 +53,7 @@
 .ds-if-row--gap4 { align-items: center; gap: 4px; }
 .ds-if-row--sizes { gap: 28px; align-items: center; }
 .ds-if-size { display: flex; align-items: center; }
-.ds-if-size .ds-if-dim { width: 0; justify-content: flex-end; position: relative; left: -7px; white-space: nowrap; }
+.ds-if-size .ds-if-dim { width: 0; justify-content: flex-end; position: relative; left: -5px; white-space: nowrap; }
 .ds-if-button { width: 50px; height: 32px; padding: 0; border: 1px solid #b4b4b4; border-radius: 6px; background: #fff; font: inherit; font-size: 14px; letter-spacing: -0.5px; color: #333; }
 
 /* Typing dropdown */
@@ -87,8 +87,8 @@
 .ds-if-pin--right::after { right: 0; top: 7px; }
 /* 왼쪽: 글자 앞에 점과 가로선 */
 .ds-if-pin--left { padding-left: 20px; }
-.ds-if-pin--left::before { left: 3px; top: 25px; width: 13px; height: 1px; }
-.ds-if-pin--left::after { left: 0; top: 24px; }
+.ds-if-pin--left::before { left: 3px; top: 16px; width: 15px; height: 1px; }
+.ds-if-pin--left::after { left: 0; top: 15px; }
 
 /* 치수선: 양 끝 눈금이 있는 막대 */
 .ds-if-dim { display: inline-flex; align-items: center; gap: 2px; }
@@ -101,12 +101,12 @@
 /* 간격 표기(4): 숫자 아래에 가로 치수선 */
 .ds-if-gap { position: relative; flex: none; margin-left: -4px; margin-right: -4px; display: flex; justify-content: center; align-items: flex-start; width: 4px; height: 32px; margin-top: -7px; line-height: 17px; background:
   linear-gradient(#e71825, #e71825) 0 19px / 1px 4px no-repeat, linear-gradient(#e71825, #e71825) 100% 19px / 1px 4px no-repeat, linear-gradient(#e71825, #e71825) 0 21px / 100% 1px no-repeat; }
-.ds-if-typing > .ds-if-gap { position: absolute; left: 10px; top: 25px; width: 4px; height: 4px; margin: 0; background: none; transform: none; }
-.ds-if-typing > .ds-if-gap::after { content: ''; position: absolute; left: 10px; top: 9px; width: 1px; height: 4px; background: #e71825; }
+.ds-if-typing > .ds-if-gap { position: absolute; left: 10px; top: 25px; width: 4px; height: 4px; margin: 0; background: none; transform: none; z-index: 1; }
+.ds-if-typing > .ds-if-gap::after { content: ''; position: absolute; left: 9px; top: 7px; width: 3px; height: 4px; background: linear-gradient(#e71825, #e71825) center / 1px 100% no-repeat, linear-gradient(#e71825, #e71825) top / 3px 1px no-repeat, linear-gradient(#e71825, #e71825) bottom / 3px 1px no-repeat; }
 /* 간격 표기(6): Label과 필드 사이 세로 */
 .ds-if-labeled { position: relative; }
 .ds-if-gap6 { position: absolute; left: 6px; top: 15px; display: flex; gap: 2px; align-items: center; font-family: Pretendard, inherit; font-size: 12px; line-height: 17px; color: #e71825; }
-.ds-if-gap6::after { content: ''; width: 1px; height: 6px; margin-top: 12px; background: #e71825; box-shadow: -1px 0 #e71825 inset; }
+.ds-if-gap6::after { content: ''; position: absolute; left: 9px; top: 6px; width: 3px; height: 6px; background: linear-gradient(#e71825, #e71825) center / 1px 100% no-repeat, linear-gradient(#e71825, #e71825) top / 3px 1px no-repeat, linear-gradient(#e71825, #e71825) bottom / 3px 1px no-repeat; }
 
 .ds-if-dropdown { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16); }
 .ds-if-dropdown__title b { color: #105aff; font-weight: 500; }
