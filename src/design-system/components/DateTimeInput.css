@@ -1,0 +1,75 @@
+/* DateTimeInput 가이드: 컨테이너 190×32(Small 28), radius 6, 아이콘 18px. 나머지 페이지 공통 스타일은 InputField.css */
+.ds-dt { box-sizing: border-box; display: flex; flex: none; align-items: center; gap: 4px; height: 32px; padding: 0 8px; overflow: clip;
+  background: #fff; border: 1px solid #d3d3d3; border-radius: 6px; font-size: 14px; line-height: 21px; letter-spacing: -0.5px; color: #333; }
+.ds-dt--small { height: 28px; font-size: 12px; line-height: 18px; }
+.ds-dt > span:first-child { flex: 1 0 0; min-width: 1px; }
+.ds-dt__placeholder { color: #b4b4b4; }
+.ds-dt__value { color: #333; }
+.ds-dt--focused { border-color: #4a4a4a; }
+.ds-dt--disabled { background: #fafafa; }
+.ds-dt--disabled .ds-dt__value { color: #b4b4b4; }
+.ds-dt--disabled .ds-dt-icon { opacity: 0.5; }
+.ds-dt-icon { position: relative; flex: none; width: 18px; height: 18px; }
+.ds-dt-icon img { position: absolute; inset: 0; display: block; width: 18px; height: 18px; }
+.ds-dt-icon img.ds-dt-icon__time { inset: 8.33%; width: auto; height: auto; }
+
+.ds-dt-stack { display: flex; flex-direction: column; gap: 4px; }
+.ds-dt-stack--tight { gap: 4px; }
+.ds-dt-row { display: flex; align-items: flex-start; }
+.ds-dt-row--labels { gap: 28px; }
+.ds-dt-row--pickers { gap: 27px; }
+
+/* Picker 공통 카드: 테두리 #4a4a4a, radius 8 */
+.ds-dt-picker { box-sizing: border-box; flex: none; background: #fff; border: 1px solid #4a4a4a; border-radius: 8px; letter-spacing: -0.5px; color: #333; }
+
+/* 달력: 185×177, 셀 23×20 */
+.ds-dt-cal { width: 185px; height: 177px; padding: 11px 11px 8px; }
+.ds-dt-cal__title { display: flex; align-items: center; justify-content: center; gap: 4px; height: 18px; margin-bottom: 2px; padding: 0 16px;
+  font-size: 12px; font-weight: 700; line-height: 18px; white-space: nowrap; }
+.ds-dt-arrow { position: relative; flex: none; width: 14px; height: 14px; overflow: clip; }
+.ds-dt-arrow img { position: absolute; display: block; max-width: none; width: auto; height: auto; }
+.ds-dt-cal__days, .ds-dt-cal__row { display: flex; width: 161px; }
+.ds-dt-cal__days span { width: 23px; height: 16px; font-size: 10px; line-height: 16px; text-align: center; color: #777; }
+.ds-dt-cal__cell { display: flex; justify-content: center; width: 23px; height: 20px; }
+.ds-dt-cal__area { width: 20px; height: 20px; border-radius: 4px; font-size: 10px; font-weight: 700; line-height: 20px; text-align: center; color: #333; }
+.ds-dt-cal__area.is-sun { color: #fa4553; }
+.ds-dt-cal__area.is-out { color: #989898; }
+.ds-dt-cal__area.is-today { color: #105aff; }
+.ds-dt-cal__area.is-selected { background: #105aff; color: #fff; }
+.ds-dt-cal__area.is-hover { background: rgba(0, 0, 0, 0.03); }
+
+/* 시간 선택: 200×221 (헤더 34, 목록 135, 하단 44) */
+.ds-dt-time { width: 200px; height: 221px; overflow: hidden; }
+.ds-dt-time__head { display: flex; box-sizing: border-box; height: 34px; border-bottom: 1px solid #ededed; font-size: 12px; font-weight: 700; line-height: 33px; text-align: center; }
+.ds-dt-time__head span { flex: 1 0 0; }
+.ds-dt-time__head .ds-dt-time__colon { flex: none; width: 4px; }
+.ds-dt-time__body { display: flex; height: 135px; margin-top: 8px; overflow: hidden; }
+.ds-dt-time__list { position: relative; flex: 1 0 0; padding: 0 4px; }
+.ds-dt-time__item { display: block; height: 24px; border-radius: 4px; font-size: 11px; line-height: 24px; text-align: center; color: #333; }
+.ds-dt-time__item.is-selected { font-weight: 500; color: #105aff; }
+.ds-dt-time__item.is-hover { background: rgba(0, 0, 0, 0.03); }
+.ds-dt-time__scroll { position: absolute; top: 4px; right: 6px; width: 4px; height: 30px; border-radius: 1000px; background: rgba(0, 0, 0, 0.16); }
+.ds-dt-time__bottom { position: absolute; display: none; }
+.ds-dt-time { position: relative; }
+.ds-dt-time__bottom { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; height: 44px; padding: 0 12px;
+  border-top: 1px solid #e1e1e1; font-size: 13px; color: #777; }
+.ds-dt-btns { display: flex; gap: 2px; }
+.ds-dt-btn { box-sizing: border-box; width: 38px; height: 28px; padding: 0; background: #fff; border: 1px solid #b4b4b4; border-radius: 6px; font: inherit; font-size: 12px; letter-spacing: -0.5px; color: #333; }
+.ds-dt-btn--primary { background: #105aff; border-color: #105aff; font-weight: 700; color: #fff; }
+
+/* Anatomy: 패널 가운데에 입력+Picker, 가이드선은 필드 왼쪽·레이블 위 기준 좌표 */
+.ds-dt-anatomy { position: relative; padding: 12px 0; }
+.ds-dt-anatomy__label { position: absolute; top: -18px; left: 12px; transform: translateX(-50%); height: 17px; --pin-len: 11px; }
+.ds-dt-anatomy__icon { position: absolute; top: -18px; left: 167.5px; transform: translateX(-50%); height: 17px; --pin-len: 45px; }
+.ds-dt-anatomy__container { position: absolute; top: 39px; left: 193px; }
+.ds-dt-anatomy__picker { position: absolute; top: 75px; left: 193px; }
+
+/* State: 레이블 58px, 입력 2개 190px, 간격 20px */
+.ds-dt-states { display: flex; flex-direction: column; gap: 20px; }
+.ds-dt-state { display: flex; align-items: center; gap: 20px; }
+.ds-dt-state__label { width: 58px; }
+
+/* Size: 두 입력을 28px 간격, 치수선은 필드에서 4px */
+.ds-dt-sizes { display: flex; align-items: center; gap: 28px; }
+.ds-dt-size { position: relative; }
+.ds-dt-size .ds-if-dim { position: absolute; top: 0; right: calc(100% + 4px); white-space: nowrap; }
