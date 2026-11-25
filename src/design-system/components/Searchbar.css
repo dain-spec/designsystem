@@ -1,0 +1,55 @@
+/* Searchbar 가이드: 컨테이너 190×32 radius 8. 나머지 페이지 공통 스타일은 InputField.css */
+.ds-sb { flex: none; gap: 6px; }
+.ds-sb .sb-field__icon { order: 2; }
+.ds-sb__text { flex: 1 1 0; min-width: 0; font-size: 14px; letter-spacing: -0.5px; white-space: nowrap; overflow: hidden; }
+.ds-sb__placeholder { color: #b4b4b4; }
+.ds-sb__value { color: #333; }
+.sb-field--completed .ds-sb__value { font-weight: 500; }
+.sb-field--disabled .ds-sb__placeholder { color: #c6c6c6; }
+.ds-sb__caret { display: inline-block; width: 1px; height: 16px; margin: 0 1px; background: #333; vertical-align: middle; }
+.ds-sb__count { order: 1; font-size: 12px; color: #777; }
+.ds-sb__count::first-line { color: #105aff; }
+.ds-sb__filter { order: 3; display: flex; padding-left: 6px; border-left: 1px solid #ededed; color: #777; }
+.ds-sb > svg { order: 1; }
+
+.ds-sb-sub { margin: 24px 0 8px; font-size: 24px; font-weight: 700; color: #333; }
+.ds-sb-types { display: flex; gap: 40px; }
+.ds-sb-states { display: grid; grid-template-columns: 1fr; gap: 14px; justify-items: center; }
+.ds-sb-state { flex-direction: row; align-items: center; width: 280px; gap: 24px; }
+.ds-sb-state .ds-if-state__label { width: 70px; text-align: right; }
+
+.ds-sb-anatomy { position: relative; display: flex; justify-content: center; padding: 28px 0 16px; }
+.ds-sb-a { position: absolute; white-space: nowrap; height: 17px; }
+.ds-sb-a--count { top: 0; left: calc(50% - 30px); transform: translateX(-50%); --pin-len: 16px; }
+.ds-sb-a--icon { top: 0; left: calc(50% + 62px); transform: translateX(-50%); --pin-len: 16px; }
+.ds-sb-a--filter { top: 34px; left: calc(50% + 110px); }
+.ds-sb-a--container { top: 33px; right: calc(50% + 105px); }
+
+.ds-sb-typing { position: relative; display: flex; flex-direction: column; gap: 4px; }
+.ds-sb-auto { position: static; width: 190px; min-width: 0; max-height: none; }
+.ds-sb-auto .dd-menu__item { font-size: 13px; }
+.ds-sb-auto b { font-weight: 400; color: #105aff; }
+.ds-sb-auto__group { gap: 4px; border-bottom: 1px solid #ededed; border-radius: 0; }
+.ds-sb-note { position: absolute; left: 200px; top: 34px; white-space: nowrap; text-align: left; line-height: 1.4; }
+
+.ds-sb-filters { display: flex; flex-direction: column; gap: 24px; align-items: center; width: 100%; }
+.ds-sb-filter { display: flex; flex-direction: column; gap: 4px; width: 100%; max-width: 440px; }
+.ds-sb-pop { box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; background: #fff; border: 1px solid #d3d3d3; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); font-size: 13px; color: #333; }
+.ds-sb-row { display: flex; align-items: flex-start; gap: 12px; }
+.ds-sb-row__label { flex: none; width: 52px; padding-top: 6px; font-weight: 500; }
+.ds-sb-row__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.ds-sb-seg { display: inline-flex; align-self: flex-start; gap: 2px; padding: 2px; background: #f5f5f5; border-radius: 6px; }
+.ds-sb-seg span { padding: 3px 8px; border-radius: 4px; font-size: 12px; color: #555; }
+.ds-sb-seg .is-active { background: #fff; border: 1px solid #4a4a4a; padding: 2px 7px; color: #333; }
+.ds-sb-hint { font-size: 11px; color: #989898; }
+.ds-sb-input { box-sizing: border-box; display: flex; align-items: center; flex: 1; height: 32px; padding: 0 10px; background: #fafafa; border-radius: 6px; font-size: 13px; color: #b4b4b4; }
+.ds-sb-pair { display: flex; gap: 4px; }
+.ds-sb-sel { box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 90px; height: 32px; padding: 0 8px; border-radius: 6px; background: #fafafa; font-size: 12px; color: #333; }
+.ds-sb-sel i { width: 6px; height: 6px; border-right: 1.3px solid #777; border-bottom: 1.3px solid #777; transform: rotate(45deg) translateY(-2px); }
+.ds-sb-dd { width: 100%; }
+.ds-sb-foot { display: flex; justify-content: flex-end; align-items: center; gap: 6px; }
+.ds-sb-check { display: flex; align-items: center; gap: 4px; margin-right: 8px; font-size: 12px; }
+.ds-sb-check i { width: 12px; height: 12px; border-radius: 3px; background: #105aff; }
+.ds-sb-btn { padding: 5px 12px; border: 1px solid #d3d3d3; border-radius: 6px; font-size: 12px; background: #fff; }
+.ds-sb-btn--primary { background: #105aff; border-color: #105aff; color: #fff; }
+.ds-sb-size { display: flex; align-items: center; gap: 10px; }

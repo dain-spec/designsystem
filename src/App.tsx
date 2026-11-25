@@ -8,6 +8,8 @@ import IcongraphPage from './design-system/icongraph/Icongraph'
 import InputFieldPage from './design-system/components/InputField'
 import TextAreaPage from './design-system/components/TextArea'
 import DropdownPage from './design-system/components/Dropdown'
+import SearchbarPage from './design-system/components/Searchbar'
+import PickerPage from './design-system/components/Picker'
 import DateTimeInputPage from './design-system/components/DateTimeInput'
 import HeaderPage from './design-system/components/Header'
 import './App.css'
@@ -26,6 +28,8 @@ const componentPages = {
   TextArea: TextAreaPage,
   DateTimeInput: DateTimeInputPage,
   Dropdown: DropdownPage,
+  Searchbar: SearchbarPage,
+  Picker: PickerPage,
   Header: HeaderPage,
 } as const
 
