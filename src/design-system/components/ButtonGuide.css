@@ -1,0 +1,44 @@
+/* Button 가이드: 컨테이너 높이 Large 36 / Medium 32 / Small 28 / XSmall 24. 나머지 페이지 공통 스타일은 InputField.css */
+.ds-bt-types { display: flex; gap: 12px; align-items: stretch; }
+.ds-bt-type { display: flex; flex-direction: column; justify-content: space-between; gap: 10px; padding: 12px 14px; background: #fff; border-radius: 10px; }
+.ds-bt-type--dark { background: #8e8e8e; }
+.ds-bt-type--dark .ds-if-state__label { color: #fff; }
+.ds-bt-cap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.ds-bt-row { display: flex; gap: 28px; justify-content: center; align-items: flex-end; flex-wrap: wrap; }
+.ds-bt-matrix { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.ds-bt-matrix__row { display: flex; align-items: center; gap: 24px; }
+.ds-bt-matrix__row .ds-if-state__label { width: 110px; text-align: right; white-space: nowrap; }
+.ds-bt-hover.btn--primary { background: #0943c6; }
+.ds-bt-hover.btn--secondary { background: #eff4ff; }
+.ds-bt-hover.btn--tertiary { border-color: #4a4a4a; }
+
+.ds-bt-anatomy { position: relative; display: flex; justify-content: center; padding: 28px 0 24px; }
+.ds-bt-a { position: absolute; white-space: nowrap; height: 17px; }
+.ds-bt-a--label { top: 0; left: calc(50% + 6px); transform: translateX(-50%); --pin-len: 16px; }
+.ds-bt-a--container { top: 38px; left: calc(50% + 80px); }
+.ds-bt-a--icon { bottom: -6px; left: calc(50% - 40px); transform: translateX(-50%); }
+.ds-bt-gap { display: flex; gap: 40px; justify-content: center; }
+.ds-bt-gap__pair { position: relative; display: inline-flex; gap: 4px; padding-bottom: 20px; }
+.ds-bt-gap__n { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+.ds-bt-icon32 { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid #d3d3d3; border-radius: 8px; background: #fff; color: #555; }
+.ds-bt-icon32.is-hovered { border-color: #4a4a4a; color: #333; }
+.ds-bt-icon32.is-disabled { background: #f4f4f4; color: #b4b4b4; }
+.ds-bt-text { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #777; }
+.ds-bt-text.is-hovered { color: #333; }
+.ds-bt-text.is-disabled { color: #b4b4b4; }
+.ds-bt-iconly { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: #777; }
+.ds-bt-iconly.is-hovered { color: #333; background: rgba(0, 0, 0, 0.05); border-radius: 4px; }
+.ds-bt-iconly.is-on { color: #105aff; }
+.ds-bt-iconly.is-disabled { color: #c6c6c6; }
+.ds-bt-sizeguide { display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+.ds-bt-usage { display: flex; justify-content: space-between; align-items: center; width: 280px; margin: 0 auto; padding: 14px 16px; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); font-size: 13px; font-weight: 700; color: #333; }
+.ds-bt-usage__actions { display: flex; gap: 4px; }
+
+.ds-bt-darkpanel { display: flex; gap: 40px; justify-content: center; padding: 20px 0; margin: -12px; background: #8e8e8e; border-radius: 8px; }
+.ds-bt-darkpanel .ds-if-state__label { color: #fff; }
+.ds-bt-ghost { box-sizing: border-box; display: inline-flex; align-items: center; gap: 4px; height: 32px; padding: 0 12px; border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 8px; background: rgba(255, 255, 255, 0.12); color: #fff; font-size: 13px; }
+.ds-bt-ghost.is-hovered { background: rgba(255, 255, 255, 0.28); }
+.ds-bt-ghost.is-disabled { width: 100px; border-color: transparent; background: rgba(255, 255, 255, 0.12); }
+.ds-bt-usage-dark { display: flex; justify-content: space-between; align-items: center; width: 420px; margin: 0 auto; padding: 14px 16px; background: #4a4a4a; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 700; }

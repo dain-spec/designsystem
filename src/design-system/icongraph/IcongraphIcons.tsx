@@ -85,7 +85,8 @@ export function MultiColorTab() {
 
 /* ───────── Monochrome ───────── */
 
-const monochrome = manifest.monochrome.map((i) => ({ ...i, title: i.id }))
+// Figma 프레임(서비스 아이콘, Icon component_01~05)을 카테고리로 사용합니다. 기존 분류는 검색어로 유지합니다.
+const monochrome = manifest.monochrome.map((i) => ({ ...i, title: i.id, category: i.frame, keywords: [i.category] }))
 type MonoItem = (typeof monochrome)[number]
 
 function MonoDetail({ icon, search }: { icon: MonoItem; search: (q: string) => void }) {
@@ -130,6 +131,7 @@ export function MonochromeTab() {
   return (
     <IconExplorer
       items={monochrome}
+      showCategoryLabels
       placeholder="이름, 태그로 검색 (예: 화살표, 메일, arrow)"
       renderCard={(i) => <span className="ig-svg ig-svg--mono ig-svg--24" dangerouslySetInnerHTML={{ __html: i.svg }} />}
       renderDetail={(i, h) => <MonoDetail key={i.id} icon={i} search={h.search} />}

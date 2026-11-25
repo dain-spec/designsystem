@@ -1,0 +1,53 @@
+/* Picker 가이드: 1개월 Calendar 186×180, Footer 44, 프리셋 100. 나머지 페이지 공통 스타일은 InputField.css */
+.ds-pk-field { box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 4px; flex: none; height: 32px; padding: 0 10px; background: #fff; border: 1px solid #d3d3d3; border-radius: 6px; font-size: 13px; letter-spacing: -0.5px; }
+.ds-pk-field__v { color: #333; } .ds-pk-field__p { color: #b4b4b4; }
+.ds-pk-field.is-disabled { background: #fafafa; }
+.ds-pk-pair { display: flex; align-items: center; gap: 8px; }
+.ds-pk-tilde { color: #777; }
+.ds-pk-stack { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.ds-pk-col-stack { display: flex; flex-direction: column; gap: 32px; align-items: center; width: 100%; }
+.ds-pk-grid { display: flex; gap: 20px; justify-content: center; width: 100%; }
+
+/* 내부 달력 카드는 바깥 카드가 테두리를 그리므로 제거 */
+.ds-pk-bare.dp-card { border: none; box-shadow: none; border-radius: 0; }
+.ds-pk-card { box-sizing: border-box; display: inline-flex; flex-direction: column; background: #fff; border: 1px solid #4a4a4a; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); letter-spacing: -0.5px; color: #333; }
+.ds-pk-card__row { display: flex; }
+.ds-pk-footer { display: flex; align-items: center; gap: 4px; height: 44px; padding: 0 12px; border-top: 1px solid #ededed; font-size: 12px; }
+.ds-pk-footer__text { flex: 1; color: #777; white-space: nowrap; }
+.ds-pk-btn { padding: 4px 10px; border: 1px solid #d3d3d3; border-radius: 6px; background: #fff; font-size: 12px; }
+.ds-pk-btn--primary { background: #105aff; border-color: #105aff; color: #fff; }
+
+.ds-pk-time { width: 100px; padding: 12px 12px 8px 0; font-size: 12px; }
+.ds-pk-time__head { display: flex; justify-content: space-between; padding: 0 12px; height: 18px; font-weight: 700; }
+.ds-pk-time__cols { position: relative; display: flex; gap: 8px; justify-content: center; margin-top: 2px; border-left: 1px solid #ededed; }
+.ds-pk-col { list-style: none; margin: 0; padding: 0; width: 36px; text-align: center; }
+.ds-pk-col li { height: 24px; line-height: 24px; border-radius: 4px; color: #333; }
+.ds-pk-col li.is-selected { color: #105aff; font-weight: 700; }
+.ds-pk-col li.is-hover { background: #f1f1f1; }
+.ds-pk-time__scroll { position: absolute; top: 4px; right: 0; width: 4px; height: 32px; border-radius: 1000px; background: rgba(0, 0, 0, 0.16); }
+.ds-pk-card--time { width: 186px; }
+.ds-pk-card--time .ds-pk-time { width: auto; padding: 12px; }
+.ds-pk-card--time .ds-pk-time__cols { border-left: none; }
+
+.ds-pk-quick { display: flex; justify-content: space-between; padding: 10px 12px 4px; font-size: 12px; font-weight: 700; }
+.ds-pk-quick__reset { font-weight: 400; color: #777; }
+.ds-pk-quick__chips { display: flex; gap: 4px; padding: 0 12px; }
+.ds-pk-chip { padding: 3px 8px; border: 1px solid #e1e1e1; border-radius: 4px; font-size: 12px; color: #333; background: #fff; white-space: nowrap; }
+.ds-pk-chip.is-active { border-color: #105aff; color: #105aff; }
+.ds-pk-presets { display: flex; flex-direction: column; gap: 4px; padding: 12px 12px 0; }
+.ds-pk-presets__row { display: flex; gap: 4px; }
+.ds-pk-presets__row .ds-pk-chip { flex: 1; text-align: center; padding: 3px 0; }
+.ds-pk-rangewrap { display: inline-flex; flex-direction: column; background: #fff; border: 1px solid #4a4a4a; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+
+.ds-pk-anatomy { position: relative; display: flex; justify-content: center; padding: 44px 0 12px; }
+.ds-pk-a { position: absolute; white-space: nowrap; text-align: center; line-height: 14px; height: 28px; }
+.ds-pk-a--header { top: 14px; left: calc(50% - 100px); transform: translateX(-50%); --pin-len: 16px; }
+.ds-pk-a--hour { top: 0; left: calc(50% + 46px); transform: translateX(-50%); --pin-len: 28px; }
+.ds-pk-a--min { top: 0; left: calc(50% + 88px); transform: translateX(-50%); --pin-len: 28px; }
+.ds-pk-a--weekday { top: 86px; right: calc(50% + 130px); }
+.ds-pk-a--grid { top: 130px; right: calc(50% + 130px); }
+.ds-pk-a--footer { top: 238px; right: calc(50% + 130px); }
+
+.ds-pk-spec { display: flex; flex-direction: column; gap: 28px; align-items: center; }
+.ds-pk-spec__item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.ds-pk-spec__h { position: absolute; left: -64px; bottom: 12px; white-space: nowrap; }

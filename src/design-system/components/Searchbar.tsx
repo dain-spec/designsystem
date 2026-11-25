@@ -1,0 +1,293 @@
+import '../foundation/Typography.css'
+import '../../components/SearchBar/SearchBar.css'
+import '../../components/Dropdown/Dropdown.css'
+import './InputField.css'
+import './Searchbar.css'
+
+// Figma "Searchbar_2.0" 프레임(node 21433:60865)의 구성을 따릅니다.
+// 페이지 공통 스타일(제목, 섹션, 패널, 가이드선)은 InputField.css를 함께 씁니다.
+
+type SbState = 'default' | 'focused' | 'typing' | 'completed' | 'disabled' | 'error'
+
+function Guide({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  return <span className={`ds-if-guide ${className}`}>{children}</span>
+}
+
+function Section({ title, description, children }: { title: string; description?: string; children: React.ReactNode }) {
+  return (
+    <section className="ds-section">
+      <div className="ds-section-heading">
+        <h2>{title}</h2>
+      </div>
+      {description && <p className="ds-if-section-desc">{description}</p>}
+      {children}
+    </section>
+  )
+}
+
+function Block({ title, description, children }: { title?: string; description?: React.ReactNode; children: React.ReactNode }) {
+  return (
+    <div className="ds-if-block">
+      {title && <h3>{title}</h3>}
+      {description && <p>{description}</p>}
+      <div className="ds-panel ds-if-panel">{children}</div>
+    </div>
+  )
+}
+
+function Dim({ height, children, className = '' }: { height: number; children: React.ReactNode; className?: string }) {
+  return (
+    <span className={`ds-if-dim ${className}`} style={{ height }}>
+      {children}
+    </span>
+  )
+}
+
+
+function SearchIcon() {
+  return (
+    <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true">
+      <circle cx="7" cy="7" r="4.5" stroke="currentColor" />
+      <path d="M10.5 10.5L14 14" stroke="currentColor" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function FilterIcon() {
+  return (
+    <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true">
+      <path d="M2 3H14" stroke="currentColor" strokeLinecap="round" />
+      <path d="M4.5 8H11.5" stroke="currentColor" strokeLinecap="round" />
+      <path d="M7 13H9" stroke="currentColor" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function ClearIcon() {
+  return (
+    <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+      <circle cx="8" cy="8" r="7" fill="#b4b4b4" />
+      <path d="M5.5 5.5L10.5 10.5M10.5 5.5L5.5 10.5" stroke="#fff" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function Sb({
+  state = 'default',
+  value,
+  count,
+  filter,
+  width = 190,
+}: {
+  state?: SbState
+  value?: string
+  count?: string
+  filter?: boolean
+  width?: number
+}) {
+  const clear = state === 'typing' || state === 'error'
+  return (
+    <span className={`sb-field ds-sb sb-field--${state}`} style={{ width }}>
+      <span className="ds-sb__text">
+        {value ? <span className="ds-sb__value">{value}</span> : <span className="ds-sb__placeholder">검색어를 입력해주세요.</span>}
+        {state === 'focused' && <i className="ds-sb__caret" />}
+        {state === 'typing' && <i className="ds-sb__caret" />}
+      </span>
+      {count && <span className="ds-sb__count">{count}</span>}
+      {clear && <ClearIcon />}
+      <span className="sb-field__icon">
+        <SearchIcon />
+      </span>
+      {filter && (
+        <span className="ds-sb__filter">
+          <FilterIcon />
+        </span>
+      )}
+    </span>
+  )
+}
+
+const STATES: { label: string; state: SbState; value?: string; count?: string }[] = [
+  { label: 'Default', state: 'default' },
+  { label: 'Focused', state: 'focused' },
+  { label: 'Typing', state: 'typing', value: '검색어 입력중' },
+  { label: 'Completed', state: 'completed', value: '입력한 검색어', count: '10/99' },
+  { label: 'Disabled', state: 'disabled' },
+  { label: 'Error', state: 'error', value: 'el@' },
+]
+
+function States({ filter }: { filter?: boolean }) {
+  return (
+    <div className="ds-sb-states">
+      {STATES.filter((s) => !(filter && s.count)).map(({ label, state, value, count }) => (
+        <div key={label} className="ds-if-state ds-sb-state">
+          <span className="ds-if-state__label">{label}</span>
+          <Sb state={state} value={value} count={count} filter={filter} />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function Segment({ items, active }: { items: string[]; active: string }) {
+  return (
+    <span className="ds-sb-seg">
+      {items.map((t) => (
+        <span key={t} className={t === active ? 'is-active' : ''}>
+          {t}
+        </span>
+      ))}
+    </span>
+  )
+}
+
+function Plain({ placeholder, width }: { placeholder: string; width?: number | string }) {
+  return (
+    <span className="ds-sb-input" style={{ width }}>
+      {placeholder}
+    </span>
+  )
+}
+
+function DropdownMock({ value, open }: { value: string; open?: boolean }) {
+  return (
+    <div className="ds-sb-dd">
+      <span className={`dd-field dd-field--medium${open ? ' dd-field--focused' : ' dd-field--completed'}`} style={{ width: '100%' }}>
+        <span className="dd-field__value">{value}</span>
+        <span className="dd-field__icon">
+          <svg viewBox="0 0 10 6" width="10" height="6" fill="none" aria-hidden="true">
+            <path d={open ? 'M1 5L5 1L9 5' : 'M1 1L5 5L9 1'} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </span>
+      {open && (
+        <ul className="dd-menu" style={{ position: 'static', marginTop: 4 }}>
+          {['전체 메일함', '리스트 항목', '리스트 항목', '리스트 항목', '리스트 항목'].map((t, i) => (
+            <li key={i}>
+              <span className={`dd-menu__item${i === 0 ? ' dd-menu__item--selected' : ''}`}>{t}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
+
+function FilterPanel({ period = '전체', dropdownOpen }: { period?: string; dropdownOpen?: boolean }) {
+  const rows: [string, React.ReactNode][] = [
+    ['기간', <>
+      <Segment items={['전체', '1주', '1개월', '3개월', '6개월', '직접입력']} active={period} />
+      <span className="ds-sb-hint">조회기간: 전체</span>
+    </>],
+    ['메일함', <DropdownMock value="전체 메일함" open={dropdownOpen} />],
+    ['보낸사람', <Plain placeholder="내용을 입력해주세요." />],
+    ['받는사람', <span className="ds-sb-pair"><span className="ds-sb-sel">받는 사람 <i /></span><Plain placeholder="내용을 입력해주세요." /></span>],
+    ['내용', <span className="ds-sb-pair"><span className="ds-sb-sel">제목+본문 <i /></span><Plain placeholder="내용을 입력해주세요." /></span>],
+    ['담당자', <Plain placeholder="내용을 입력해주세요." />],
+    ['검색', <Plain placeholder="이름을 검색해주세요." />],
+  ]
+  return (
+    <div className="ds-sb-filter">
+      <Sb filter width={190} />
+      <div className="ds-sb-pop">
+        {rows.map(([label, node]) => (
+          <div key={label} className="ds-sb-row">
+            <span className="ds-sb-row__label">{label}</span>
+            <div className="ds-sb-row__body">{node}</div>
+          </div>
+        ))}
+        <div className="ds-sb-foot">
+          <label className="ds-sb-check"><i />첨부파일</label>
+          <span className="ds-sb-btn">초기화</span>
+          <span className="ds-sb-btn ds-sb-btn--primary">조회</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function SearchbarPage() {
+  return (
+    <div className="ds-typography-page ds-if-page">
+      <header className="ds-if-head">
+        <h1>Searchbar</h1>
+        <p>검색어를 입력해 원하는 정보를 찾을 때 사용하는 폼 컴포넌트입니다.</p>
+      </header>
+
+      <Section title="Types">
+        <div className="ds-panel ds-if-panel">
+          <div className="ds-sb-types">
+            <div className="ds-if-state">
+              <span className="ds-if-state__label">Searchbar</span>
+              <Sb />
+            </div>
+            <div className="ds-if-state">
+              <span className="ds-if-state__label">Searchbar Filter</span>
+              <Sb filter />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title="Anatomy"
+        description="Searchbar는 검색어를 입력하는 Container와 Search Icon으로 구성되며, 필요에 따라 결과 수를 표시할 수 있습니다. Filter 타입은 Filter Icon이 추가됩니다."
+      >
+        <Block>
+          <div className="ds-sb-anatomy">
+            <Guide className="ds-sb-a ds-sb-a--count ds-if-pin ds-if-pin--down">Result Count (Optional)</Guide>
+            <Guide className="ds-sb-a ds-sb-a--icon ds-if-pin ds-if-pin--down">Search Icon</Guide>
+            <Guide className="ds-sb-a ds-sb-a--filter ds-if-pin ds-if-pin--right">Filter Icon (Filter 타입 전용)</Guide>
+            <Guide className="ds-sb-a ds-sb-a--container">Container</Guide>
+            <Sb state="completed" value="입력한 검색어" count="10/99" filter />
+          </div>
+        </Block>
+      </Section>
+
+      <Section title="Searchbar" description="검색어를 입력하고 검색할 때 사용하는 컴포넌트로, 입력 중 자동완성을 제공합니다.">
+        <h2 className="ds-sb-sub">Behaviors</h2>
+        <Block title="State" description="Searchbar는 Default, Focused, Typing, Completed, Disabled, Error 상태를 가집니다.">
+          <States />
+        </Block>
+        <Block title="Typing" description="입력 중 하단에 자동완성 Dropdown이 나타날 경우, 세로 간격은 4px로 둡니다.">
+          <div className="ds-sb-typing">
+            <Sb state="typing" value="kim" />
+            <ul className="dd-menu ds-sb-auto">
+              <li><span className="dd-menu__item ds-sb-auto__group">카테고리명 <b>99건</b></span></li>
+              {['douzonekim', 'douzonekim', 'douzonekim', 'douzonekim', 'douzonekim'].map((t, i) => (
+                <li key={i}><span className="dd-menu__item">{t.replace('kim', '')}<b>kim</b></span></li>
+              ))}
+            </ul>
+            <Guide className="ds-sb-note">상단 타이틀 있는 경우<br />타이틀 리스트 고정, border 추가</Guide>
+          </div>
+        </Block>
+      </Section>
+
+      <Section title="Searchbar Filter" description="상세 검색 조건을 지정할 때 사용하는 컴포넌트입니다. 검색 필터는 팝오버로 표시됩니다.">
+        <h2 className="ds-sb-sub">Behaviors</h2>
+        <Block title="State" description="Searchbar Filter는 Default, Focused, Typing, Completed, Disabled, Error 상태를 가집니다.">
+          <States filter />
+        </Block>
+        <Block title="Filter">
+          <div className="ds-sb-filters">
+            <FilterPanel />
+            <FilterPanel period="직접입력" />
+            <FilterPanel dropdownOpen />
+          </div>
+        </Block>
+      </Section>
+
+      <Section title="Spec">
+        <Block title="Size" description="Container의 높이는 32px로 단일 사이즈입니다.">
+          <div className="ds-sb-size">
+            <Dim height={32}>
+              <Guide>32</Guide>
+              <i className="ds-if-bar" style={{ height: 32 }} />
+            </Dim>
+            <Sb filter />
+          </div>
+        </Block>
+      </Section>
+    </div>
+  )
+}

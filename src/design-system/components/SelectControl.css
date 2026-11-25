@@ -1,0 +1,18 @@
+/* SelectControl 가이드: Control 14×14, 라벨 14px. 나머지 페이지 공통 스타일은 InputField.css */
+.ds-sc-sub { margin: 24px 0 8px; font-size: 24px; font-weight: 700; color: #333; }
+.ds-sc-item { display: inline-flex; align-items: center; gap: 6px; }
+.ds-sc-text { font-size: 14px; letter-spacing: -0.5px; color: #333; white-space: nowrap; }
+.ds-sc-text.is-disabled { color: #b4b4b4; }
+.ds-sc-em { font-weight: 700; color: #105aff; }
+.ds-sc-types { display: flex; gap: 16px; }
+.ds-sc-type { display: flex; flex-direction: column; gap: 8px; padding: 14px 14px; background: #fff; border-radius: 12px; }
+.ds-sc-row { display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; }
+.ds-sc-cap { gap: 8px; }
+.ds-sc-focus .cb-mark, .ds-sc-focus .rd-mark { border-color: #4a4a4a; }
+.ds-sc-anatomy { position: relative; display: flex; justify-content: center; padding: 22px 0 6px; }
+.ds-sc-a { position: absolute; white-space: nowrap; height: 17px; }
+.ds-sc-a--label { top: -4px; left: calc(50% + 40px); transform: translateX(-50%); --pin-len: 16px; }
+.ds-sc-a--control { top: 22px; right: calc(50% + 38px); }
+.ds-sc-size { position: relative; display: flex; align-items: center; justify-content: center; gap: 4px; padding: 14px 0; }
+.ds-sc-size__w { position: absolute; top: 40px; left: calc(50% - 82px); }
+.ds-sc-toggles { display: flex; align-items: center; justify-content: center; gap: 8px; }
