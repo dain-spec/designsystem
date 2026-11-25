@@ -130,6 +130,7 @@ export function MonochromeTab() {
   return (
     <IconExplorer
       items={monochrome}
+      flat
       placeholder="이름, 태그로 검색 (예: 화살표, 메일, arrow)"
       renderCard={(i) => <span className="ig-svg ig-svg--mono ig-svg--24" dangerouslySetInnerHTML={{ __html: i.svg }} />}
       renderDetail={(i, h) => <MonoDetail key={i.id} icon={i} search={h.search} />}

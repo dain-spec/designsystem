@@ -12,6 +12,7 @@ interface Props<T extends ExplorerItem> {
   items: T[]
   placeholder: string
   showCategoryLabels?: boolean
+  flat?: boolean
   cardSize?: number
   renderCard: (item: T, active: boolean) => ReactNode
   renderDetail: (item: T, helpers: { search: (q: string) => void }) => ReactNode
@@ -22,6 +23,7 @@ export default function IconExplorer<T extends ExplorerItem>({
   items,
   placeholder,
   showCategoryLabels = false,
+  flat = false,
   cardSize = 56,
   renderCard,
   renderDetail,
@@ -35,9 +37,11 @@ export default function IconExplorer<T extends ExplorerItem>({
     const filtered = q
       ? items.filter((i) => [i.id, i.title, i.category, ...i.tags].join(' ').toLowerCase().includes(q))
       : items
+    // flat: 카테고리로 묶지 않고 items 순서(Figma 정렬 기준)를 그대로 유지합니다.
+    if (flat) return [{ category: '', items: filtered }]
     const order = Array.from(new Set(filtered.map((i) => i.category)))
     return order.map((category) => ({ category, items: filtered.filter((i) => i.category === category) }))
-  }, [items, query])
+  }, [items, query, flat])
 
   const total = grouped.reduce((n, g) => n + g.items.length, 0)
   const ids = useMemo(() => grouped.flatMap((g) => g.items.map((i) => i.id)), [grouped])
