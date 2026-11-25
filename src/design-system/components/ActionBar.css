@@ -1,0 +1,32 @@
+/* ActionBar 가이드: 높이 48, 배경 #4a5063. 나머지 페이지 공통 스타일은 InputField.css */
+.ds-ab { box-sizing: border-box; display: flex; align-items: center; gap: 4px; height: 48px; padding: 0 12px; background: #4d5468; color: #fff; font-size: 13px; letter-spacing: -0.5px; white-space: nowrap; }
+.ds-ab__count { font-weight: 700; }
+.ds-ab__count em { font-style: normal; color: #8fb0ff; }
+.ds-ab__spacer { flex: 1; }
+.ds-ab__guide { display: inline-flex; align-items: center; gap: 4px; margin-right: 8px; padding-right: 12px; border-right: 1px solid rgba(255, 255, 255, 0.3); font-size: 12px; }
+.ds-ab__btn { display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 10px; border: 1px solid rgba(255, 255, 255, 0.55); border-radius: 6px; font-size: 12px; }
+.ds-ab__btn--text { border-color: transparent; }
+.ds-ab--small { height: 20px; padding: 0 6px; gap: 2px; font-size: 6px; }
+.ds-ab--small .ds-ab__btn { height: 12px; padding: 0 3px; font-size: 6px; border-radius: 2px; gap: 1px; }
+.ds-ab--small .ds-ab__btn svg { width: 5px; height: 5px; }
+
+.ds-ab-stack { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.ds-ab-stack--screens { gap: 24px; }
+.ds-ab-anatomy { position: relative; width: 100%; padding: 28px 0 0; }
+.ds-ab-a { position: absolute; top: 0; white-space: nowrap; height: 17px; --pin-len: 16px; }
+.ds-ab-a--count { left: 50px; transform: translateX(-50%); }
+.ds-ab-a--guide { right: 150px; transform: translateX(50%); }
+.ds-ab-a--btn { right: 40px; transform: translateX(50%); }
+.ds-ab-spec { position: relative; width: 100%; padding: 22px 0 0 28px; box-sizing: border-box; }
+.ds-ab-spec__w { position: absolute; top: 0; left: 50%; transform: translateX(-50%); color: #e71825; }
+.ds-ab-spec__h { position: absolute; left: 0; top: 46px; color: #e71825; }
+
+.ds-ab-screen { display: flex; height: 220px; background: #222; border-radius: 2px; overflow: hidden; }
+.ds-ab-screen__gnb { flex: none; width: 14px; background: #222; }
+.ds-ab-screen__main { flex: 1; display: flex; flex-direction: column; background: #fff; }
+.ds-ab-screen__top { height: 14px; border-bottom: 1px solid #e1e1e1; }
+.ds-ab-screen__body { flex: 1; display: flex; background: #f0f5ff; }
+.ds-ab-screen__side { flex: none; width: 24%; background: #fafbff; }
+.ds-ab-screen__area { flex: 1; position: relative; }
+.ds-ab-screen__area.is-split { margin-left: 0; }
+.ds-ab-screen__bar { position: absolute; left: 0; right: 0; bottom: 0; }

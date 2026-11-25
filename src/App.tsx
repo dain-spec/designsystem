@@ -13,6 +13,8 @@ import PickerPage from './design-system/components/Picker'
 import SelectControlPage from './design-system/components/SelectControl'
 import ButtonGuidePage from './design-system/components/ButtonGuide'
 import FloatingButtonPage from './design-system/components/FloatingButton'
+import FileUploadPage from './design-system/components/FileUpload'
+import ActionBarPage from './design-system/components/ActionBar'
 import DateTimeInputPage from './design-system/components/DateTimeInput'
 import HeaderPage from './design-system/components/Header'
 import './App.css'
@@ -36,6 +38,8 @@ const componentPages = {
   SelectControl: SelectControlPage,
   Button: ButtonGuidePage,
   FloatingButton: FloatingButtonPage,
+  FileUpload: FileUploadPage,
+  ActionBar: ActionBarPage,
   Header: HeaderPage,
 } as const
 
