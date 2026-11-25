@@ -124,7 +124,7 @@ export default function FileUploadPage() {
       </header>
 
       <Section title="Types">
-        <div className="ds-panel ds-if-panel">
+        <div className="ds-panel ds-if-panel ds-fu-white">
           <div className="ds-fu-types">
             <Cap label="FileProgressBar"><Progress /></Cap>
             <Cap label="FileAttachment"><FileList /></Cap>
@@ -133,7 +133,7 @@ export default function FileUploadPage() {
       </Section>
 
       <Section title="Anatomy" description="FileUpload는 파일을 받는 Drop Zone, 첨부 경로를 고르는 Upload Button, 첨부한 파일을 보여주는 File List로 구성됩니다.">
-        <div className="ds-panel ds-if-panel">
+        <div className="ds-panel ds-if-panel ds-fu-white">
           <div className="ds-fu-anatomy">
             <Guide className="ds-fu-a ds-fu-a--drop ds-if-pin ds-if-pin--down">Drop Zone</Guide>
             <Guide className="ds-fu-a ds-fu-a--list ds-if-pin ds-if-pin--down">File List</Guide>
@@ -154,7 +154,7 @@ export default function FileUploadPage() {
       </Section>
 
       <Section title="FileAttachment" description="파일을 직접 선택하거나 드래그 앤 드롭으로 첨부하는 영역입니다. 첨부한 파일은 목록으로 확인하고 관리할 수 있습니다.">
-        <Block title="State" description="FileAttachment는 Default, Completed, ReadOnly 상태를 가집니다.">
+        <Block panelClass="ds-fu-white" title="State" description="FileAttachment는 Default, Completed, ReadOnly 상태를 가집니다.">
           <div className="ds-fu-stack ds-fu-stack--states">
             <Cap label="Default"><DropZone /></Cap>
             <Cap label="Completed"><FileList width={330} /></Cap>

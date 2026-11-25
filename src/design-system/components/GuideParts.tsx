@@ -17,12 +17,12 @@ export function Section({ title, description, children }: { title: string; descr
   )
 }
 
-export function Block({ title, description, children }: { title?: string; description?: React.ReactNode; children: React.ReactNode }) {
+export function Block({ title, description, children, panelClass = '' }: { title?: string; description?: React.ReactNode; children: React.ReactNode; panelClass?: string }) {
   return (
     <div className="ds-if-block">
       {title && <h3>{title}</h3>}
       {description && <p>{description}</p>}
-      <div className="ds-panel ds-if-panel">{children}</div>
+      <div className={`ds-panel ds-if-panel ${panelClass}`}>{children}</div>
     </div>
   )
 }
