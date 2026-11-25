@@ -6,6 +6,7 @@ export interface ExplorerItem {
   title: string
   category: string
   tags: string[]
+  keywords?: string[]
 }
 
 interface Props<T extends ExplorerItem> {
@@ -35,7 +36,7 @@ export default function IconExplorer<T extends ExplorerItem>({
   const grouped = useMemo(() => {
     const q = query.trim().toLowerCase()
     const filtered = q
-      ? items.filter((i) => [i.id, i.title, i.category, ...i.tags].join(' ').toLowerCase().includes(q))
+      ? items.filter((i) => [i.id, i.title, i.category, ...i.tags, ...(i.keywords ?? [])].join(' ').toLowerCase().includes(q))
       : items
     // flat: 카테고리로 묶지 않고 items 순서(Figma 정렬 기준)를 그대로 유지합니다.
     if (flat) return [{ category: '', items: filtered }]
