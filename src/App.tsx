@@ -10,6 +10,9 @@ import TextAreaPage from './design-system/components/TextArea'
 import DropdownPage from './design-system/components/Dropdown'
 import SearchbarPage from './design-system/components/Searchbar'
 import PickerPage from './design-system/components/Picker'
+import SelectControlPage from './design-system/components/SelectControl'
+import ButtonGuidePage from './design-system/components/ButtonGuide'
+import FloatingButtonPage from './design-system/components/FloatingButton'
 import DateTimeInputPage from './design-system/components/DateTimeInput'
 import HeaderPage from './design-system/components/Header'
 import './App.css'
@@ -30,6 +33,9 @@ const componentPages = {
   Dropdown: DropdownPage,
   Searchbar: SearchbarPage,
   Picker: PickerPage,
+  SelectControl: SelectControlPage,
+  Button: ButtonGuidePage,
+  FloatingButton: FloatingButtonPage,
   Header: HeaderPage,
 } as const
 

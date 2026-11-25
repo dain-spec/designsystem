@@ -1,0 +1,20 @@
+/* FloatingButton 가이드: 컨테이너 48×48 원형, 그림자. 나머지 페이지 공통 스타일은 InputField.css */
+.ds-fb { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 48px; height: 48px; border-radius: 50%; background: #fff; color: #333; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18); }
+.ds-fb.is-hovered { background: #f1f1f1; }
+.ds-fb-anatomy { position: relative; display: flex; justify-content: center; padding: 28px 0 8px; }
+.ds-fb-a { position: absolute; white-space: nowrap; height: 17px; }
+.ds-fb-a--icon { top: 0; left: 50%; transform: translateX(-50%); --pin-len: 14px; }
+.ds-fb-a--container { top: 48px; left: calc(50% + 40px); }
+.ds-fb-a--bar { position: absolute; top: 28px; left: calc(50% + 32px); }
+.ds-fb-states { display: flex; gap: 20px; justify-content: center; }
+.ds-fb-spec { position: relative; display: flex; align-items: center; justify-content: center; gap: 6px; padding-top: 22px; }
+.ds-fb-spec__w { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+.ds-fb-screen { display: flex; height: 360px; margin: 0 auto; width: 100%; max-width: 640px; background: #f0f5ff; border-radius: 4px; overflow: hidden; }
+.ds-fb-screen__gnb { flex: none; width: 24px; background: #222; }
+.ds-fb-screen__body { position: relative; flex: 1; }
+.ds-fb-screen__body::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 24px; background: #fff; border-bottom: 1px solid #e1e1e1; }
+.ds-fb-screen__fab { position: absolute; right: 20px; bottom: 28px; }
+.ds-fb-screen__fab .ds-fb { width: 32px; height: 32px; }
+.ds-fb-screen__fab .ds-fb svg { width: 14px; height: 14px; }
+.ds-fb-screen__r { position: absolute; right: 4px; bottom: 44px; color: #e71825; }
+.ds-fb-screen__b { position: absolute; right: 30px; bottom: 4px; color: #e71825; }
