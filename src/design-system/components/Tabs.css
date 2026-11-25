@@ -1,0 +1,51 @@
+/* Tabs 가이드 — Figma Tabs_2.0 실측값
+   TabBorder: 선택 #4a4a4a 하단 2px, 글자 16/700 #333 · 비선택 16/400 #777, 카운트 #105aff, 높이 32/24
+   TabChips : 선택 #4a4a4a 배경 흰 글자 14/700 · 비선택 #f7f8fa 배경 #777 14/500, radius 1000, 높이 32/24, Badge #fa4553
+   TabText  : 선택 14/700 #333 · 비선택 14/500 #777, Divider 1×12 #e1e1e1
+   TabIcon  : 32×32 radius 6, 선택 테두리 #4a4a4a, 컨테이너 테두리 #d3d3d3
+   TabSegment: 컨테이너 #f4f4f4 radius 6, 선택 항목 흰색 radius 4, 12/500 · 비선택 12/400 #777 */
+.ds-tb-sub { margin: 0; }
+.ds-tb-row { display: flex; align-items: flex-end; }
+.ds-tb-types { display: flex; flex-wrap: wrap; gap: 12px; width: 100%; }
+.ds-tb-card { display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; background: #fff; border-radius: 10px; }
+.ds-tb-count { margin-left: 4px; color: #105aff; }
+.ds-tb-border { box-sizing: border-box; display: inline-flex; align-items: center; gap: 4px; height: 32px; padding: 0 2px; font-size: 16px; font-weight: 400; color: #777; letter-spacing: -0.5px; white-space: nowrap; border-bottom: 2px solid transparent; }
+.ds-tb-border.is-on { font-weight: 700; color: #333; border-bottom-color: #4a4a4a; }
+.ds-tb-border:not(.is-on) .ds-tb-count { color: #777; }
+.ds-tb-border--sm { height: 24px; font-size: 14px; }
+.ds-tb-chip { box-sizing: border-box; display: inline-flex; align-items: center; gap: 4px; position: relative; height: 32px; padding: 0 14px; border-radius: 1000px; background: #f7f8fa; font-size: 14px; font-weight: 500; color: #777; letter-spacing: -0.5px; white-space: nowrap; }
+.ds-tb-chip.is-on { background: #4a4a4a; color: #fff; font-weight: 700; }
+.ds-tb-chip.is-hover { background: #f7f8fa linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)); }
+.ds-tb-chip--sm { height: 24px; padding: 0 10px; font-size: 12px; }
+.ds-tb-dot { position: absolute; top: 5px; right: 6px; width: 4px; height: 4px; border-radius: 50%; background: #fa4553; }
+.ds-tb-text { display: inline-flex; align-items: center; font-size: 14px; font-weight: 500; color: #777; letter-spacing: -0.5px; white-space: nowrap; }
+.ds-tb-text.is-on { font-weight: 700; color: #333; }
+.ds-tb-text:not(.is-on) .ds-tb-count { color: #777; }
+.ds-tb-textrow { display: inline-flex; align-items: center; gap: 8px; }
+.ds-tb-div { width: 1px; height: 12px; background: #e1e1e1; }
+.ds-tb-iconwrap { display: inline-flex; box-sizing: border-box; padding: 0; background: #fff; border: 1px solid #d3d3d3; border-radius: 6px; }
+.ds-tb-icon { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin: -1px; color: #777; border-radius: 6px; }
+.ds-tb-icon.is-on { color: #333; border: 1px solid #4a4a4a; background: #fff; }
+.ds-tb-seg { display: inline-flex; gap: 2px; padding: 4px; background: #f4f4f4; border-radius: 6px; }
+.ds-tb-seg__item { box-sizing: border-box; display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: 4px; font-size: 12px; font-weight: 400; color: #777; letter-spacing: -0.5px; white-space: nowrap; }
+.ds-tb-seg__item.is-on { background: #fff; font-weight: 500; color: #333; }
+
+.ds-tb-anno { position: relative; display: flex; justify-content: center; padding: 44px 0 40px; }
+.ds-tb-scroll { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.ds-tb-size { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.ds-tb-size--spaced { gap: 0; }
+.ds-tb-size--spaced > .ds-tb-border { margin: 0 20px; }
+.ds-tb-size--tight { gap: 0; }
+.ds-tb-size--tight > * { margin: 0 4px; }
+.ds-tb-gap { color: #e71825; margin: 0 -10px; z-index: 1; }
+.ds-tb-gap--chip { margin: 0 -4px; }
+.ds-tb-sep { width: 40px; }
+
+/* Anatomy 가이드 라벨: 빨간 글자 + 짧은 선. down=라벨 아래로 선, up=라벨 위로 선, left/right=옆으로 선 */
+.ds-tb-pin { position: absolute; z-index: 1; font-size: 11px; line-height: 14px; color: #e71825; white-space: nowrap; transform: translateX(-50%); }
+.ds-tb-pin::before { content: ''; position: absolute; background: #e71825; }
+.ds-tb-pin--down::before { left: 50%; top: 16px; width: 1px; height: 14px; }
+.ds-tb-pin--up::before { left: 50%; bottom: 16px; width: 1px; height: 14px; }
+.ds-tb-pin--left, .ds-tb-pin--right { transform: translate(-50%, -50%); }
+.ds-tb-pin--left::before { right: calc(100% + 4px); top: 7px; width: 14px; height: 1px; }
+.ds-tb-pin--right::before { left: calc(100% + 4px); top: 7px; width: 14px; height: 1px; }

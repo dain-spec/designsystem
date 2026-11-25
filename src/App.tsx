@@ -15,6 +15,7 @@ import ButtonGuidePage from './design-system/components/ButtonGuide'
 import FloatingButtonPage from './design-system/components/FloatingButton'
 import FileUploadPage from './design-system/components/FileUpload'
 import ActionBarPage from './design-system/components/ActionBar'
+import TabsPage from './design-system/components/Tabs'
 import DateTimeInputPage from './design-system/components/DateTimeInput'
 import HeaderPage from './design-system/components/Header'
 import './App.css'
@@ -40,6 +41,7 @@ const componentPages = {
   FloatingButton: FloatingButtonPage,
   FileUpload: FileUploadPage,
   ActionBar: ActionBarPage,
+  Tabs: TabsPage,
   Header: HeaderPage,
 } as const
 
