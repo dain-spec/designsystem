@@ -54,11 +54,11 @@ function SearchIcon({ size = 16 }: { size?: number }) {
 }
 
 function FilterIcon({ size = 16 }: { size?: number }) {
+  // Figma ic_filter (icongraph monochrome ic_filter)
   return (
-    <svg viewBox="0 0 16 16" width={size} height={size} fill="none" aria-hidden="true">
-      <path d="M2 3H14" stroke="currentColor" strokeLinecap="round" />
-      <path d="M4.5 8H11.5" stroke="currentColor" strokeLinecap="round" />
-      <path d="M7 13H9" stroke="currentColor" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
+      <path fillRule="evenodd" clipRule="evenodd" d="M7.75 2C8.16421 2 8.5 2.33579 8.5 2.75V4.07422C10.2118 4.42161 11.5 5.93573 11.5 7.75C11.5 9.56487 10.2106 11.0781 8.49805 11.4248V21.25C8.49805 21.6642 8.16226 22 7.74805 22C7.33383 22 6.99805 21.6642 6.99805 21.25V11.4238C5.28741 11.0756 4 9.56348 4 7.75C4 5.93573 5.28824 4.42161 7 4.07422V2.75C7 2.33579 7.33579 2 7.75 2ZM7.75 5.5C6.50736 5.5 5.5 6.50736 5.5 7.75C5.5 8.99264 6.50736 10 7.75 10C8.99264 10 10 8.99264 10 7.75C10 6.50736 8.99264 5.5 7.75 5.5Z" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M16.248 2C16.6623 2 16.998 2.33579 16.998 2.75V12.5742C18.7107 12.9209 20 14.4351 20 16.25C20 18.0642 18.7117 19.5773 17 19.9248V21.25C17 21.6642 16.6642 22 16.25 22C15.8358 22 15.5 21.6642 15.5 21.25V19.9248C13.7883 19.5773 12.5 18.0642 12.5 16.25C12.5 14.4365 13.7873 12.9234 15.498 12.5752V2.75C15.498 2.33579 15.8338 2 16.248 2ZM16.25 14C15.0074 14 14 15.0074 14 16.25C14 17.4926 15.0074 18.5 16.25 18.5C17.4926 18.5 18.5 17.4926 18.5 16.25C18.5 15.0074 17.4926 14 16.25 14Z" />
     </svg>
   )
 }
