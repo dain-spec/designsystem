@@ -7,18 +7,18 @@
   max-width: 100%;
   height: 32px;
   padding: 0 10px;
-  background: #ffffff;
-  border: 1px solid #d3d3d3; /* input/border */
+  background: var(--color-input-field);
+  border: 1px solid var(--color-input-border);
   border-radius: 8px;
   font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
   letter-spacing: -0.5px;
-  color: #333333; /* text/basic */
+  color: var(--color-text-basic);
 }
 
 .sb-field__icon {
   flex: 0 0 auto;
   display: flex;
-  color: #777777; /* icon/subtle */
+  color: var(--color-icon-subtle);
 }
 
 .sb-field__input {
@@ -33,7 +33,7 @@
 }
 
 .sb-field__input::placeholder {
-  color: #b4b4b4; /* text/disabled */
+  color: var(--color-text-disabled);
 }
 
 .sb-field__filter {
@@ -44,41 +44,41 @@
   border: none;
   background: transparent;
   padding: 0;
-  color: #777777; /* icon/subtle */
+  color: var(--color-icon-subtle);
   cursor: pointer;
 }
 
 .sb-field:focus-within,
 .sb-field--focused,
 .sb-field--typing {
-  border-color: #4a4a4a; /* input/border-focus */
+  border-color: var(--color-input-border-focus);
 }
 
 .sb-field--focused .sb-field__icon,
 .sb-field--focused .sb-field__filter,
 .sb-field--typing .sb-field__icon,
 .sb-field--typing .sb-field__filter {
-  color: #4a4a4a; /* icon/basic */
+  color: var(--color-icon-basic);
 }
 
 .sb-field--completed .sb-field__input {
-  color: #333333;
+  color: var(--color-text-basic);
   font-weight: 500;
 }
 
 .sb-field--error {
-  border-color: #fa4553; /* input/border-error */
+  border-color: var(--color-input-border-error);
 }
 
 .sb-field--disabled {
-  background: #fafafa; /* input/field-disabled */
-  border-color: #d3d3d3; /* input/border */
-  color: #b4b4b4; /* text/disabled */
+  background: var(--color-input-field-disabled);
+  border-color: var(--color-input-border);
+  color: var(--color-text-disabled);
 }
 
 .sb-field--disabled .sb-field__icon,
 .sb-field--disabled .sb-field__filter {
-  color: #b4b4b4; /* icon/disabled */
+  color: var(--color-icon-disabled);
 }
 
 .sb-field--disabled .sb-field__input {

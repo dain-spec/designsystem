@@ -1,0 +1,41 @@
+/* Figma 변수(WEHAGO Web 2.0) → CSS 변수. 이름은 Figma 변수명의 "/"를 "-"로 바꿉니다. */
+:root {
+  --color-action-primary: #105aff; /* action/primary */
+  --color-action-basic: #ffffff; /* action/basic */
+  --color-border-bolder: #4a4a4a; /* border/bolder */
+  --color-border-subtle: #e1e1e1; /* border/subtle */
+  --color-border-subtler: #ededed; /* border/subtler */
+  --color-button-fill: #ffffff; /* button/fill */
+  --color-button-primary-fill: #105aff; /* button/primary-fill */
+  --color-button-tertiary-border: #b4b4b4; /* button/tertiary-border */
+  --color-element-subtler: #f4f4f4; /* element/subtler */
+  --gap-2: 4px; /* gap/2 */
+  --gap-3: 6px; /* gap/3 */
+  --gap-5: 12px; /* gap/5 */
+  --color-icon-basic: #4a4a4a; /* icon/basic */
+  --color-icon-disabled: #b4b4b4; /* icon/disabled */
+  --color-icon-subtle: #777777; /* icon/subtle */
+  --color-input-field: #ffffff; /* input/field */
+  --color-input-border: #d3d3d3; /* input/border */
+  --color-input-border-error: #fa4553; /* input/border-error */
+  --color-input-border-focus: #4a4a4a; /* input/border-focus */
+  --color-input-field-disabled: #fafafa; /* input/field-disabled */
+  --padding-2: 4px; /* padding/2 */
+  --padding-4: 8px; /* padding/4 */
+  --padding-7: 20px; /* padding/7 */
+  --radius-medium: 12px; /* radius/medium */
+  --radius-small: 8px; /* radius/small */
+  --radius-xsmall: 6px; /* radius/xsmall */
+  --radius-xxsmall: 4px; /* radius/xxsmall */
+  --shadow-level1: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-level1 */
+  --shadow-level2: 0 4px 12px rgba(0, 0, 0, 0.1); /* shadow-level2 */
+  --size-6: 28px; /* size/6 */
+  --color-surface-basic: #ffffff; /* surface/basic */
+  --color-surface-subtler: #f7f8fa; /* surface/subtler */
+  --color-text-basic: #333333; /* text/basic */
+  --color-text-basic-inverse: #ffffff; /* text/basic-inverse */
+  --color-text-disabled: #b4b4b4; /* text/disabled */
+  --color-text-primary: #105aff; /* text/primary */
+  --color-text-subtle: #777777; /* text/subtle */
+  --color-text-subtler: #989898; /* text/subtler */
+}
