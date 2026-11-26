@@ -220,7 +220,14 @@ function FilterPanel({ period = '전체', dropdownOpen }: { period?: string; dro
           </div>
         ))}
         <div className="ds-sb-foot">
-          <label className="ds-sb-check"><i />첨부파일</label>
+          <label className="ds-sb-check">
+            <i>
+              <svg viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true">
+                <path d="M3.5 7.2L6 9.6L10.5 4.8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </i>
+            첨부파일
+          </label>
           <span className="ds-sb-foot__btns">
             <span className="ds-sb-btn">초기화</span>
             <span className="ds-sb-btn ds-sb-btn--primary">조회</span>
