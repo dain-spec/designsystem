@@ -57,10 +57,10 @@
 .ds-sb-dd { width: 100%; }
 .ds-sb-dd .dd-field { background: var(--color-surface-subtler); border-color: transparent; }
 .ds-sb-dd .dd-field__value { color: var(--color-text-subtle); }
-.ds-sb-foot { display: flex; justify-content: space-between; align-items: center; margin-top: var(--gap-5); }
+.ds-sb-foot { display: flex; justify-content: flex-end; align-items: center; gap: var(--gap-5); margin-top: var(--gap-5); }
 .ds-sb-foot__btns { display: flex; gap: var(--gap-3); }
 .ds-sb-check { display: flex; align-items: center; gap: var(--gap-2); font-size: 12px; }
-.ds-sb-check i { width: 14px; height: 14px; border-radius: var(--radius-xxsmall); background: var(--color-action-primary); }
+.ds-sb-check i { display: flex; width: 14px; height: 14px; border-radius: var(--radius-xxsmall); background: var(--color-element-primary-light); color: var(--color-element-static); }
 .ds-sb-btn { box-sizing: border-box; display: inline-flex; align-items: center; height: var(--size-6); padding: 0 var(--padding-4); border: 1px solid var(--color-button-tertiary-border); border-radius: var(--radius-xsmall); background: var(--color-button-fill); font-size: 12px; color: var(--color-text-basic); }
 .ds-sb-btn--primary { background: var(--color-button-primary-fill); border-color: var(--color-button-primary-fill); color: var(--color-text-basic-inverse); font-weight: 700; }
 .ds-sb-drp { box-sizing: border-box; width: 373px; margin-top: var(--gap-2); background: var(--color-surface-basic); border: 1px solid var(--color-border-bolder); border-radius: var(--radius-small); overflow: hidden; box-shadow: var(--shadow-level1); }

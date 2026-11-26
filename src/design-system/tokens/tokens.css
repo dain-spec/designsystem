@@ -1,6 +1,5 @@
 /* Figma 변수(WEHAGO Web 2.0) → CSS 변수. 이름은 Figma 변수명의 "/"를 "-"로 바꿉니다. */
 :root {
-  --color-action-primary: #105aff; /* action/primary */
   --color-action-basic: #ffffff; /* action/basic */
   --color-border-bolder: #4a4a4a; /* border/bolder */
   --color-border-subtle: #e1e1e1; /* border/subtle */
@@ -8,6 +7,8 @@
   --color-button-fill: #ffffff; /* button/fill */
   --color-button-primary-fill: #105aff; /* button/primary-fill */
   --color-button-tertiary-border: #b4b4b4; /* button/tertiary-border */
+  --color-element-primary-light: #719bfc; /* element/primary-light */
+  --color-element-static: #ffffff; /* element/static */
   --color-element-subtler: #f4f4f4; /* element/subtler */
   --gap-2: 4px; /* gap/2 */
   --gap-3: 6px; /* gap/3 */
