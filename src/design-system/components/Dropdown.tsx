@@ -10,8 +10,12 @@ import type { DropdownSize, DropdownState } from '../../components/Dropdown/Drop
 
 const ITEMS = ['현재 선택된 값', '리스트 항목', '리스트 항목', '리스트 항목', '리스트 항목']
 
-function Guide({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <span className={`ds-if-guide ${className}`}>{children}</span>
+function Guide({ children, className = '', style }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
+  return (
+    <span className={`ds-if-guide ${className}`} style={style}>
+      {children}
+    </span>
+  )
 }
 
 function Section({ title, description, children }: { title: string; description?: string; children: React.ReactNode }) {
@@ -26,19 +30,19 @@ function Section({ title, description, children }: { title: string; description?
   )
 }
 
-function Block({ title, description, children }: { title?: string; description?: React.ReactNode; children: React.ReactNode }) {
+function Block({ title, description, children, panelClass = '' }: { title?: string; description?: React.ReactNode; children: React.ReactNode; panelClass?: string }) {
   return (
     <div className="ds-if-block">
       {title && <h3>{title}</h3>}
       {description && <p>{description}</p>}
-      <div className="ds-panel ds-if-panel">{children}</div>
+      <div className={`ds-panel ds-if-panel ${panelClass}`}>{children}</div>
     </div>
   )
 }
 
-function Dim({ height, children, className = '' }: { height: number; children: React.ReactNode; className?: string }) {
+function Dim({ height, children, className = '', style }: { height: number; children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   return (
-    <span className={`ds-if-dim ${className}`} style={{ height }}>
+    <span className={`ds-if-dim ${className}`} style={{ height, ...style }}>
       {children}
     </span>
   )
@@ -101,16 +105,25 @@ export default function DropdownPage() {
         title="Anatomy"
         description="Dropdown은 입력 영역인 Container, ListMenu, ListMenu를 여는 Trailing Icon으로 구성되며, 필요에 따라 Label을 함께 표시할 수 있습니다."
       >
-        <Block>
-          <div className="ds-dd-anatomy">
-            <Guide className="ds-dd-a ds-dd-a--label ds-if-pin ds-if-pin--down">Label (Optional)</Guide>
-            <Guide className="ds-dd-a ds-dd-a--icon ds-if-pin ds-if-pin--down">Trailing Icon</Guide>
-            <Guide className="ds-dd-a ds-dd-a--item ds-if-pin ds-if-pin--left">ListItem</Guide>
-            <Guide className="ds-dd-a ds-dd-a--container">Container</Guide>
-            <Guide className="ds-dd-a ds-dd-a--menu">ListMenu</Guide>
-            <Label>
-              <Box open value="현재 선택된 값" />
-            </Label>
+        <Block panelClass="ds-dd-panel">
+          {/* Figma Dropdown_2.0 Anatomy(780×311) 좌표를 가운데(x=390) 기준 오프셋으로 옮긴 배치 */}
+          <div className="ds-dd-stage">
+            <Guide className="ds-dd-g ds-if-pin ds-if-pin--down" style={{ left: 'calc(50% - 59px)', top: 10, '--pin-len': '11px' } as React.CSSProperties}>Label (Optional)</Guide>
+            <Guide className="ds-dd-g ds-if-pin ds-if-pin--down" style={{ left: 'calc(50% + 70px)', top: 10, '--pin-len': '50px' } as React.CSSProperties}>Trailing Icon</Guide>
+            <Guide className="ds-dd-g ds-dd-g--item ds-if-pin ds-if-pin--right" style={{ left: 'calc(50% - 155px)', top: 114 }}>ListItem</Guide>
+            <div className="ds-dd-stage__field">
+              <Label>
+                <Box open value="현재 선택된 값" />
+              </Label>
+            </div>
+            <Dim height={32} className="ds-dd-dim" style={{ left: 'calc(50% + 93px)', top: 67 }}>
+              <i className="ds-if-bar" style={{ height: 32 }} />
+              <Guide>Container</Guide>
+            </Dim>
+            <Dim height={168} className="ds-dd-dim" style={{ left: 'calc(50% + 93px)', top: 103 }}>
+              <i className="ds-if-bar" style={{ height: 168 }} />
+              <Guide>ListMenu</Guide>
+            </Dim>
           </div>
         </Block>
       </Section>

@@ -3,15 +3,13 @@
 .ds-dd .dd-wrap { display: block; }
 .ds-dd .dd-field { width: 170px; }
 .ds-dd .dd-field--focused .dd-field__icon svg { transform: rotate(180deg); }
-.ds-dd .dd-menu { position: static; margin-top: 4px; width: 170px; max-height: none; overflow: visible; border-radius: 8px; }
+.ds-dd .dd-menu { position: static; margin-top: 4px; width: 170px; max-height: none; overflow: visible; border-radius: 8px; padding: 3px 0; }
 .ds-dd .dd-menu__item { position: relative; }
 .ds-dd .dd-menu__item--selected { justify-content: space-between; }
 .ds-dd .dd-menu__item--selected::after { content: ''; width: 10px; height: 6px; margin-right: 2px; border-left: 1.5px solid #105aff; border-bottom: 1.5px solid #105aff; transform: rotate(-45deg) translateY(-2px); }
-.ds-dd__scroll { position: absolute; top: 76px; right: 4px; width: 4px; height: 30px; border-radius: 1000px; background: rgba(0, 0, 0, 0.16); }
+.ds-dd__scroll { position: absolute; top: 72px; right: 4px; width: 4px; height: 30px; border-radius: 1000px; background: rgba(0, 0, 0, 0.16); }
 
 .ds-dd-labeled { display: flex; flex-direction: column; gap: 6px; }
-.ds-dd-anatomy { position: relative; display: flex; justify-content: center; padding: 28px 0 12px; }
-.ds-dd-anatomy .ds-if-guide { position: absolute; }
 .ds-dd-row { display: flex; align-items: center; gap: 4px; }
 .ds-dd-row__input { box-sizing: border-box; width: 170px; height: 32px; padding: 0 10px; border: 1px solid #d3d3d3; border-radius: 8px; font-size: 14px; letter-spacing: -0.5px; color: #b4b4b4; display: flex; align-items: center; }
 .ds-dd-row__btn { box-sizing: border-box; height: 32px; padding: 0 12px; border: 1px solid #d3d3d3; border-radius: 8px; background: #fff; font-size: 14px; color: #333; }
@@ -20,10 +18,11 @@
 .ds-dd-states .ds-if-state__label { width: 70px; text-align: right; padding-top: 6px; }
 .ds-dd-sizes { display: flex; align-items: center; gap: 12px; }
 
-/* Anatomy 가이드: 필드 왼쪽 = 50% - 85px, 위쪽 패딩 28px */
-.ds-dd-a { top: 0; height: 17px; white-space: nowrap; --pin-len: 14px; }
-.ds-dd-a--label { left: calc(50% - 85px + 29px); transform: translateX(-50%); }
-.ds-dd-a--icon { left: calc(50% + 70px); transform: translateX(-50%); --pin-len: 40px; }
-.ds-dd-a--item { right: calc(50% + 90px); top: 90px; --pin-len: 20px; }
-.ds-dd-a--container { left: calc(50% + 95px); top: 52px; }
-.ds-dd-a--menu { left: calc(50% + 95px); top: 140px; }
+
+/* Anatomy: Figma 780×311 스테이지. 패딩 없이 가운데(x=390) 기준 좌표로 배치 */
+.ds-dd-panel.ds-panel { padding: 0; }
+.ds-dd-stage { position: relative; width: 100%; height: 311px; }
+.ds-dd-stage__field { position: absolute; top: 40px; left: calc(50% - 85px); }
+.ds-dd-g { position: absolute; transform: translateX(-50%); height: 17px; white-space: nowrap; }
+.ds-dd-g--item { transform: none; }
+.ds-dd-dim { position: absolute; }
