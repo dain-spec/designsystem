@@ -53,3 +53,37 @@
 .ds-sb-btn { padding: 5px 12px; border: 1px solid #d3d3d3; border-radius: 6px; font-size: 12px; background: #fff; }
 .ds-sb-btn--primary { background: #105aff; border-color: #105aff; color: #fff; }
 .ds-sb-size { display: flex; align-items: center; gap: 10px; }
+
+/* ---- Figma Searchbar Filter 기준 (21458:43913) ---- */
+.ds-sb--f { border-radius: 6px; gap: 6px; }
+.ds-sb--f.sb-field--completed .ds-sb__value { font-weight: 400; }
+.ds-sb--f .ds-sb__filter { border-left: 0; padding-left: 0; }
+.ds-sb-filter { max-width: 485px; }
+.ds-sb-pop { gap: 12px; padding: 20px; background: #fff; border: 1px solid #e1e1e1; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.ds-sb-row { align-items: flex-start; gap: 0; }
+.ds-sb-row__label { width: 58px; padding-top: 6px; font-size: 13px; font-weight: 500; line-height: 20px; color: #777; }
+.ds-sb-row__body { gap: 4px; }
+.ds-sb-seg { gap: 0; padding: 4px; background: #f4f4f4; border-radius: 6px; width: 327px; box-sizing: border-box; }
+.ds-sb-seg span { padding: 3px 0; flex: 1; text-align: center; font-size: 12px; line-height: 18px; color: #777; }
+.ds-sb-seg .is-active { background: #fff; border: 0; padding: 3px 0; font-weight: 500; color: #333; }
+.ds-sb-hint { font-size: 12px; font-weight: 500; color: #989898; }
+.ds-sb-input { gap: 6px; padding: 0 10px; background: #f7f8fa; font-size: 14px; }
+.ds-sb-input__text { flex: 1; min-width: 0; }
+.ds-sb-input svg { flex: none; color: #777; }
+.ds-sb-pair { gap: 4px; }
+.ds-sb-sel { width: 94px; background: #f7f8fa; font-size: 14px; color: #777; }
+.ds-sb-dd .dd-field { background: #f7f8fa; border-color: transparent; }
+.ds-sb-dd .dd-field__value { color: #777; }
+.ds-sb-foot { margin-top: 12px; justify-content: space-between; }
+.ds-sb-foot__btns { display: flex; gap: 6px; }
+.ds-sb-check i { width: 14px; height: 14px; border-radius: 4px; }
+.ds-sb-btn { box-sizing: border-box; height: 28px; display: inline-flex; align-items: center; padding: 0 8px; border: 1px solid #b4b4b4; border-radius: 6px; font-size: 12px; color: #333; }
+.ds-sb-btn--primary { background: #105aff; border-color: #105aff; color: #fff; font-weight: 700; }
+.ds-sb-drp { box-sizing: border-box; width: 373px; margin-top: 4px; background: #fff; border: 1px solid #4a4a4a; border-radius: 8px; overflow: hidden; }
+.ds-sb-drp__cal { display: flex; height: 180px; }
+.ds-sb-drp__month { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 12px 0; border-right: 1px solid #e1e1e1; }
+.ds-sb-drp__month:last-child { border-right: 0; }
+.ds-sb-drp__title { font-size: 12px; font-weight: 500; color: #333; }
+.ds-sb-drp__grid { width: 100%; flex: 1; border-radius: 4px; background: repeating-linear-gradient(#fff 0 18px, #f4f4f4 18px 19px); }
+.ds-sb-drp__bottom { display: flex; align-items: center; gap: 6px; height: 44px; padding: 0 12px; border-top: 1px solid #e1e1e1; }
+.ds-sb-drp__text { flex: 1; font-size: 13px; color: #333; }

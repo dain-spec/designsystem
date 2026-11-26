@@ -44,18 +44,18 @@ function Dim({ height, children, className = '' }: { height: number; children: R
 }
 
 
-function SearchIcon() {
+function SearchIcon({ size = 16 }: { size?: number }) {
   return (
-    <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 16 16" width={size} height={size} fill="none" aria-hidden="true">
       <circle cx="7" cy="7" r="4.5" stroke="currentColor" />
       <path d="M10.5 10.5L14 14" stroke="currentColor" strokeLinecap="round" />
     </svg>
   )
 }
 
-function FilterIcon() {
+function FilterIcon({ size = 16 }: { size?: number }) {
   return (
-    <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 16 16" width={size} height={size} fill="none" aria-hidden="true">
       <path d="M2 3H14" stroke="currentColor" strokeLinecap="round" />
       <path d="M4.5 8H11.5" stroke="currentColor" strokeLinecap="round" />
       <path d="M7 13H9" stroke="currentColor" strokeLinecap="round" />
@@ -63,9 +63,9 @@ function FilterIcon() {
   )
 }
 
-function ClearIcon() {
+function ClearIcon({ size = 14 }: { size?: number }) {
   return (
-    <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+    <svg viewBox="0 0 16 16" width={size} height={size} aria-hidden="true">
       <circle cx="8" cy="8" r="7" fill="#b4b4b4" />
       <path d="M5.5 5.5L10.5 10.5M10.5 5.5L5.5 10.5" stroke="#fff" strokeWidth="1.2" strokeLinecap="round" />
     </svg>
@@ -86,21 +86,23 @@ function Sb({
   width?: number
 }) {
   const clear = state === 'typing' || state === 'error'
+  const ico = filter ? 18 : 16
   return (
-    <span className={`sb-field ds-sb sb-field--${state}`} style={{ width }}>
+    <span className={`sb-field ds-sb sb-field--${state}${filter ? ' ds-sb--f' : ''}`} style={{ width: filter && width === 190 ? 200 : width }}>
       <span className="ds-sb__text">
+        {state === 'focused' && filter && <i className="ds-sb__caret" />}
         {value ? <span className="ds-sb__value">{value}</span> : <span className="ds-sb__placeholder">검색어를 입력해주세요.</span>}
-        {state === 'focused' && <i className="ds-sb__caret" />}
+        {state === 'focused' && !filter && <i className="ds-sb__caret" />}
         {state === 'typing' && <i className="ds-sb__caret" />}
       </span>
       {count && <span className="ds-sb__count">{count}</span>}
-      {clear && <ClearIcon />}
+      {clear && <ClearIcon size={filter ? 18 : 14} />}
       <span className="sb-field__icon">
-        <SearchIcon />
+        <SearchIcon size={ico} />
       </span>
       {filter && (
         <span className="ds-sb__filter">
-          <FilterIcon />
+          <FilterIcon size={ico} />
         </span>
       )}
     </span>
@@ -113,7 +115,7 @@ const STATES: { label: string; state: SbState; value?: string; count?: string }[
   { label: 'Typing', state: 'typing', value: '검색어 입력중' },
   { label: 'Completed', state: 'completed', value: '입력한 검색어', count: '10/99' },
   { label: 'Disabled', state: 'disabled' },
-  { label: 'Error', state: 'error', value: 'el@' },
+  { label: 'Error', state: 'error', value: 'e!@' },
 ]
 
 function States({ filter }: { filter?: boolean }) {
@@ -141,10 +143,11 @@ function Segment({ items, active }: { items: string[]; active: string }) {
   )
 }
 
-function Plain({ placeholder, width }: { placeholder: string; width?: number | string }) {
+function Plain({ placeholder, width, search }: { placeholder: string; width?: number | string; search?: boolean }) {
   return (
     <span className="ds-sb-input" style={{ width }}>
-      {placeholder}
+      <span className="ds-sb-input__text">{placeholder}</span>
+      {search && <SearchIcon size={18} />}
     </span>
   )
 }
@@ -173,6 +176,26 @@ function DropdownMock({ value, open }: { value: string; open?: boolean }) {
   )
 }
 
+function DateRange() {
+  return (
+    <div className="ds-sb-drp">
+      <div className="ds-sb-drp__cal">
+        {['2024.01', '2024.02'].map((m) => (
+          <div key={m} className="ds-sb-drp__month">
+            <span className="ds-sb-drp__title">{m}</span>
+            <span className="ds-sb-drp__grid" />
+          </div>
+        ))}
+      </div>
+      <div className="ds-sb-drp__bottom">
+        <span className="ds-sb-drp__text">기간을 선택하세요.</span>
+        <span className="ds-sb-btn">취소</span>
+        <span className="ds-sb-btn ds-sb-btn--primary">적용</span>
+      </div>
+    </div>
+  )
+}
+
 function FilterPanel({ period = '전체', dropdownOpen }: { period?: string; dropdownOpen?: boolean }) {
   const rows: [string, React.ReactNode][] = [
     ['기간', <>
@@ -180,15 +203,15 @@ function FilterPanel({ period = '전체', dropdownOpen }: { period?: string; dro
       <span className="ds-sb-hint">조회기간: 전체</span>
     </>],
     ['메일함', <DropdownMock value="전체 메일함" open={dropdownOpen} />],
-    ['보낸사람', <Plain placeholder="내용을 입력해주세요." />],
-    ['받는사람', <span className="ds-sb-pair"><span className="ds-sb-sel">받는 사람 <i /></span><Plain placeholder="내용을 입력해주세요." /></span>],
-    ['내용', <span className="ds-sb-pair"><span className="ds-sb-sel">제목+본문 <i /></span><Plain placeholder="내용을 입력해주세요." /></span>],
-    ['담당자', <Plain placeholder="내용을 입력해주세요." />],
-    ['검색', <Plain placeholder="이름을 검색해주세요." />],
+    ['보낸사람', <Plain placeholder="내용을 입력하세요." />],
+    ['받는사람', <span className="ds-sb-pair"><span className="ds-sb-sel">받는 사람 <i /></span><Plain placeholder="내용을 입력하세요." /></span>],
+    ['내용', <span className="ds-sb-pair"><span className="ds-sb-sel">제목+본문 <i /></span><Plain placeholder="내용을 입력하세요." /></span>],
+    ['담당자', <Plain placeholder="내용을 입력하세요." />],
+    ['검색', <Plain placeholder="이름을 검색하세요." search />],
   ]
   return (
     <div className="ds-sb-filter">
-      <Sb filter width={190} />
+      <Sb filter width={260} />
       <div className="ds-sb-pop">
         {rows.map(([label, node]) => (
           <div key={label} className="ds-sb-row">
@@ -198,10 +221,13 @@ function FilterPanel({ period = '전체', dropdownOpen }: { period?: string; dro
         ))}
         <div className="ds-sb-foot">
           <label className="ds-sb-check"><i />첨부파일</label>
-          <span className="ds-sb-btn">초기화</span>
-          <span className="ds-sb-btn ds-sb-btn--primary">조회</span>
+          <span className="ds-sb-foot__btns">
+            <span className="ds-sb-btn">초기화</span>
+            <span className="ds-sb-btn ds-sb-btn--primary">조회</span>
+          </span>
         </div>
       </div>
+      {period === '직접입력' && <DateRange />}
     </div>
   )
 }
@@ -263,12 +289,12 @@ export default function SearchbarPage() {
         </Block>
       </Section>
 
-      <Section title="Searchbar Filter" description="상세 검색 조건을 지정할 때 사용하는 컴포넌트입니다. 검색 필터는 팝오버로 표시됩니다.">
+      <Section title="Searchbar Filter" description="상세 검색 조건을 지정해 검색할 때 사용하는 폼 컴포넌트입니다. 검색 필터는 팝오버로 표시됩니다.">
         <h2 className="ds-sb-sub">Behaviors</h2>
         <Block title="State" description="Searchbar Filter는 Default, Focused, Typing, Completed, Disabled, Error 상태를 가집니다.">
           <States filter />
         </Block>
-        <Block title="Filter">
+        <Block title="Filter" description="Dropdown, Button 등 입력 속성의 컴포넌트와 조합 시, 간격 4입니다.">
           <div className="ds-sb-filters">
             <FilterPanel />
             <FilterPanel period="직접입력" />
